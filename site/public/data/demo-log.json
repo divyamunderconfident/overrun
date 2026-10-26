@@ -1,0 +1,1417 @@
+{
+ "note": "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.",
+ "limit": 2000000,
+ "rateCard": "groq-gpt-oss-20b",
+ "overhead": {
+  "openai/gpt-oss-20b": {
+   "noSystem": 71,
+   "withSystem": 74
+  },
+  "gemini-3.1-flash-lite": {
+   "noSystem": 1,
+   "withSystem": 1
+  }
+ },
+ "requests": [
+  {
+   "id": "req-01",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "English",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "\"I yelled at everyone to get out of the water: 'There's a shark in the water!'\" Hammel added.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 24,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.318555191,
+    "prompt_tokens": 109,
+    "prompt_time": 0.005387139,
+    "completion_tokens": 33,
+    "completion_time": 0.034689068,
+    "total_tokens": 142,
+    "total_time": 0.040076207,
+    "completion_tokens_details": {
+     "reasoning_tokens": 21
+    }
+   }
+  },
+  {
+   "id": "req-02",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "English",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "\"I yelled at everyone to get out of the water: 'There's a shark in the water!'\" Hammel added.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 27,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 39,
+     "candidatesTokenCount": 2,
+     "totalTokenCount": 41,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 39
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-03",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "English",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "The city of Palu, which has more than 380,000 people, was strewn with debris from collapsed buildings.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 25,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.278542483,
+    "prompt_tokens": 110,
+    "prompt_time": 0.005399373,
+    "completion_tokens": 27,
+    "completion_time": 0.037738554,
+    "total_tokens": 137,
+    "total_time": 0.043137927,
+    "completion_tokens_details": {
+     "reasoning_tokens": 15
+    }
+   }
+  },
+  {
+   "id": "req-04",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "English",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "The city of Palu, which has more than 380,000 people, was strewn with debris from collapsed buildings.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 28,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 40,
+     "candidatesTokenCount": 4,
+     "totalTokenCount": 44,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 40
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-05",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Spanish",
+   "system": "",
+   "prompt": "“Grité a todos que saliesen del agua porque había un tiburón”, añadió Hammel.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 21,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.416501731,
+    "prompt_tokens": 92,
+    "prompt_time": 0.006152983,
+    "completion_tokens": 52,
+    "completion_time": 0.055468127,
+    "total_tokens": 144,
+    "total_time": 0.06162111,
+    "completion_tokens_details": {
+     "reasoning_tokens": 22
+    }
+   }
+  },
+  {
+   "id": "req-06",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Spanish",
+   "system": "",
+   "prompt": "“Grité a todos que saliesen del agua porque había un tiburón”, añadió Hammel.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 20,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 21,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 33,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 21
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-07",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Spanish",
+   "system": "",
+   "prompt": "La ciudad de Palu, con más de 380 000 habitantes, quedó cubierta de restos de los edificios derrumbados.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 28,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.406735581,
+    "prompt_tokens": 99,
+    "prompt_time": 0.00743746,
+    "completion_tokens": 64,
+    "completion_time": 0.075416513,
+    "total_tokens": 163,
+    "total_time": 0.082853973,
+    "completion_tokens_details": {
+     "reasoning_tokens": 27
+    }
+   }
+  },
+  {
+   "id": "req-08",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Spanish",
+   "system": "",
+   "prompt": "La ciudad de Palu, con más de 380 000 habitantes, quedó cubierta de restos de los edificios derrumbados.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 34,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 35,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 47,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 35
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-09",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "French",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "« Je hurlais pour que tout le monde sorte de l’eau : Il y a un requin ! », explique Chad.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 29,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.461590431,
+    "prompt_tokens": 114,
+    "prompt_time": 0.00777438,
+    "completion_tokens": 50,
+    "completion_time": 0.069972635,
+    "total_tokens": 164,
+    "total_time": 0.077747015,
+    "completion_tokens_details": {
+     "reasoning_tokens": 38
+    }
+   }
+  },
+  {
+   "id": "req-10",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "French",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "« Je hurlais pour que tout le monde sorte de l’eau : Il y a un requin ! », explique Chad.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 34,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 46,
+     "candidatesTokenCount": 3,
+     "totalTokenCount": 49,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 46
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-11",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "French",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "Comptant plus de 380 000 habitants, la ville de Palu se trouvait parsemée de débris des bâtiments effondrés.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 31,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.39276385,
+    "prompt_tokens": 116,
+    "prompt_time": 0.006600051,
+    "completion_tokens": 30,
+    "completion_time": 0.032250591,
+    "total_tokens": 146,
+    "total_time": 0.038850642,
+    "completion_tokens_details": {
+     "reasoning_tokens": 18
+    }
+   }
+  },
+  {
+   "id": "req-12",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "French",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "Comptant plus de 380 000 habitants, la ville de Palu se trouvait parsemée de débris des bâtiments effondrés.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 35,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 47,
+     "candidatesTokenCount": 5,
+     "totalTokenCount": 52,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 47
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-13",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "German",
+   "system": "",
+   "prompt": "„Ich schrie, dass alle aus dem Wasser herauskommen sollten: ‚Da ist ein Hai im Wasser!‘“, fügte Hammel hinzu.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 30,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.393028151,
+    "prompt_tokens": 101,
+    "prompt_time": 0.005000913,
+    "completion_tokens": 48,
+    "completion_time": 0.065454403,
+    "total_tokens": 149,
+    "total_time": 0.070455316,
+    "completion_tokens_details": {
+     "reasoning_tokens": 14
+    }
+   }
+  },
+  {
+   "id": "req-14",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "German",
+   "system": "",
+   "prompt": "„Ich schrie, dass alle aus dem Wasser herauskommen sollten: ‚Da ist ein Hai im Wasser!‘“, fügte Hammel hinzu.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 30,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 31,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 43,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 31
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-15",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "German",
+   "system": "",
+   "prompt": "Die Stadt Palu, die über mehr als 380.000 Einwohner verfügt, war übersät mit den Trümmern eingestürzter Gebäude.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 33,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 1.1574992100000001,
+    "prompt_tokens": 104,
+    "prompt_time": 0.005023742,
+    "completion_tokens": 64,
+    "completion_time": 0.073423608,
+    "total_tokens": 168,
+    "total_time": 0.07844735,
+    "completion_tokens_details": {
+     "reasoning_tokens": 16
+    }
+   }
+  },
+  {
+   "id": "req-16",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "German",
+   "system": "",
+   "prompt": "Die Stadt Palu, die über mehr als 380.000 Einwohner verfügt, war übersät mit den Trümmern eingestürzter Gebäude.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 37,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 38,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 50,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 38
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-17",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Russian",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "«Я закричал, чтобы все выбирались из воды: „Здесь акула!“», — рассказывает Хаммел.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 30,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.477268504,
+    "prompt_tokens": 115,
+    "prompt_time": 0.010622297,
+    "completion_tokens": 27,
+    "completion_time": 0.029439561,
+    "total_tokens": 142,
+    "total_time": 0.040061858,
+    "completion_tokens_details": {
+     "reasoning_tokens": 14
+    }
+   }
+  },
+  {
+   "id": "req-18",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Russian",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "«Я закричал, чтобы все выбирались из воды: „Здесь акула!“», — рассказывает Хаммел.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 29,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 41,
+     "candidatesTokenCount": 4,
+     "totalTokenCount": 45,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 41
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-19",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Russian",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "Город Палу с населением свыше 380 тысяч людей был завален обломками обрушившихся домов.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 28,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.349404825,
+    "prompt_tokens": 113,
+    "prompt_time": 0.009607566,
+    "completion_tokens": 64,
+    "completion_time": 0.07025289,
+    "total_tokens": 177,
+    "total_time": 0.079860456,
+    "completion_tokens_details": {
+     "reasoning_tokens": 62
+    }
+   }
+  },
+  {
+   "id": "req-20",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Russian",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "Город Палу с населением свыше 380 тысяч людей был завален обломками обрушившихся домов.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 31,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 43,
+     "candidatesTokenCount": 5,
+     "totalTokenCount": 48,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 43
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-21",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Arabic",
+   "system": "",
+   "prompt": "\"لقد قمت بالصياح بأعلى صوتي مطالبًا الجميع بالخروج من المياه: \"يوجد قرش في المياه!\" كما أضاف هاميل.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 33,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.396249947,
+    "prompt_tokens": 104,
+    "prompt_time": 0.032570816,
+    "completion_tokens": 53,
+    "completion_time": 0.054335522,
+    "total_tokens": 157,
+    "total_time": 0.086906338,
+    "completion_tokens_details": {
+     "reasoning_tokens": 16
+    }
+   }
+  },
+  {
+   "id": "req-22",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Arabic",
+   "system": "",
+   "prompt": "\"لقد قمت بالصياح بأعلى صوتي مطالبًا الجميع بالخروج من المياه: \"يوجد قرش في المياه!\" كما أضاف هاميل.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 36,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 37,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 49,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 37
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-23",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Arabic",
+   "system": "",
+   "prompt": "وقد تمت تغطية مدينة بالو والتي يعيش بها أكثر من 380,000 شخص بالحطام الناتج عن انهيار المباني.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 29,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.39520964,
+    "prompt_tokens": 100,
+    "prompt_time": 0.004951734,
+    "completion_tokens": 64,
+    "completion_time": 0.084186118,
+    "total_tokens": 164,
+    "total_time": 0.089137852,
+    "completion_tokens_details": {
+     "reasoning_tokens": 45
+    }
+   }
+  },
+  {
+   "id": "req-24",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Arabic",
+   "system": "",
+   "prompt": "وقد تمت تغطية مدينة بالو والتي يعيش بها أكثر من 380,000 شخص بالحطام الناتج عن انهيار المباني.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 34,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 35,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 47,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 35
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-25",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Hindi",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "हम्मेल ने कहा, \"मैंने सभी की आवाज़ लगाई कि वे पानी से बाहर निकल जाएं: पानी में एक शार्क है!''",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 34,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.507858227,
+    "prompt_tokens": 119,
+    "prompt_time": 0.00677664,
+    "completion_tokens": 51,
+    "completion_time": 0.056859087,
+    "total_tokens": 170,
+    "total_time": 0.063635727,
+    "completion_tokens_details": {
+     "reasoning_tokens": 39
+    }
+   }
+  },
+  {
+   "id": "req-26",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Hindi",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "हम्मेल ने कहा, \"मैंने सभी की आवाज़ लगाई कि वे पानी से बाहर निकल जाएं: पानी में एक शार्क है!''",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 29,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 41,
+     "candidatesTokenCount": 3,
+     "totalTokenCount": 44,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 41
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-27",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Hindi",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "380,000 से ज़्यादा की आबादी वाले पालू के शहर में कई इमारतों ढह गए थी, जिससे यह शहर मलबे से भर गया था।",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 37,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.400696965,
+    "prompt_tokens": 122,
+    "prompt_time": 0.046960348,
+    "completion_tokens": 28,
+    "completion_time": 0.03082061,
+    "total_tokens": 150,
+    "total_time": 0.077780958,
+    "completion_tokens_details": {
+     "reasoning_tokens": 14
+    }
+   }
+  },
+  {
+   "id": "req-28",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Hindi",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "380,000 से ज़्यादा की आबादी वाले पालू के शहर में कई इमारतों ढह गए थी, जिससे यह शहर मलबे से भर गया था।",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 36,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 48,
+     "candidatesTokenCount": 4,
+     "totalTokenCount": 52,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 48
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-29",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Tamil",
+   "system": "",
+   "prompt": "அனைவரையும் தண்ணீரிலிருந்து வெளியே வரும்படி கத்தினேன்: 'தண்ணீரில் ஒரு சுறா உள்ளது!'\" என ஹாமல் கூறினார்.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 37,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.064016961,
+    "prompt_tokens": 108,
+    "prompt_time": 0.006227874,
+    "completion_tokens": 64,
+    "completion_time": 0.0696643,
+    "total_tokens": 172,
+    "total_time": 0.075892174,
+    "completion_tokens_details": {
+     "reasoning_tokens": 60
+    }
+   }
+  },
+  {
+   "id": "req-30",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Tamil",
+   "system": "",
+   "prompt": "அனைவரையும் தண்ணீரிலிருந்து வெளியே வரும்படி கத்தினேன்: 'தண்ணீரில் ஒரு சுறா உள்ளது!'\" என ஹாமல் கூறினார்.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 30,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 31,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 43,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 31
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-31",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Tamil",
+   "system": "",
+   "prompt": "380,000-க்கும் மேற்பட்ட மக்களைக் கொண்ட பலு நகரம், சிதைந்த கட்டடங்களின் தூசுகளோடு விழுந்து கிடக்கிறது.",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 36,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.395573937,
+    "prompt_tokens": 107,
+    "prompt_time": 0.006049784,
+    "completion_tokens": 64,
+    "completion_time": 0.067275411,
+    "total_tokens": 171,
+    "total_time": 0.073325195,
+    "completion_tokens_details": {
+     "reasoning_tokens": 7
+    }
+   }
+  },
+  {
+   "id": "req-32",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Tamil",
+   "system": "",
+   "prompt": "380,000-க்கும் மேற்பட்ட மக்களைக் கொண்ட பலு நகரம், சிதைந்த கட்டடங்களின் தூசுகளோடு விழுந்து கிடக்கிறது.",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 33,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 34,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 46,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 34
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-33",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Chinese",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "\"我冲着每个人叫喊，让他们从水里出来：“水里有鲨鱼！” Hammel 接着说。",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 28,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.393075122,
+    "prompt_tokens": 113,
+    "prompt_time": 0.009388634,
+    "completion_tokens": 36,
+    "completion_time": 0.052756557,
+    "total_tokens": 149,
+    "total_time": 0.062145191,
+    "completion_tokens_details": {
+     "reasoning_tokens": 23
+    }
+   }
+  },
+  {
+   "id": "req-34",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Chinese",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "\"我冲着每个人叫喊，让他们从水里出来：“水里有鲨鱼！” Hammel 接着说。",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 26,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 38,
+     "candidatesTokenCount": 3,
+     "totalTokenCount": 41,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 38
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-35",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Chinese",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "巴鲁市人口超过 38 万, 震后，到处是坍塌建筑物的废墟。",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 26,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.353320827,
+    "prompt_tokens": 111,
+    "prompt_time": 0.006171143,
+    "completion_tokens": 30,
+    "completion_time": 0.038042821,
+    "total_tokens": 141,
+    "total_time": 0.044213964,
+    "completion_tokens_details": {
+     "reasoning_tokens": 19
+    }
+   }
+  },
+  {
+   "id": "req-36",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Chinese",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "巴鲁市人口超过 38 万, 震后，到处是坍塌建筑物的废墟。",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 23,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 35,
+     "candidatesTokenCount": 3,
+     "totalTokenCount": 38,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 35
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-37",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Japanese",
+   "system": "",
+   "prompt": "「全員海から出るように叫んだ。サメがいるって！」ハメルは語る。",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 26,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.426523573,
+    "prompt_tokens": 97,
+    "prompt_time": 0.070099988,
+    "completion_tokens": 64,
+    "completion_time": 0.083159243,
+    "total_tokens": 161,
+    "total_time": 0.153259231,
+    "completion_tokens_details": {
+     "reasoning_tokens": 46
+    }
+   }
+  },
+  {
+   "id": "req-38",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Japanese",
+   "system": "",
+   "prompt": "「全員海から出るように叫んだ。サメがいるって！」ハメルは語る。",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 20,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 21,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 33,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 21
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-39",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "prose",
+   "lang": "Japanese",
+   "system": "",
+   "prompt": "38万人の人口があるパルでは、倒壊した建物の破片が散らばっている。",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 26,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.421582934,
+    "prompt_tokens": 97,
+    "prompt_time": 0.007536682,
+    "completion_tokens": 64,
+    "completion_time": 0.070398208,
+    "total_tokens": 161,
+    "total_time": 0.07793489,
+    "completion_tokens_details": {
+     "reasoning_tokens": 11
+    }
+   }
+  },
+  {
+   "id": "req-40",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "prose",
+   "lang": "Japanese",
+   "system": "",
+   "prompt": "38万人の人口があるパルでは、倒壊した建物の破片が散らばっている。",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 23,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 24,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 36,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 24
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-41",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "code",
+   "lang": "Rust",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "use super::*;\npub fn estimate(text: &str, chars_per_token: u64) -> Result<u64, Error> {\n    if chars_per_token == 0 {\n        return Err(Error::Invalid(\"ratio must be positive\".into()));\n    }\n    let n = text.chars().count() as u64;\n    Ok(n / chars_per_token + u64::from(n % chars_per_token != 0))\n}\n",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 87,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.562578833,
+    "prompt_tokens": 172,
+    "prompt_time": 0.041766197,
+    "completion_tokens": 22,
+    "completion_time": 0.022552886,
+    "total_tokens": 194,
+    "total_time": 0.064319083,
+    "completion_tokens_details": {
+     "reasoning_tokens": 11
+    }
+   }
+  },
+  {
+   "id": "req-42",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "code",
+   "lang": "Rust",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "use super::*;\npub fn estimate(text: &str, chars_per_token: u64) -> Result<u64, Error> {\n    if chars_per_token == 0 {\n        return Err(Error::Invalid(\"ratio must be positive\".into()));\n    }\n    let n = text.chars().count() as u64;\n    Ok(n / chars_per_token + u64::from(n % chars_per_token != 0))\n}\n",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 112,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 124,
+     "candidatesTokenCount": 2,
+     "totalTokenCount": 126,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 124
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-43",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "code",
+   "lang": "Rust",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "use super::*;\npub fn parse_usage(line: &str) -> Result<Usage, Error> {\n    let p: Vec<&str> = line.trim().split(',').collect();\n    if p.len() != 3 {\n        return Err(Error::Invalid(\"input,output,cached required\".into()));\n    }\n    let mut n = Vec::new();\n    for part in p {\n        if part.is_empty() || !part.bytes().all(|b| b.is_ascii_digit()) {\n            return Err(Error::Invalid(\"unsigned counter required\".into()));\n        }\n        n.push(part.parse::<u64>().map_err(|_| Error::Limit)?);\n    }\n    if n[2] > n[0] {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    Ok(Usage {\n        input: n[0],\n        output: n[1],\n        cached: n[2],\n    })\n}\n",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 191,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.350303914,
+    "prompt_tokens": 276,
+    "prompt_time": 0.020245021,
+    "completion_tokens": 25,
+    "completion_time": 0.030602741,
+    "total_tokens": 301,
+    "total_time": 0.050847762,
+    "completion_tokens_details": {
+     "reasoning_tokens": 15
+    }
+   }
+  },
+  {
+   "id": "req-44",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "code",
+   "lang": "Rust",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "use super::*;\npub fn parse_usage(line: &str) -> Result<Usage, Error> {\n    let p: Vec<&str> = line.trim().split(',').collect();\n    if p.len() != 3 {\n        return Err(Error::Invalid(\"input,output,cached required\".into()));\n    }\n    let mut n = Vec::new();\n    for part in p {\n        if part.is_empty() || !part.bytes().all(|b| b.is_ascii_digit()) {\n            return Err(Error::Invalid(\"unsigned counter required\".into()));\n        }\n        n.push(part.parse::<u64>().map_err(|_| Error::Limit)?);\n    }\n    if n[2] > n[0] {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    Ok(Usage {\n        input: n[0],\n        output: n[1],\n        cached: n[2],\n    })\n}\n",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 231,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 243,
+     "candidatesTokenCount": 4,
+     "totalTokenCount": 247,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 243
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-45",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "json",
+   "lang": "JSON",
+   "system": "",
+   "prompt": "{\"id\":\"chatcmpl-0001\",\"object\":\"chat.completion\",\"model\":\"example-model\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The invoice total is 42.50 EUR.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":12,\"total_tokens\":132}}",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 70,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.908882735,
+    "prompt_tokens": 141,
+    "prompt_time": 0.007953831,
+    "completion_tokens": 61,
+    "completion_time": 0.074995492,
+    "total_tokens": 202,
+    "total_time": 0.082949323,
+    "completion_tokens_details": {
+     "reasoning_tokens": 22
+    }
+   }
+  },
+  {
+   "id": "req-46",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "json",
+   "lang": "JSON",
+   "system": "",
+   "prompt": "{\"id\":\"chatcmpl-0001\",\"object\":\"chat.completion\",\"model\":\"example-model\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The invoice total is 42.50 EUR.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":12,\"total_tokens\":132}}",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 83,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 84,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 96,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 84
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-47",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "markdown",
+   "lang": "English",
+   "system": "",
+   "prompt": "Install Rust (`rustc`) and Python 3.10+. The core uses the Rust standard library; Python adapters compile into private temporary directories.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --init learning-artifacts/token-counter-and-cost-meter\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 1 --path learning-artifacts/token-counter-and-cost-meter\n```\n\n## Build route\n\n1. [Estimate text with a documented bound](stages/01-estimate-text-with-a-documented-bound/docs/en.md)\n2. [Validate recorded usage](stages/02-validate-recorded-usage/docs/en.md)\n3. [Price with checked integers](stages/03-price-with-checked-integers/docs/en.md)\n4. [Admit work against a ledger](stages/04-admit-work-against-a-ledger/docs/en.md)\n\n## Run with your own inputs",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 189,
+    "system": 0
+   },
+   "usage": {
+    "queue_time": 0.393171298,
+    "prompt_tokens": 260,
+    "prompt_time": 0.015050381,
+    "completion_tokens": 64,
+    "completion_time": 0.087374217,
+    "total_tokens": 324,
+    "total_time": 0.102424598,
+    "completion_tokens_details": {
+     "reasoning_tokens": 30
+    }
+   }
+  },
+  {
+   "id": "req-48",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "markdown",
+   "lang": "English",
+   "system": "",
+   "prompt": "Install Rust (`rustc`) and Python 3.10+. The core uses the Rust standard library; Python adapters compile into private temporary directories.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --init learning-artifacts/token-counter-and-cost-meter\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 1 --path learning-artifacts/token-counter-and-cost-meter\n```\n\n## Build route\n\n1. [Estimate text with a documented bound](stages/01-estimate-text-with-a-documented-bound/docs/en.md)\n2. [Validate recorded usage](stages/02-validate-recorded-usage/docs/en.md)\n3. [Price with checked integers](stages/03-price-with-checked-integers/docs/en.md)\n4. [Admit work against a ledger](stages/04-admit-work-against-a-ledger/docs/en.md)\n\n## Run with your own inputs",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 239,
+    "system": 0
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 240,
+     "candidatesTokenCount": 12,
+     "totalTokenCount": 252,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 240
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  },
+  {
+   "id": "req-49",
+   "provider": "groq",
+   "model": "openai/gpt-oss-20b",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "monday mood ☕️☕️☕️ + 47 unread emails 😵‍💫📧 send help 🆘",
+   "output_limit": 64,
+   "local": {
+    "tokenizer": "o200k_base",
+    "prompt": 29,
+    "system": 11
+   },
+   "usage": {
+    "queue_time": 0.728977959,
+    "prompt_tokens": 114,
+    "prompt_time": 0.006488583,
+    "completion_tokens": 24,
+    "completion_time": 0.032471051,
+    "total_tokens": 138,
+    "total_time": 0.038959634,
+    "completion_tokens_details": {
+     "reasoning_tokens": 12
+    }
+   }
+  },
+  {
+   "id": "req-50",
+   "provider": "gemini",
+   "model": "gemini-3.1-flash-lite",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "system": "You are a terse assistant. Reply with one word.",
+   "prompt": "monday mood ☕️☕️☕️ + 47 unread emails 😵‍💫📧 send help 🆘",
+   "output_limit": 16,
+   "local": {
+    "tokenizer": "gemma3",
+    "prompt": 25,
+    "system": 11
+   },
+   "usage": {
+    "usageMetadata": {
+     "promptTokenCount": 37,
+     "candidatesTokenCount": 3,
+     "totalTokenCount": 40,
+     "promptTokensDetails": [
+      {
+       "modality": "TEXT",
+       "tokenCount": 37
+      }
+     ],
+     "serviceTier": "standard"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,4140 @@
+{
+ "generated": "2026-10-26T16:20:02.692Z",
+ "method": "estimate = ceil(Unicode characters / 4); tokens = local tokenizer count without special tokens; factor = real tokens / estimated tokens; errorPct = (estimate - real) / real * 100",
+ "corpus": {
+  "built": "2026-10-26",
+  "samples": 200,
+  "sources": [
+   "NTREX-128 newstest2019-ref.eng-US.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.spa.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.fra.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.deu.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.rus.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.arb.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.hin.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.tam.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.zho-CN.txt (CC BY-SA 4.0)",
+   "NTREX-128 newstest2019-ref.jpn.txt (CC BY-SA 4.0)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage1.rs (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage2.rs (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage3.rs (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage4.rs (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/cli.rs (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py (MIT)",
+   "overrun/site/lib/usage.ts (MIT (this repo))",
+   "overrun/site/lib/ledger.ts (MIT (this repo))",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md (MIT)",
+   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/stages/03-price-with-checked-integers/docs/en.md (MIT)",
+   "overrun/docs/PRD.md (MIT (this repo))",
+   "synthetic, written for this study (MIT (this repo))"
+  ]
+ },
+ "tokenizers": [
+  {
+   "id": "o200k_base",
+   "label": "o200k_base",
+   "usedBy": "GPT-4o, GPT-5, gpt-oss (Groq)"
+  },
+  {
+   "id": "cl100k_base",
+   "label": "cl100k_base",
+   "usedBy": "GPT-4, GPT-3.5"
+  },
+  {
+   "id": "llama3",
+   "label": "Llama 3.1",
+   "usedBy": "Llama 3.x (Groq llama-3.1-8b-instant)",
+   "hf": "Xenova/Meta-Llama-3.1-Tokenizer"
+  },
+  {
+   "id": "gemma3",
+   "label": "Gemma 3",
+   "usedBy": "Gemma 3; closest open relative of Gemini's tokenizer",
+   "hf": "onnx-community/gemma-3-270m-it-ONNX"
+  }
+ ],
+ "headline": {
+  "worst": {
+   "group": "Tamil",
+   "tokenizer": "cl100k_base",
+   "tokens": 3352,
+   "charsPerToken": 0.74,
+   "errorPct": -81.3,
+   "factor": 5.35
+  },
+  "english": {
+   "tokenizer": "o200k_base",
+   "tokens": 470,
+   "charsPerToken": 4.68,
+   "errorPct": 18.5,
+   "factor": 0.84
+  }
+ },
+ "groups": [
+  {
+   "group": "English",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2201,
+   "estimate": 557,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 470,
+     "charsPerToken": 4.68,
+     "errorPct": 18.5,
+     "factor": 0.84
+    },
+    "cl100k_base": {
+     "tokens": 476,
+     "charsPerToken": 4.62,
+     "errorPct": 17,
+     "factor": 0.85
+    },
+    "llama3": {
+     "tokens": 476,
+     "charsPerToken": 4.62,
+     "errorPct": 17,
+     "factor": 0.85
+    },
+    "gemma3": {
+     "tokens": 478,
+     "charsPerToken": 4.6,
+     "errorPct": 16.5,
+     "factor": 0.86
+    }
+   }
+  },
+  {
+   "group": "Spanish",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2542,
+   "estimate": 641,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 575,
+     "charsPerToken": 4.42,
+     "errorPct": 11.5,
+     "factor": 0.9
+    },
+    "cl100k_base": {
+     "tokens": 682,
+     "charsPerToken": 3.73,
+     "errorPct": -6,
+     "factor": 1.06
+    },
+    "llama3": {
+     "tokens": 682,
+     "charsPerToken": 3.73,
+     "errorPct": -6,
+     "factor": 1.06
+    },
+    "gemma3": {
+     "tokens": 573,
+     "charsPerToken": 4.44,
+     "errorPct": 11.9,
+     "factor": 0.89
+    }
+   }
+  },
+  {
+   "group": "French",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2566,
+   "estimate": 646,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 617,
+     "charsPerToken": 4.16,
+     "errorPct": 4.7,
+     "factor": 0.96
+    },
+    "cl100k_base": {
+     "tokens": 725,
+     "charsPerToken": 3.54,
+     "errorPct": -10.9,
+     "factor": 1.12
+    },
+    "llama3": {
+     "tokens": 724,
+     "charsPerToken": 3.54,
+     "errorPct": -10.8,
+     "factor": 1.12
+    },
+    "gemma3": {
+     "tokens": 654,
+     "charsPerToken": 3.92,
+     "errorPct": -1.2,
+     "factor": 1.01
+    }
+   }
+  },
+  {
+   "group": "German",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2606,
+   "estimate": 657,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 610,
+     "charsPerToken": 4.27,
+     "errorPct": 7.7,
+     "factor": 0.93
+    },
+    "cl100k_base": {
+     "tokens": 728,
+     "charsPerToken": 3.58,
+     "errorPct": -9.8,
+     "factor": 1.11
+    },
+    "llama3": {
+     "tokens": 727,
+     "charsPerToken": 3.58,
+     "errorPct": -9.6,
+     "factor": 1.11
+    },
+    "gemma3": {
+     "tokens": 618,
+     "charsPerToken": 4.22,
+     "errorPct": 6.3,
+     "factor": 0.94
+    }
+   }
+  },
+  {
+   "group": "Russian",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2402,
+   "estimate": 607,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 683,
+     "charsPerToken": 3.52,
+     "errorPct": -11.1,
+     "factor": 1.13
+    },
+    "cl100k_base": {
+     "tokens": 1170,
+     "charsPerToken": 2.05,
+     "errorPct": -48.1,
+     "factor": 1.93
+    },
+    "llama3": {
+     "tokens": 793,
+     "charsPerToken": 3.03,
+     "errorPct": -23.5,
+     "factor": 1.31
+    },
+    "gemma3": {
+     "tokens": 658,
+     "charsPerToken": 3.65,
+     "errorPct": -7.8,
+     "factor": 1.08
+    }
+   }
+  },
+  {
+   "group": "Arabic",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 1932,
+   "estimate": 490,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 598,
+     "charsPerToken": 3.23,
+     "errorPct": -18.1,
+     "factor": 1.22
+    },
+    "cl100k_base": {
+     "tokens": 1333,
+     "charsPerToken": 1.45,
+     "errorPct": -63.2,
+     "factor": 2.72
+    },
+    "llama3": {
+     "tokens": 740,
+     "charsPerToken": 2.61,
+     "errorPct": -33.8,
+     "factor": 1.51
+    },
+    "gemma3": {
+     "tokens": 658,
+     "charsPerToken": 2.94,
+     "errorPct": -25.5,
+     "factor": 1.34
+    }
+   }
+  },
+  {
+   "group": "Hindi",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2239,
+   "estimate": 564,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 732,
+     "charsPerToken": 3.06,
+     "errorPct": -23,
+     "factor": 1.3
+    },
+    "cl100k_base": {
+     "tokens": 2184,
+     "charsPerToken": 1.03,
+     "errorPct": -74.2,
+     "factor": 3.87
+    },
+    "llama3": {
+     "tokens": 1186,
+     "charsPerToken": 1.89,
+     "errorPct": -52.4,
+     "factor": 2.1
+    },
+    "gemma3": {
+     "tokens": 628,
+     "charsPerToken": 3.57,
+     "errorPct": -10.2,
+     "factor": 1.11
+    }
+   }
+  },
+  {
+   "group": "Tamil",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 2478,
+   "estimate": 627,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 884,
+     "charsPerToken": 2.8,
+     "errorPct": -29.1,
+     "factor": 1.41
+    },
+    "cl100k_base": {
+     "tokens": 3352,
+     "charsPerToken": 0.74,
+     "errorPct": -81.3,
+     "factor": 5.35
+    },
+    "llama3": {
+     "tokens": 3352,
+     "charsPerToken": 0.74,
+     "errorPct": -81.3,
+     "factor": 5.35
+    },
+    "gemma3": {
+     "tokens": 688,
+     "charsPerToken": 3.6,
+     "errorPct": -8.9,
+     "factor": 1.1
+    }
+   }
+  },
+  {
+   "group": "Chinese",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 719,
+   "estimate": 186,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 575,
+     "charsPerToken": 1.25,
+     "errorPct": -67.7,
+     "factor": 3.09
+    },
+    "cl100k_base": {
+     "tokens": 869,
+     "charsPerToken": 0.83,
+     "errorPct": -78.6,
+     "factor": 4.67
+    },
+    "llama3": {
+     "tokens": 594,
+     "charsPerToken": 1.21,
+     "errorPct": -68.7,
+     "factor": 3.19
+    },
+    "gemma3": {
+     "tokens": 514,
+     "charsPerToken": 1.4,
+     "errorPct": -63.8,
+     "factor": 2.76
+    }
+   }
+  },
+  {
+   "group": "Japanese",
+   "kind": "prose",
+   "samples": 15,
+   "chars": 942,
+   "estimate": 241,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 752,
+     "charsPerToken": 1.25,
+     "errorPct": -68,
+     "factor": 3.12
+    },
+    "cl100k_base": {
+     "tokens": 1018,
+     "charsPerToken": 0.93,
+     "errorPct": -76.3,
+     "factor": 4.22
+    },
+    "llama3": {
+     "tokens": 675,
+     "charsPerToken": 1.4,
+     "errorPct": -64.3,
+     "factor": 2.8
+    },
+    "gemma3": {
+     "tokens": 555,
+     "charsPerToken": 1.7,
+     "errorPct": -56.6,
+     "factor": 2.3
+    }
+   }
+  },
+  {
+   "group": "code",
+   "kind": "code",
+   "samples": 15,
+   "chars": 12191,
+   "estimate": 3053,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 3011,
+     "charsPerToken": 4.05,
+     "errorPct": 1.4,
+     "factor": 0.99
+    },
+    "cl100k_base": {
+     "tokens": 2999,
+     "charsPerToken": 4.07,
+     "errorPct": 1.8,
+     "factor": 0.98
+    },
+    "llama3": {
+     "tokens": 2999,
+     "charsPerToken": 4.07,
+     "errorPct": 1.8,
+     "factor": 0.98
+    },
+    "gemma3": {
+     "tokens": 3630,
+     "charsPerToken": 3.36,
+     "errorPct": -15.9,
+     "factor": 1.19
+    }
+   }
+  },
+  {
+   "group": "markdown",
+   "kind": "markdown",
+   "samples": 11,
+   "chars": 7555,
+   "estimate": 1893,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 1642,
+     "charsPerToken": 4.6,
+     "errorPct": 15.3,
+     "factor": 0.87
+    },
+    "cl100k_base": {
+     "tokens": 1651,
+     "charsPerToken": 4.58,
+     "errorPct": 14.7,
+     "factor": 0.87
+    },
+    "llama3": {
+     "tokens": 1651,
+     "charsPerToken": 4.58,
+     "errorPct": 14.7,
+     "factor": 0.87
+    },
+    "gemma3": {
+     "tokens": 1854,
+     "charsPerToken": 4.07,
+     "errorPct": 2.1,
+     "factor": 0.98
+    }
+   }
+  },
+  {
+   "group": "json",
+   "kind": "json",
+   "samples": 12,
+   "chars": 5411,
+   "estimate": 1358,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 1744,
+     "charsPerToken": 3.1,
+     "errorPct": -22.1,
+     "factor": 1.28
+    },
+    "cl100k_base": {
+     "tokens": 1741,
+     "charsPerToken": 3.11,
+     "errorPct": -22,
+     "factor": 1.28
+    },
+    "llama3": {
+     "tokens": 1741,
+     "charsPerToken": 3.11,
+     "errorPct": -22,
+     "factor": 1.28
+    },
+    "gemma3": {
+     "tokens": 2118,
+     "charsPerToken": 2.55,
+     "errorPct": -35.9,
+     "factor": 1.56
+    }
+   }
+  },
+  {
+   "group": "emoji",
+   "kind": "emoji",
+   "samples": 12,
+   "chars": 742,
+   "estimate": 189,
+   "byTokenizer": {
+    "o200k_base": {
+     "tokens": 314,
+     "charsPerToken": 2.36,
+     "errorPct": -39.8,
+     "factor": 1.66
+    },
+    "cl100k_base": {
+     "tokens": 368,
+     "charsPerToken": 2.02,
+     "errorPct": -48.6,
+     "factor": 1.95
+    },
+    "llama3": {
+     "tokens": 360,
+     "charsPerToken": 2.06,
+     "errorPct": -47.5,
+     "factor": 1.9
+    },
+    "gemma3": {
+     "tokens": 260,
+     "charsPerToken": 2.85,
+     "errorPct": -27.3,
+     "factor": 1.38
+    }
+   }
+  }
+ ],
+ "rows": [
+  {
+   "id": "prose-eng-US-51",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 93,
+   "estimate": 24,
+   "tokens": {
+    "o200k_base": 24,
+    "cl100k_base": 25,
+    "llama3": 25,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-eng-US-148",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 102,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 25,
+    "cl100k_base": 25,
+    "llama3": 25,
+    "gemma3": 28
+   }
+  },
+  {
+   "id": "prose-eng-US-342",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 85,
+   "estimate": 22,
+   "tokens": {
+    "o200k_base": 19,
+    "cl100k_base": 19,
+    "llama3": 19,
+    "gemma3": 18
+   }
+  },
+  {
+   "id": "prose-eng-US-439",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 238,
+   "estimate": 60,
+   "tokens": {
+    "o200k_base": 52,
+    "cl100k_base": 51,
+    "llama3": 51,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-eng-US-536",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 233,
+   "estimate": 59,
+   "tokens": {
+    "o200k_base": 48,
+    "cl100k_base": 48,
+    "llama3": 48,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-eng-US-633",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 150,
+   "estimate": 38,
+   "tokens": {
+    "o200k_base": 32,
+    "cl100k_base": 34,
+    "llama3": 34,
+    "gemma3": 35
+   }
+  },
+  {
+   "id": "prose-eng-US-827",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 81,
+   "estimate": 21,
+   "tokens": {
+    "o200k_base": 15,
+    "cl100k_base": 15,
+    "llama3": 15,
+    "gemma3": 15
+   }
+  },
+  {
+   "id": "prose-eng-US-924",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 164,
+   "estimate": 41,
+   "tokens": {
+    "o200k_base": 32,
+    "cl100k_base": 33,
+    "llama3": 33,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-eng-US-1118",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 199,
+   "estimate": 50,
+   "tokens": {
+    "o200k_base": 46,
+    "cl100k_base": 46,
+    "llama3": 46,
+    "gemma3": 44
+   }
+  },
+  {
+   "id": "prose-eng-US-1215",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 170,
+   "estimate": 43,
+   "tokens": {
+    "o200k_base": 37,
+    "cl100k_base": 37,
+    "llama3": 37,
+    "gemma3": 38
+   }
+  },
+  {
+   "id": "prose-eng-US-1312",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 182,
+   "estimate": 46,
+   "tokens": {
+    "o200k_base": 36,
+    "cl100k_base": 37,
+    "llama3": 37,
+    "gemma3": 38
+   }
+  },
+  {
+   "id": "prose-eng-US-1409",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 140,
+   "estimate": 35,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 29,
+    "llama3": 29,
+    "gemma3": 29
+   }
+  },
+  {
+   "id": "prose-eng-US-1506",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 159,
+   "estimate": 40,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 31,
+    "llama3": 31,
+    "gemma3": 30
+   }
+  },
+  {
+   "id": "prose-eng-US-1603",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 93,
+   "estimate": 24,
+   "tokens": {
+    "o200k_base": 25,
+    "cl100k_base": 25,
+    "llama3": 25,
+    "gemma3": 26
+   }
+  },
+  {
+   "id": "prose-eng-US-1700",
+   "kind": "prose",
+   "lang": "English",
+   "chars": 112,
+   "estimate": 28,
+   "tokens": {
+    "o200k_base": 20,
+    "cl100k_base": 21,
+    "llama3": 21,
+    "gemma3": 20
+   }
+  },
+  {
+   "id": "prose-spa-51",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 77,
+   "estimate": 20,
+   "tokens": {
+    "o200k_base": 21,
+    "cl100k_base": 24,
+    "llama3": 24,
+    "gemma3": 20
+   }
+  },
+  {
+   "id": "prose-spa-148",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 104,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 35,
+    "llama3": 35,
+    "gemma3": 34
+   }
+  },
+  {
+   "id": "prose-spa-342",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 106,
+   "estimate": 27,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 30,
+    "llama3": 30,
+    "gemma3": 25
+   }
+  },
+  {
+   "id": "prose-spa-439",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 301,
+   "estimate": 76,
+   "tokens": {
+    "o200k_base": 71,
+    "cl100k_base": 76,
+    "llama3": 76,
+    "gemma3": 70
+   }
+  },
+  {
+   "id": "prose-spa-536",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 245,
+   "estimate": 62,
+   "tokens": {
+    "o200k_base": 51,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-spa-633",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 176,
+   "estimate": 44,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 53,
+    "llama3": 53,
+    "gemma3": 44
+   }
+  },
+  {
+   "id": "prose-spa-827",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 99,
+   "estimate": 25,
+   "tokens": {
+    "o200k_base": 18,
+    "cl100k_base": 22,
+    "llama3": 22,
+    "gemma3": 17
+   }
+  },
+  {
+   "id": "prose-spa-924",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 198,
+   "estimate": 50,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 52,
+    "llama3": 52,
+    "gemma3": 41
+   }
+  },
+  {
+   "id": "prose-spa-1118",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 192,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 51,
+    "llama3": 51,
+    "gemma3": 42
+   }
+  },
+  {
+   "id": "prose-spa-1215",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 192,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 46,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-spa-1312",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 200,
+   "estimate": 50,
+   "tokens": {
+    "o200k_base": 42,
+    "cl100k_base": 54,
+    "llama3": 54,
+    "gemma3": 41
+   }
+  },
+  {
+   "id": "prose-spa-1409",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 189,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 40,
+    "cl100k_base": 51,
+    "llama3": 51,
+    "gemma3": 40
+   }
+  },
+  {
+   "id": "prose-spa-1506",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 194,
+   "estimate": 49,
+   "tokens": {
+    "o200k_base": 42,
+    "cl100k_base": 52,
+    "llama3": 52,
+    "gemma3": 42
+   }
+  },
+  {
+   "id": "prose-spa-1603",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 118,
+   "estimate": 30,
+   "tokens": {
+    "o200k_base": 32,
+    "cl100k_base": 35,
+    "llama3": 35,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-spa-1700",
+   "kind": "prose",
+   "lang": "Spanish",
+   "chars": 151,
+   "estimate": 38,
+   "tokens": {
+    "o200k_base": 27,
+    "cl100k_base": 35,
+    "llama3": 35,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-fra-51",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 89,
+   "estimate": 23,
+   "tokens": {
+    "o200k_base": 29,
+    "cl100k_base": 31,
+    "llama3": 31,
+    "gemma3": 34
+   }
+  },
+  {
+   "id": "prose-fra-148",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 108,
+   "estimate": 27,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 36,
+    "llama3": 36,
+    "gemma3": 35
+   }
+  },
+  {
+   "id": "prose-fra-342",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 128,
+   "estimate": 32,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 39,
+    "llama3": 39,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-fra-439",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 248,
+   "estimate": 62,
+   "tokens": {
+    "o200k_base": 62,
+    "cl100k_base": 72,
+    "llama3": 72,
+    "gemma3": 66
+   }
+  },
+  {
+   "id": "prose-fra-536",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 239,
+   "estimate": 60,
+   "tokens": {
+    "o200k_base": 52,
+    "cl100k_base": 58,
+    "llama3": 58,
+    "gemma3": 51
+   }
+  },
+  {
+   "id": "prose-fra-633",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 180,
+   "estimate": 45,
+   "tokens": {
+    "o200k_base": 45,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-fra-827",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 115,
+   "estimate": 29,
+   "tokens": {
+    "o200k_base": 20,
+    "cl100k_base": 24,
+    "llama3": 24,
+    "gemma3": 20
+   }
+  },
+  {
+   "id": "prose-fra-924",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 211,
+   "estimate": 53,
+   "tokens": {
+    "o200k_base": 49,
+    "cl100k_base": 60,
+    "llama3": 60,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-fra-1118",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 202,
+   "estimate": 51,
+   "tokens": {
+    "o200k_base": 55,
+    "cl100k_base": 61,
+    "llama3": 61,
+    "gemma3": 60
+   }
+  },
+  {
+   "id": "prose-fra-1215",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 206,
+   "estimate": 52,
+   "tokens": {
+    "o200k_base": 54,
+    "cl100k_base": 62,
+    "llama3": 61,
+    "gemma3": 58
+   }
+  },
+  {
+   "id": "prose-fra-1312",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 201,
+   "estimate": 51,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 54,
+    "llama3": 54,
+    "gemma3": 46
+   }
+  },
+  {
+   "id": "prose-fra-1409",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 171,
+   "estimate": 43,
+   "tokens": {
+    "o200k_base": 38,
+    "cl100k_base": 46,
+    "llama3": 46,
+    "gemma3": 39
+   }
+  },
+  {
+   "id": "prose-fra-1506",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 192,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 53,
+    "llama3": 53,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "prose-fra-1603",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 110,
+   "estimate": 28,
+   "tokens": {
+    "o200k_base": 34,
+    "cl100k_base": 36,
+    "llama3": 36,
+    "gemma3": 39
+   }
+  },
+  {
+   "id": "prose-fra-1700",
+   "kind": "prose",
+   "lang": "French",
+   "chars": 166,
+   "estimate": 42,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 37,
+    "llama3": 37,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-deu-51",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 109,
+   "estimate": 28,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 33,
+    "llama3": 33,
+    "gemma3": 30
+   }
+  },
+  {
+   "id": "prose-deu-148",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 112,
+   "estimate": 28,
+   "tokens": {
+    "o200k_base": 33,
+    "cl100k_base": 41,
+    "llama3": 41,
+    "gemma3": 37
+   }
+  },
+  {
+   "id": "prose-deu-342",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 103,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 27,
+    "cl100k_base": 30,
+    "llama3": 30,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-deu-439",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 252,
+   "estimate": 63,
+   "tokens": {
+    "o200k_base": 65,
+    "cl100k_base": 75,
+    "llama3": 75,
+    "gemma3": 66
+   }
+  },
+  {
+   "id": "prose-deu-536",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 254,
+   "estimate": 64,
+   "tokens": {
+    "o200k_base": 58,
+    "cl100k_base": 65,
+    "llama3": 65,
+    "gemma3": 59
+   }
+  },
+  {
+   "id": "prose-deu-633",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 200,
+   "estimate": 50,
+   "tokens": {
+    "o200k_base": 47,
+    "cl100k_base": 60,
+    "llama3": 60,
+    "gemma3": 49
+   }
+  },
+  {
+   "id": "prose-deu-827",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 96,
+   "estimate": 24,
+   "tokens": {
+    "o200k_base": 18,
+    "cl100k_base": 21,
+    "llama3": 21,
+    "gemma3": 18
+   }
+  },
+  {
+   "id": "prose-deu-924",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 209,
+   "estimate": 53,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 40
+   }
+  },
+  {
+   "id": "prose-deu-1118",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 211,
+   "estimate": 53,
+   "tokens": {
+    "o200k_base": 46,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 47
+   }
+  },
+  {
+   "id": "prose-deu-1215",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 203,
+   "estimate": 51,
+   "tokens": {
+    "o200k_base": 53,
+    "cl100k_base": 60,
+    "llama3": 60,
+    "gemma3": 54
+   }
+  },
+  {
+   "id": "prose-deu-1312",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 219,
+   "estimate": 55,
+   "tokens": {
+    "o200k_base": 49,
+    "cl100k_base": 58,
+    "llama3": 58,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-deu-1409",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 173,
+   "estimate": 44,
+   "tokens": {
+    "o200k_base": 38,
+    "cl100k_base": 46,
+    "llama3": 46,
+    "gemma3": 37
+   }
+  },
+  {
+   "id": "prose-deu-1506",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 218,
+   "estimate": 55,
+   "tokens": {
+    "o200k_base": 45,
+    "cl100k_base": 58,
+    "llama3": 57,
+    "gemma3": 44
+   }
+  },
+  {
+   "id": "prose-deu-1603",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 105,
+   "estimate": 27,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 35,
+    "llama3": 35,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-deu-1700",
+   "kind": "prose",
+   "lang": "German",
+   "chars": 142,
+   "estimate": 36,
+   "tokens": {
+    "o200k_base": 27,
+    "cl100k_base": 34,
+    "llama3": 34,
+    "gemma3": 29
+   }
+  },
+  {
+   "id": "prose-rus-51",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 82,
+   "estimate": 21,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 43,
+    "llama3": 31,
+    "gemma3": 29
+   }
+  },
+  {
+   "id": "prose-rus-148",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 87,
+   "estimate": 22,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 45,
+    "llama3": 31,
+    "gemma3": 31
+   }
+  },
+  {
+   "id": "prose-rus-342",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 128,
+   "estimate": 32,
+   "tokens": {
+    "o200k_base": 34,
+    "cl100k_base": 63,
+    "llama3": 45,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-rus-439",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 214,
+   "estimate": 54,
+   "tokens": {
+    "o200k_base": 63,
+    "cl100k_base": 101,
+    "llama3": 72,
+    "gemma3": 59
+   }
+  },
+  {
+   "id": "prose-rus-536",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 214,
+   "estimate": 54,
+   "tokens": {
+    "o200k_base": 76,
+    "cl100k_base": 115,
+    "llama3": 88,
+    "gemma3": 72
+   }
+  },
+  {
+   "id": "prose-rus-633",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 164,
+   "estimate": 41,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 79,
+    "llama3": 47,
+    "gemma3": 41
+   }
+  },
+  {
+   "id": "prose-rus-827",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 90,
+   "estimate": 23,
+   "tokens": {
+    "o200k_base": 20,
+    "cl100k_base": 36,
+    "llama3": 27,
+    "gemma3": 20
+   }
+  },
+  {
+   "id": "prose-rus-924",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 237,
+   "estimate": 60,
+   "tokens": {
+    "o200k_base": 56,
+    "cl100k_base": 109,
+    "llama3": 74,
+    "gemma3": 57
+   }
+  },
+  {
+   "id": "prose-rus-1118",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 180,
+   "estimate": 45,
+   "tokens": {
+    "o200k_base": 46,
+    "cl100k_base": 84,
+    "llama3": 54,
+    "gemma3": 45
+   }
+  },
+  {
+   "id": "prose-rus-1215",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 201,
+   "estimate": 51,
+   "tokens": {
+    "o200k_base": 60,
+    "cl100k_base": 99,
+    "llama3": 66,
+    "gemma3": 60
+   }
+  },
+  {
+   "id": "prose-rus-1312",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 197,
+   "estimate": 50,
+   "tokens": {
+    "o200k_base": 52,
+    "cl100k_base": 93,
+    "llama3": 60,
+    "gemma3": 45
+   }
+  },
+  {
+   "id": "prose-rus-1409",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 169,
+   "estimate": 43,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 87,
+    "llama3": 52,
+    "gemma3": 42
+   }
+  },
+  {
+   "id": "prose-rus-1506",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 196,
+   "estimate": 49,
+   "tokens": {
+    "o200k_base": 51,
+    "cl100k_base": 88,
+    "llama3": 57,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-rus-1603",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 97,
+   "estimate": 25,
+   "tokens": {
+    "o200k_base": 35,
+    "cl100k_base": 53,
+    "llama3": 39,
+    "gemma3": 34
+   }
+  },
+  {
+   "id": "prose-rus-1700",
+   "kind": "prose",
+   "lang": "Russian",
+   "chars": 146,
+   "estimate": 37,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 75,
+    "llama3": 50,
+    "gemma3": 41
+   }
+  },
+  {
+   "id": "prose-arb-51",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 99,
+   "estimate": 25,
+   "tokens": {
+    "o200k_base": 33,
+    "cl100k_base": 68,
+    "llama3": 43,
+    "gemma3": 36
+   }
+  },
+  {
+   "id": "prose-arb-148",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 93,
+   "estimate": 24,
+   "tokens": {
+    "o200k_base": 29,
+    "cl100k_base": 60,
+    "llama3": 36,
+    "gemma3": 34
+   }
+  },
+  {
+   "id": "prose-arb-342",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 67,
+   "estimate": 17,
+   "tokens": {
+    "o200k_base": 21,
+    "cl100k_base": 49,
+    "llama3": 23,
+    "gemma3": 22
+   }
+  },
+  {
+   "id": "prose-arb-439",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 176,
+   "estimate": 44,
+   "tokens": {
+    "o200k_base": 54,
+    "cl100k_base": 120,
+    "llama3": 67,
+    "gemma3": 61
+   }
+  },
+  {
+   "id": "prose-arb-536",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 214,
+   "estimate": 54,
+   "tokens": {
+    "o200k_base": 62,
+    "cl100k_base": 140,
+    "llama3": 77,
+    "gemma3": 70
+   }
+  },
+  {
+   "id": "prose-arb-633",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 137,
+   "estimate": 35,
+   "tokens": {
+    "o200k_base": 40,
+    "cl100k_base": 94,
+    "llama3": 49,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "prose-arb-827",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 69,
+   "estimate": 18,
+   "tokens": {
+    "o200k_base": 24,
+    "cl100k_base": 50,
+    "llama3": 29,
+    "gemma3": 24
+   }
+  },
+  {
+   "id": "prose-arb-924",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 161,
+   "estimate": 41,
+   "tokens": {
+    "o200k_base": 51,
+    "cl100k_base": 108,
+    "llama3": 58,
+    "gemma3": 52
+   }
+  },
+  {
+   "id": "prose-arb-1118",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 135,
+   "estimate": 34,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 90,
+    "llama3": 53,
+    "gemma3": 46
+   }
+  },
+  {
+   "id": "prose-arb-1215",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 160,
+   "estimate": 40,
+   "tokens": {
+    "o200k_base": 53,
+    "cl100k_base": 116,
+    "llama3": 67,
+    "gemma3": 57
+   }
+  },
+  {
+   "id": "prose-arb-1312",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 152,
+   "estimate": 38,
+   "tokens": {
+    "o200k_base": 42,
+    "cl100k_base": 107,
+    "llama3": 55,
+    "gemma3": 45
+   }
+  },
+  {
+   "id": "prose-arb-1409",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 125,
+   "estimate": 32,
+   "tokens": {
+    "o200k_base": 38,
+    "cl100k_base": 90,
+    "llama3": 47,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "prose-arb-1506",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 130,
+   "estimate": 33,
+   "tokens": {
+    "o200k_base": 34,
+    "cl100k_base": 88,
+    "llama3": 46,
+    "gemma3": 39
+   }
+  },
+  {
+   "id": "prose-arb-1603",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 77,
+   "estimate": 20,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 59,
+    "llama3": 36,
+    "gemma3": 36
+   }
+  },
+  {
+   "id": "prose-arb-1700",
+   "kind": "prose",
+   "lang": "Arabic",
+   "chars": 137,
+   "estimate": 35,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 94,
+    "llama3": 54,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-hin-51",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 92,
+   "estimate": 23,
+   "tokens": {
+    "o200k_base": 34,
+    "cl100k_base": 87,
+    "llama3": 51,
+    "gemma3": 29
+   }
+  },
+  {
+   "id": "prose-hin-148",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 100,
+   "estimate": 25,
+   "tokens": {
+    "o200k_base": 37,
+    "cl100k_base": 96,
+    "llama3": 52,
+    "gemma3": 36
+   }
+  },
+  {
+   "id": "prose-hin-342",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 101,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 96,
+    "llama3": 53,
+    "gemma3": 23
+   }
+  },
+  {
+   "id": "prose-hin-439",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 205,
+   "estimate": 52,
+   "tokens": {
+    "o200k_base": 67,
+    "cl100k_base": 194,
+    "llama3": 110,
+    "gemma3": 55
+   }
+  },
+  {
+   "id": "prose-hin-536",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 259,
+   "estimate": 65,
+   "tokens": {
+    "o200k_base": 87,
+    "cl100k_base": 257,
+    "llama3": 140,
+    "gemma3": 68
+   }
+  },
+  {
+   "id": "prose-hin-633",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 139,
+   "estimate": 35,
+   "tokens": {
+    "o200k_base": 43,
+    "cl100k_base": 132,
+    "llama3": 73,
+    "gemma3": 36
+   }
+  },
+  {
+   "id": "prose-hin-827",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 90,
+   "estimate": 23,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 91,
+    "llama3": 45,
+    "gemma3": 24
+   }
+  },
+  {
+   "id": "prose-hin-924",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 164,
+   "estimate": 41,
+   "tokens": {
+    "o200k_base": 53,
+    "cl100k_base": 168,
+    "llama3": 87,
+    "gemma3": 47
+   }
+  },
+  {
+   "id": "prose-hin-1118",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 196,
+   "estimate": 49,
+   "tokens": {
+    "o200k_base": 55,
+    "cl100k_base": 187,
+    "llama3": 102,
+    "gemma3": 49
+   }
+  },
+  {
+   "id": "prose-hin-1215",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 192,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 67,
+    "cl100k_base": 188,
+    "llama3": 97,
+    "gemma3": 59
+   }
+  },
+  {
+   "id": "prose-hin-1312",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 170,
+   "estimate": 43,
+   "tokens": {
+    "o200k_base": 49,
+    "cl100k_base": 167,
+    "llama3": 90,
+    "gemma3": 46
+   }
+  },
+  {
+   "id": "prose-hin-1409",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 126,
+   "estimate": 32,
+   "tokens": {
+    "o200k_base": 44,
+    "cl100k_base": 135,
+    "llama3": 67,
+    "gemma3": 37
+   }
+  },
+  {
+   "id": "prose-hin-1506",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 184,
+   "estimate": 46,
+   "tokens": {
+    "o200k_base": 61,
+    "cl100k_base": 182,
+    "llama3": 98,
+    "gemma3": 52
+   }
+  },
+  {
+   "id": "prose-hin-1603",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 117,
+   "estimate": 30,
+   "tokens": {
+    "o200k_base": 40,
+    "cl100k_base": 105,
+    "llama3": 65,
+    "gemma3": 35
+   }
+  },
+  {
+   "id": "prose-hin-1700",
+   "kind": "prose",
+   "lang": "Hindi",
+   "chars": 104,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 37,
+    "cl100k_base": 99,
+    "llama3": 56,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-tam-51",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 102,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 37,
+    "cl100k_base": 138,
+    "llama3": 138,
+    "gemma3": 30
+   }
+  },
+  {
+   "id": "prose-tam-148",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 101,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 36,
+    "cl100k_base": 127,
+    "llama3": 127,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-tam-342",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 95,
+   "estimate": 24,
+   "tokens": {
+    "o200k_base": 35,
+    "cl100k_base": 130,
+    "llama3": 130,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-tam-439",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 189,
+   "estimate": 48,
+   "tokens": {
+    "o200k_base": 60,
+    "cl100k_base": 242,
+    "llama3": 242,
+    "gemma3": 44
+   }
+  },
+  {
+   "id": "prose-tam-536",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 242,
+   "estimate": 61,
+   "tokens": {
+    "o200k_base": 97,
+    "cl100k_base": 334,
+    "llama3": 334,
+    "gemma3": 69
+   }
+  },
+  {
+   "id": "prose-tam-633",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 150,
+   "estimate": 38,
+   "tokens": {
+    "o200k_base": 55,
+    "cl100k_base": 208,
+    "llama3": 208,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "prose-tam-827",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 113,
+   "estimate": 29,
+   "tokens": {
+    "o200k_base": 39,
+    "cl100k_base": 160,
+    "llama3": 160,
+    "gemma3": 25
+   }
+  },
+  {
+   "id": "prose-tam-924",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 185,
+   "estimate": 47,
+   "tokens": {
+    "o200k_base": 59,
+    "cl100k_base": 253,
+    "llama3": 253,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "prose-tam-1118",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 187,
+   "estimate": 47,
+   "tokens": {
+    "o200k_base": 63,
+    "cl100k_base": 263,
+    "llama3": 263,
+    "gemma3": 46
+   }
+  },
+  {
+   "id": "prose-tam-1215",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 217,
+   "estimate": 55,
+   "tokens": {
+    "o200k_base": 79,
+    "cl100k_base": 277,
+    "llama3": 277,
+    "gemma3": 68
+   }
+  },
+  {
+   "id": "prose-tam-1312",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 272,
+   "estimate": 68,
+   "tokens": {
+    "o200k_base": 87,
+    "cl100k_base": 378,
+    "llama3": 378,
+    "gemma3": 67
+   }
+  },
+  {
+   "id": "prose-tam-1409",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 181,
+   "estimate": 46,
+   "tokens": {
+    "o200k_base": 69,
+    "cl100k_base": 240,
+    "llama3": 240,
+    "gemma3": 57
+   }
+  },
+  {
+   "id": "prose-tam-1506",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 196,
+   "estimate": 49,
+   "tokens": {
+    "o200k_base": 66,
+    "cl100k_base": 274,
+    "llama3": 274,
+    "gemma3": 54
+   }
+  },
+  {
+   "id": "prose-tam-1603",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 102,
+   "estimate": 26,
+   "tokens": {
+    "o200k_base": 41,
+    "cl100k_base": 136,
+    "llama3": 136,
+    "gemma3": 37
+   }
+  },
+  {
+   "id": "prose-tam-1700",
+   "kind": "prose",
+   "lang": "Tamil",
+   "chars": 146,
+   "estimate": 37,
+   "tokens": {
+    "o200k_base": 61,
+    "cl100k_base": 192,
+    "llama3": 192,
+    "gemma3": 45
+   }
+  },
+  {
+   "id": "prose-zho-CN-51",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 39,
+   "estimate": 10,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 42,
+    "llama3": 28,
+    "gemma3": 26
+   }
+  },
+  {
+   "id": "prose-zho-CN-148",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 29,
+   "estimate": 8,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 37,
+    "llama3": 27,
+    "gemma3": 23
+   }
+  },
+  {
+   "id": "prose-zho-CN-342",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 41,
+   "estimate": 11,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 49,
+    "llama3": 34,
+    "gemma3": 31
+   }
+  },
+  {
+   "id": "prose-zho-CN-439",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 85,
+   "estimate": 22,
+   "tokens": {
+    "o200k_base": 64,
+    "cl100k_base": 82,
+    "llama3": 62,
+    "gemma3": 49
+   }
+  },
+  {
+   "id": "prose-zho-CN-536",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 83,
+   "estimate": 21,
+   "tokens": {
+    "o200k_base": 63,
+    "cl100k_base": 89,
+    "llama3": 65,
+    "gemma3": 58
+   }
+  },
+  {
+   "id": "prose-zho-CN-633",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 40,
+   "estimate": 10,
+   "tokens": {
+    "o200k_base": 33,
+    "cl100k_base": 57,
+    "llama3": 34,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-zho-CN-827",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 32,
+   "estimate": 8,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 49,
+    "llama3": 30,
+    "gemma3": 21
+   }
+  },
+  {
+   "id": "prose-zho-CN-924",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 68,
+   "estimate": 17,
+   "tokens": {
+    "o200k_base": 57,
+    "cl100k_base": 91,
+    "llama3": 59,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-zho-CN-1118",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 51,
+   "estimate": 13,
+   "tokens": {
+    "o200k_base": 39,
+    "cl100k_base": 60,
+    "llama3": 42,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-zho-CN-1215",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 57,
+   "estimate": 15,
+   "tokens": {
+    "o200k_base": 50,
+    "cl100k_base": 73,
+    "llama3": 51,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-zho-CN-1312",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 50,
+   "estimate": 13,
+   "tokens": {
+    "o200k_base": 34,
+    "cl100k_base": 56,
+    "llama3": 37,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-zho-CN-1409",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 35,
+   "estimate": 9,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 42,
+    "llama3": 30,
+    "gemma3": 27
+   }
+  },
+  {
+   "id": "prose-zho-CN-1506",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 45,
+   "estimate": 12,
+   "tokens": {
+    "o200k_base": 38,
+    "cl100k_base": 52,
+    "llama3": 38,
+    "gemma3": 33
+   }
+  },
+  {
+   "id": "prose-zho-CN-1603",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 26,
+   "estimate": 7,
+   "tokens": {
+    "o200k_base": 23,
+    "cl100k_base": 31,
+    "llama3": 23,
+    "gemma3": 23
+   }
+  },
+  {
+   "id": "prose-zho-CN-1700",
+   "kind": "prose",
+   "lang": "Chinese",
+   "chars": 38,
+   "estimate": 10,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 59,
+    "llama3": 34,
+    "gemma3": 32
+   }
+  },
+  {
+   "id": "prose-jpn-51",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 31,
+   "estimate": 8,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 32,
+    "llama3": 24,
+    "gemma3": 20
+   }
+  },
+  {
+   "id": "prose-jpn-148",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 33,
+   "estimate": 9,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 34,
+    "llama3": 23,
+    "gemma3": 23
+   }
+  },
+  {
+   "id": "prose-jpn-342",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 35,
+   "estimate": 9,
+   "tokens": {
+    "o200k_base": 31,
+    "cl100k_base": 47,
+    "llama3": 28,
+    "gemma3": 23
+   }
+  },
+  {
+   "id": "prose-jpn-439",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 99,
+   "estimate": 25,
+   "tokens": {
+    "o200k_base": 73,
+    "cl100k_base": 98,
+    "llama3": 66,
+    "gemma3": 52
+   }
+  },
+  {
+   "id": "prose-jpn-536",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 112,
+   "estimate": 28,
+   "tokens": {
+    "o200k_base": 85,
+    "cl100k_base": 111,
+    "llama3": 75,
+    "gemma3": 57
+   }
+  },
+  {
+   "id": "prose-jpn-633",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 57,
+   "estimate": 15,
+   "tokens": {
+    "o200k_base": 57,
+    "cl100k_base": 78,
+    "llama3": 46,
+    "gemma3": 40
+   }
+  },
+  {
+   "id": "prose-jpn-827",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 31,
+   "estimate": 8,
+   "tokens": {
+    "o200k_base": 28,
+    "cl100k_base": 42,
+    "llama3": 27,
+    "gemma3": 18
+   }
+  },
+  {
+   "id": "prose-jpn-924",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 85,
+   "estimate": 22,
+   "tokens": {
+    "o200k_base": 64,
+    "cl100k_base": 91,
+    "llama3": 58,
+    "gemma3": 46
+   }
+  },
+  {
+   "id": "prose-jpn-1118",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 87,
+   "estimate": 22,
+   "tokens": {
+    "o200k_base": 69,
+    "cl100k_base": 90,
+    "llama3": 58,
+    "gemma3": 50
+   }
+  },
+  {
+   "id": "prose-jpn-1215",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 78,
+   "estimate": 20,
+   "tokens": {
+    "o200k_base": 61,
+    "cl100k_base": 82,
+    "llama3": 57,
+    "gemma3": 48
+   }
+  },
+  {
+   "id": "prose-jpn-1312",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 79,
+   "estimate": 20,
+   "tokens": {
+    "o200k_base": 59,
+    "cl100k_base": 83,
+    "llama3": 53,
+    "gemma3": 44
+   }
+  },
+  {
+   "id": "prose-jpn-1409",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 61,
+   "estimate": 16,
+   "tokens": {
+    "o200k_base": 48,
+    "cl100k_base": 68,
+    "llama3": 42,
+    "gemma3": 36
+   }
+  },
+  {
+   "id": "prose-jpn-1506",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 58,
+   "estimate": 15,
+   "tokens": {
+    "o200k_base": 50,
+    "cl100k_base": 67,
+    "llama3": 47,
+    "gemma3": 38
+   }
+  },
+  {
+   "id": "prose-jpn-1603",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 44,
+   "estimate": 11,
+   "tokens": {
+    "o200k_base": 37,
+    "cl100k_base": 41,
+    "llama3": 36,
+    "gemma3": 31
+   }
+  },
+  {
+   "id": "prose-jpn-1700",
+   "kind": "prose",
+   "lang": "Japanese",
+   "chars": 52,
+   "estimate": 13,
+   "tokens": {
+    "o200k_base": 38,
+    "cl100k_base": 54,
+    "llama3": 35,
+    "gemma3": 29
+   }
+  },
+  {
+   "id": "code-stage1.rs-1",
+   "kind": "code",
+   "lang": "Rust",
+   "chars": 302,
+   "estimate": 76,
+   "tokens": {
+    "o200k_base": 87,
+    "cl100k_base": 86,
+    "llama3": 86,
+    "gemma3": 112
+   }
+  },
+  {
+   "id": "code-stage2.rs-2",
+   "kind": "code",
+   "lang": "Rust",
+   "chars": 692,
+   "estimate": 173,
+   "tokens": {
+    "o200k_base": 191,
+    "cl100k_base": 190,
+    "llama3": 190,
+    "gemma3": 231
+   }
+  },
+  {
+   "id": "code-stage3.rs-3",
+   "kind": "code",
+   "lang": "Rust",
+   "chars": 533,
+   "estimate": 134,
+   "tokens": {
+    "o200k_base": 138,
+    "cl100k_base": 142,
+    "llama3": 142,
+    "gemma3": 184
+   }
+  },
+  {
+   "id": "code-stage4.rs-4",
+   "kind": "code",
+   "lang": "Rust",
+   "chars": 260,
+   "estimate": 65,
+   "tokens": {
+    "o200k_base": 76,
+    "cl100k_base": 76,
+    "llama3": 76,
+    "gemma3": 96
+   }
+  },
+  {
+   "id": "code-cli.rs-5",
+   "kind": "code",
+   "lang": "Rust",
+   "chars": 2352,
+   "estimate": 588,
+   "tokens": {
+    "o200k_base": 659,
+    "cl100k_base": 658,
+    "llama3": 658,
+    "gemma3": 803
+   }
+  },
+  {
+   "id": "code-usage.py-6",
+   "kind": "code",
+   "lang": "Python",
+   "chars": 547,
+   "estimate": 137,
+   "tokens": {
+    "o200k_base": 120,
+    "cl100k_base": 119,
+    "llama3": 119,
+    "gemma3": 145
+   }
+  },
+  {
+   "id": "code-usage.py-7",
+   "kind": "code",
+   "lang": "Python",
+   "chars": 1859,
+   "estimate": 465,
+   "tokens": {
+    "o200k_base": 395,
+    "cl100k_base": 395,
+    "llama3": 395,
+    "gemma3": 463
+   }
+  },
+  {
+   "id": "code-usage.py-8",
+   "kind": "code",
+   "lang": "Python",
+   "chars": 594,
+   "estimate": 149,
+   "tokens": {
+    "o200k_base": 116,
+    "cl100k_base": 114,
+    "llama3": 114,
+    "gemma3": 157
+   }
+  },
+  {
+   "id": "code-usage.py-9",
+   "kind": "code",
+   "lang": "Python",
+   "chars": 812,
+   "estimate": 203,
+   "tokens": {
+    "o200k_base": 145,
+    "cl100k_base": 143,
+    "llama3": 143,
+    "gemma3": 181
+   }
+  },
+  {
+   "id": "code-usage.py-10",
+   "kind": "code",
+   "lang": "Python",
+   "chars": 241,
+   "estimate": 61,
+   "tokens": {
+    "o200k_base": 58,
+    "cl100k_base": 58,
+    "llama3": 58,
+    "gemma3": 79
+   }
+  },
+  {
+   "id": "code-usage.ts-11",
+   "kind": "code",
+   "lang": "TypeScript",
+   "chars": 488,
+   "estimate": 122,
+   "tokens": {
+    "o200k_base": 138,
+    "cl100k_base": 136,
+    "llama3": 136,
+    "gemma3": 149
+   }
+  },
+  {
+   "id": "code-usage.ts-12",
+   "kind": "code",
+   "lang": "TypeScript",
+   "chars": 572,
+   "estimate": 143,
+   "tokens": {
+    "o200k_base": 158,
+    "cl100k_base": 156,
+    "llama3": 156,
+    "gemma3": 179
+   }
+  },
+  {
+   "id": "code-usage.ts-13",
+   "kind": "code",
+   "lang": "TypeScript",
+   "chars": 625,
+   "estimate": 157,
+   "tokens": {
+    "o200k_base": 170,
+    "cl100k_base": 166,
+    "llama3": 166,
+    "gemma3": 190
+   }
+  },
+  {
+   "id": "code-usage.ts-14",
+   "kind": "code",
+   "lang": "TypeScript",
+   "chars": 1801,
+   "estimate": 451,
+   "tokens": {
+    "o200k_base": 436,
+    "cl100k_base": 436,
+    "llama3": 436,
+    "gemma3": 529
+   }
+  },
+  {
+   "id": "code-ledger.ts-15",
+   "kind": "code",
+   "lang": "TypeScript",
+   "chars": 513,
+   "estimate": 129,
+   "tokens": {
+    "o200k_base": 124,
+    "cl100k_base": 124,
+    "llama3": 124,
+    "gemma3": 132
+   }
+  },
+  {
+   "id": "markdown-1",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 663,
+   "estimate": 166,
+   "tokens": {
+    "o200k_base": 140,
+    "cl100k_base": 141,
+    "llama3": 141,
+    "gemma3": 159
+   }
+  },
+  {
+   "id": "markdown-2",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 786,
+   "estimate": 197,
+   "tokens": {
+    "o200k_base": 189,
+    "cl100k_base": 186,
+    "llama3": 186,
+    "gemma3": 239
+   }
+  },
+  {
+   "id": "markdown-3",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 620,
+   "estimate": 155,
+   "tokens": {
+    "o200k_base": 121,
+    "cl100k_base": 121,
+    "llama3": 121,
+    "gemma3": 148
+   }
+  },
+  {
+   "id": "markdown-4",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 744,
+   "estimate": 186,
+   "tokens": {
+    "o200k_base": 138,
+    "cl100k_base": 139,
+    "llama3": 139,
+    "gemma3": 160
+   }
+  },
+  {
+   "id": "markdown-5",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 590,
+   "estimate": 148,
+   "tokens": {
+    "o200k_base": 137,
+    "cl100k_base": 139,
+    "llama3": 139,
+    "gemma3": 156
+   }
+  },
+  {
+   "id": "markdown-6",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 697,
+   "estimate": 175,
+   "tokens": {
+    "o200k_base": 181,
+    "cl100k_base": 184,
+    "llama3": 184,
+    "gemma3": 212
+   }
+  },
+  {
+   "id": "markdown-7",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 558,
+   "estimate": 140,
+   "tokens": {
+    "o200k_base": 104,
+    "cl100k_base": 104,
+    "llama3": 104,
+    "gemma3": 119
+   }
+  },
+  {
+   "id": "markdown-8",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 646,
+   "estimate": 162,
+   "tokens": {
+    "o200k_base": 136,
+    "cl100k_base": 137,
+    "llama3": 137,
+    "gemma3": 141
+   }
+  },
+  {
+   "id": "markdown-9",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 546,
+   "estimate": 137,
+   "tokens": {
+    "o200k_base": 118,
+    "cl100k_base": 119,
+    "llama3": 119,
+    "gemma3": 123
+   }
+  },
+  {
+   "id": "markdown-10",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 632,
+   "estimate": 158,
+   "tokens": {
+    "o200k_base": 137,
+    "cl100k_base": 138,
+    "llama3": 138,
+    "gemma3": 144
+   }
+  },
+  {
+   "id": "markdown-11",
+   "kind": "markdown",
+   "lang": "English",
+   "chars": 1073,
+   "estimate": 269,
+   "tokens": {
+    "o200k_base": 241,
+    "cl100k_base": 243,
+    "llama3": 243,
+    "gemma3": 253
+   }
+  },
+  {
+   "id": "json-chat-response-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 373,
+   "estimate": 94,
+   "tokens": {
+    "o200k_base": 117,
+    "cl100k_base": 117,
+    "llama3": 117,
+    "gemma3": 149
+   }
+  },
+  {
+   "id": "json-chat-response-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 267,
+   "estimate": 67,
+   "tokens": {
+    "o200k_base": 70,
+    "cl100k_base": 69,
+    "llama3": 69,
+    "gemma3": 83
+   }
+  },
+  {
+   "id": "json-users-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 845,
+   "estimate": 212,
+   "tokens": {
+    "o200k_base": 288,
+    "cl100k_base": 289,
+    "llama3": 289,
+    "gemma3": 367
+   }
+  },
+  {
+   "id": "json-users-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 542,
+   "estimate": 136,
+   "tokens": {
+    "o200k_base": 158,
+    "cl100k_base": 159,
+    "llama3": 159,
+    "gemma3": 175
+   }
+  },
+  {
+   "id": "json-orders-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 1153,
+   "estimate": 289,
+   "tokens": {
+    "o200k_base": 400,
+    "cl100k_base": 402,
+    "llama3": 402,
+    "gemma3": 500
+   }
+  },
+  {
+   "id": "json-orders-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 660,
+   "estimate": 165,
+   "tokens": {
+    "o200k_base": 236,
+    "cl100k_base": 234,
+    "llama3": 234,
+    "gemma3": 275
+   }
+  },
+  {
+   "id": "json-config-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 257,
+   "estimate": 65,
+   "tokens": {
+    "o200k_base": 99,
+    "cl100k_base": 99,
+    "llama3": 99,
+    "gemma3": 121
+   }
+  },
+  {
+   "id": "json-config-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 167,
+   "estimate": 42,
+   "tokens": {
+    "o200k_base": 57,
+    "cl100k_base": 56,
+    "llama3": 56,
+    "gemma3": 64
+   }
+  },
+  {
+   "id": "json-geo-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 492,
+   "estimate": 123,
+   "tokens": {
+    "o200k_base": 139,
+    "cl100k_base": 139,
+    "llama3": 139,
+    "gemma3": 175
+   }
+  },
+  {
+   "id": "json-geo-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 262,
+   "estimate": 66,
+   "tokens": {
+    "o200k_base": 72,
+    "cl100k_base": 70,
+    "llama3": 70,
+    "gemma3": 83
+   }
+  },
+  {
+   "id": "json-tool-call-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 233,
+   "estimate": 59,
+   "tokens": {
+    "o200k_base": 67,
+    "cl100k_base": 67,
+    "llama3": 67,
+    "gemma3": 83
+   }
+  },
+  {
+   "id": "json-tool-call-min",
+   "kind": "json",
+   "lang": "JSON",
+   "chars": 160,
+   "estimate": 40,
+   "tokens": {
+    "o200k_base": 41,
+    "cl100k_base": 40,
+    "llama3": 40,
+    "gemma3": 43
+   }
+  },
+  {
+   "id": "emoji-1",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 79,
+   "estimate": 20,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 31,
+    "llama3": 31,
+    "gemma3": 22
+   }
+  },
+  {
+   "id": "emoji-2",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 54,
+   "estimate": 14,
+   "tokens": {
+    "o200k_base": 29,
+    "cl100k_base": 31,
+    "llama3": 30,
+    "gemma3": 25
+   }
+  },
+  {
+   "id": "emoji-3",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 64,
+   "estimate": 16,
+   "tokens": {
+    "o200k_base": 24,
+    "cl100k_base": 24,
+    "llama3": 24,
+    "gemma3": 19
+   }
+  },
+  {
+   "id": "emoji-4",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 51,
+   "estimate": 13,
+   "tokens": {
+    "o200k_base": 30,
+    "cl100k_base": 38,
+    "llama3": 38,
+    "gemma3": 22
+   }
+  },
+  {
+   "id": "emoji-5",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 58,
+   "estimate": 15,
+   "tokens": {
+    "o200k_base": 27,
+    "cl100k_base": 32,
+    "llama3": 31,
+    "gemma3": 26
+   }
+  },
+  {
+   "id": "emoji-6",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 59,
+   "estimate": 15,
+   "tokens": {
+    "o200k_base": 29,
+    "cl100k_base": 34,
+    "llama3": 33,
+    "gemma3": 21
+   }
+  },
+  {
+   "id": "emoji-7",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 73,
+   "estimate": 19,
+   "tokens": {
+    "o200k_base": 26,
+    "cl100k_base": 29,
+    "llama3": 28,
+    "gemma3": 22
+   }
+  },
+  {
+   "id": "emoji-8",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 71,
+   "estimate": 18,
+   "tokens": {
+    "o200k_base": 32,
+    "cl100k_base": 41,
+    "llama3": 38,
+    "gemma3": 26
+   }
+  },
+  {
+   "id": "emoji-9",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 56,
+   "estimate": 14,
+   "tokens": {
+    "o200k_base": 22,
+    "cl100k_base": 26,
+    "llama3": 25,
+    "gemma3": 19
+   }
+  },
+  {
+   "id": "emoji-10",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 54,
+   "estimate": 14,
+   "tokens": {
+    "o200k_base": 21,
+    "cl100k_base": 26,
+    "llama3": 26,
+    "gemma3": 17
+   }
+  },
+  {
+   "id": "emoji-11",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 72,
+   "estimate": 18,
+   "tokens": {
+    "o200k_base": 25,
+    "cl100k_base": 28,
+    "llama3": 28,
+    "gemma3": 24
+   }
+  },
+  {
+   "id": "emoji-12",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "chars": 51,
+   "estimate": 13,
+   "tokens": {
+    "o200k_base": 23,
+    "cl100k_base": 28,
+    "llama3": 28,
+    "gemma3": 17
+   }
+  }
+ ],
+ "real": {
+  "requests": 50,
+  "planned": 50,
+  "stoppedEarly": [],
+  "summary": [
+   {
+    "model": "openai/gpt-oss-20b",
+    "provider": "groq",
+    "tokenizer": "o200k_base",
+    "requests": 25,
+    "overheadNoSystem": {
+     "median": 71,
+     "min": 71,
+     "max": 71,
+     "n": 12
+    },
+    "overheadWithSystem": {
+     "median": 74,
+     "min": 74,
+     "max": 74,
+     "n": 13
+    },
+    "medianEstimateErrorPct": -76.7,
+    "totalReportedInput": 3114,
+    "totalEstimate": 956
+   },
+   {
+    "model": "gemini-3.1-flash-lite",
+    "provider": "gemini",
+    "tokenizer": "gemma3",
+    "requests": 25,
+    "overheadNoSystem": {
+     "median": 1,
+     "min": 1,
+     "max": 1,
+     "n": 12
+    },
+    "overheadWithSystem": {
+     "median": 1,
+     "min": 1,
+     "max": 1,
+     "n": 13
+    },
+    "medianEstimateErrorPct": -38.5,
+    "totalReportedInput": 1453,
+    "totalEstimate": 956
+   }
+  ],
+  "rows": [
+   {
+    "id": "req-01",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-eng-US-51",
+    "kind": "prose",
+    "lang": "English",
+    "system": true,
+    "chars": 93,
+    "estimate": 24,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 24,
+    "localSystemTokens": 11,
+    "reportedInput": 109,
+    "reportedOutput": 33,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -78
+   },
+   {
+    "id": "req-02",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-eng-US-51",
+    "kind": "prose",
+    "lang": "English",
+    "system": true,
+    "chars": 93,
+    "estimate": 24,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 27,
+    "localSystemTokens": 11,
+    "reportedInput": 39,
+    "reportedOutput": 2,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -38.5
+   },
+   {
+    "id": "req-03",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-eng-US-148",
+    "kind": "prose",
+    "lang": "English",
+    "system": true,
+    "chars": 102,
+    "estimate": 26,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 25,
+    "localSystemTokens": 11,
+    "reportedInput": 110,
+    "reportedOutput": 27,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -76.4
+   },
+   {
+    "id": "req-04",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-eng-US-148",
+    "kind": "prose",
+    "lang": "English",
+    "system": true,
+    "chars": 102,
+    "estimate": 26,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 28,
+    "localSystemTokens": 11,
+    "reportedInput": 40,
+    "reportedOutput": 4,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -35
+   },
+   {
+    "id": "req-05",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-spa-51",
+    "kind": "prose",
+    "lang": "Spanish",
+    "system": false,
+    "chars": 77,
+    "estimate": 20,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 21,
+    "localSystemTokens": 0,
+    "reportedInput": 92,
+    "reportedOutput": 52,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -78.3
+   },
+   {
+    "id": "req-06",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-spa-51",
+    "kind": "prose",
+    "lang": "Spanish",
+    "system": false,
+    "chars": 77,
+    "estimate": 20,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 20,
+    "localSystemTokens": 0,
+    "reportedInput": 21,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -4.8
+   },
+   {
+    "id": "req-07",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-spa-148",
+    "kind": "prose",
+    "lang": "Spanish",
+    "system": false,
+    "chars": 104,
+    "estimate": 26,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 28,
+    "localSystemTokens": 0,
+    "reportedInput": 99,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -73.7
+   },
+   {
+    "id": "req-08",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-spa-148",
+    "kind": "prose",
+    "lang": "Spanish",
+    "system": false,
+    "chars": 104,
+    "estimate": 26,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 34,
+    "localSystemTokens": 0,
+    "reportedInput": 35,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -25.7
+   },
+   {
+    "id": "req-09",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-fra-51",
+    "kind": "prose",
+    "lang": "French",
+    "system": true,
+    "chars": 89,
+    "estimate": 23,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 29,
+    "localSystemTokens": 11,
+    "reportedInput": 114,
+    "reportedOutput": 50,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -79.8
+   },
+   {
+    "id": "req-10",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-fra-51",
+    "kind": "prose",
+    "lang": "French",
+    "system": true,
+    "chars": 89,
+    "estimate": 23,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 34,
+    "localSystemTokens": 11,
+    "reportedInput": 46,
+    "reportedOutput": 3,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -50
+   },
+   {
+    "id": "req-11",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-fra-148",
+    "kind": "prose",
+    "lang": "French",
+    "system": true,
+    "chars": 108,
+    "estimate": 27,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 31,
+    "localSystemTokens": 11,
+    "reportedInput": 116,
+    "reportedOutput": 30,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -76.7
+   },
+   {
+    "id": "req-12",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-fra-148",
+    "kind": "prose",
+    "lang": "French",
+    "system": true,
+    "chars": 108,
+    "estimate": 27,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 35,
+    "localSystemTokens": 11,
+    "reportedInput": 47,
+    "reportedOutput": 5,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -42.6
+   },
+   {
+    "id": "req-13",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-deu-51",
+    "kind": "prose",
+    "lang": "German",
+    "system": false,
+    "chars": 109,
+    "estimate": 28,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 30,
+    "localSystemTokens": 0,
+    "reportedInput": 101,
+    "reportedOutput": 48,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -72.3
+   },
+   {
+    "id": "req-14",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-deu-51",
+    "kind": "prose",
+    "lang": "German",
+    "system": false,
+    "chars": 109,
+    "estimate": 28,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 30,
+    "localSystemTokens": 0,
+    "reportedInput": 31,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -9.7
+   },
+   {
+    "id": "req-15",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-deu-148",
+    "kind": "prose",
+    "lang": "German",
+    "system": false,
+    "chars": 112,
+    "estimate": 28,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 33,
+    "localSystemTokens": 0,
+    "reportedInput": 104,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -73.1
+   },
+   {
+    "id": "req-16",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-deu-148",
+    "kind": "prose",
+    "lang": "German",
+    "system": false,
+    "chars": 112,
+    "estimate": 28,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 37,
+    "localSystemTokens": 0,
+    "reportedInput": 38,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -26.3
+   },
+   {
+    "id": "req-17",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-rus-51",
+    "kind": "prose",
+    "lang": "Russian",
+    "system": true,
+    "chars": 82,
+    "estimate": 21,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 30,
+    "localSystemTokens": 11,
+    "reportedInput": 115,
+    "reportedOutput": 27,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -81.7
+   },
+   {
+    "id": "req-18",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-rus-51",
+    "kind": "prose",
+    "lang": "Russian",
+    "system": true,
+    "chars": 82,
+    "estimate": 21,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 29,
+    "localSystemTokens": 11,
+    "reportedInput": 41,
+    "reportedOutput": 4,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -48.8
+   },
+   {
+    "id": "req-19",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-rus-148",
+    "kind": "prose",
+    "lang": "Russian",
+    "system": true,
+    "chars": 87,
+    "estimate": 22,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 28,
+    "localSystemTokens": 11,
+    "reportedInput": 113,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -80.5
+   },
+   {
+    "id": "req-20",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-rus-148",
+    "kind": "prose",
+    "lang": "Russian",
+    "system": true,
+    "chars": 87,
+    "estimate": 22,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 31,
+    "localSystemTokens": 11,
+    "reportedInput": 43,
+    "reportedOutput": 5,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -48.8
+   },
+   {
+    "id": "req-21",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-arb-51",
+    "kind": "prose",
+    "lang": "Arabic",
+    "system": false,
+    "chars": 99,
+    "estimate": 25,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 33,
+    "localSystemTokens": 0,
+    "reportedInput": 104,
+    "reportedOutput": 53,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -76
+   },
+   {
+    "id": "req-22",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-arb-51",
+    "kind": "prose",
+    "lang": "Arabic",
+    "system": false,
+    "chars": 99,
+    "estimate": 25,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 36,
+    "localSystemTokens": 0,
+    "reportedInput": 37,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -32.4
+   },
+   {
+    "id": "req-23",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-arb-148",
+    "kind": "prose",
+    "lang": "Arabic",
+    "system": false,
+    "chars": 93,
+    "estimate": 24,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 29,
+    "localSystemTokens": 0,
+    "reportedInput": 100,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -76
+   },
+   {
+    "id": "req-24",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-arb-148",
+    "kind": "prose",
+    "lang": "Arabic",
+    "system": false,
+    "chars": 93,
+    "estimate": 24,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 34,
+    "localSystemTokens": 0,
+    "reportedInput": 35,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -31.4
+   },
+   {
+    "id": "req-25",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-hin-51",
+    "kind": "prose",
+    "lang": "Hindi",
+    "system": true,
+    "chars": 92,
+    "estimate": 23,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 34,
+    "localSystemTokens": 11,
+    "reportedInput": 119,
+    "reportedOutput": 51,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -80.7
+   },
+   {
+    "id": "req-26",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-hin-51",
+    "kind": "prose",
+    "lang": "Hindi",
+    "system": true,
+    "chars": 92,
+    "estimate": 23,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 29,
+    "localSystemTokens": 11,
+    "reportedInput": 41,
+    "reportedOutput": 3,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -43.9
+   },
+   {
+    "id": "req-27",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-hin-148",
+    "kind": "prose",
+    "lang": "Hindi",
+    "system": true,
+    "chars": 100,
+    "estimate": 25,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 37,
+    "localSystemTokens": 11,
+    "reportedInput": 122,
+    "reportedOutput": 28,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -79.5
+   },
+   {
+    "id": "req-28",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-hin-148",
+    "kind": "prose",
+    "lang": "Hindi",
+    "system": true,
+    "chars": 100,
+    "estimate": 25,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 36,
+    "localSystemTokens": 11,
+    "reportedInput": 48,
+    "reportedOutput": 4,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -47.9
+   },
+   {
+    "id": "req-29",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-tam-51",
+    "kind": "prose",
+    "lang": "Tamil",
+    "system": false,
+    "chars": 102,
+    "estimate": 26,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 37,
+    "localSystemTokens": 0,
+    "reportedInput": 108,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -75.9
+   },
+   {
+    "id": "req-30",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-tam-51",
+    "kind": "prose",
+    "lang": "Tamil",
+    "system": false,
+    "chars": 102,
+    "estimate": 26,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 30,
+    "localSystemTokens": 0,
+    "reportedInput": 31,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -16.1
+   },
+   {
+    "id": "req-31",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-tam-148",
+    "kind": "prose",
+    "lang": "Tamil",
+    "system": false,
+    "chars": 101,
+    "estimate": 26,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 36,
+    "localSystemTokens": 0,
+    "reportedInput": 107,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -75.7
+   },
+   {
+    "id": "req-32",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-tam-148",
+    "kind": "prose",
+    "lang": "Tamil",
+    "system": false,
+    "chars": 101,
+    "estimate": 26,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 33,
+    "localSystemTokens": 0,
+    "reportedInput": 34,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -23.5
+   },
+   {
+    "id": "req-33",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-zho-CN-51",
+    "kind": "prose",
+    "lang": "Chinese",
+    "system": true,
+    "chars": 39,
+    "estimate": 10,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 28,
+    "localSystemTokens": 11,
+    "reportedInput": 113,
+    "reportedOutput": 36,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -91.2
+   },
+   {
+    "id": "req-34",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-zho-CN-51",
+    "kind": "prose",
+    "lang": "Chinese",
+    "system": true,
+    "chars": 39,
+    "estimate": 10,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 26,
+    "localSystemTokens": 11,
+    "reportedInput": 38,
+    "reportedOutput": 3,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -73.7
+   },
+   {
+    "id": "req-35",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-zho-CN-148",
+    "kind": "prose",
+    "lang": "Chinese",
+    "system": true,
+    "chars": 29,
+    "estimate": 8,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 26,
+    "localSystemTokens": 11,
+    "reportedInput": 111,
+    "reportedOutput": 30,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -92.8
+   },
+   {
+    "id": "req-36",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-zho-CN-148",
+    "kind": "prose",
+    "lang": "Chinese",
+    "system": true,
+    "chars": 29,
+    "estimate": 8,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 23,
+    "localSystemTokens": 11,
+    "reportedInput": 35,
+    "reportedOutput": 3,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -77.1
+   },
+   {
+    "id": "req-37",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-jpn-51",
+    "kind": "prose",
+    "lang": "Japanese",
+    "system": false,
+    "chars": 31,
+    "estimate": 8,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 26,
+    "localSystemTokens": 0,
+    "reportedInput": 97,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -91.8
+   },
+   {
+    "id": "req-38",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-jpn-51",
+    "kind": "prose",
+    "lang": "Japanese",
+    "system": false,
+    "chars": 31,
+    "estimate": 8,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 20,
+    "localSystemTokens": 0,
+    "reportedInput": 21,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -61.9
+   },
+   {
+    "id": "req-39",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "prose-jpn-148",
+    "kind": "prose",
+    "lang": "Japanese",
+    "system": false,
+    "chars": 33,
+    "estimate": 9,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 26,
+    "localSystemTokens": 0,
+    "reportedInput": 97,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -90.7
+   },
+   {
+    "id": "req-40",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "prose-jpn-148",
+    "kind": "prose",
+    "lang": "Japanese",
+    "system": false,
+    "chars": 33,
+    "estimate": 9,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 23,
+    "localSystemTokens": 0,
+    "reportedInput": 24,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -62.5
+   },
+   {
+    "id": "req-41",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "code-stage1.rs-1",
+    "kind": "code",
+    "lang": "Rust",
+    "system": true,
+    "chars": 302,
+    "estimate": 76,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 87,
+    "localSystemTokens": 11,
+    "reportedInput": 172,
+    "reportedOutput": 22,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -55.8
+   },
+   {
+    "id": "req-42",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "code-stage1.rs-1",
+    "kind": "code",
+    "lang": "Rust",
+    "system": true,
+    "chars": 302,
+    "estimate": 76,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 112,
+    "localSystemTokens": 11,
+    "reportedInput": 124,
+    "reportedOutput": 2,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -38.7
+   },
+   {
+    "id": "req-43",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "code-stage2.rs-2",
+    "kind": "code",
+    "lang": "Rust",
+    "system": true,
+    "chars": 692,
+    "estimate": 173,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 191,
+    "localSystemTokens": 11,
+    "reportedInput": 276,
+    "reportedOutput": 25,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -37.3
+   },
+   {
+    "id": "req-44",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "code-stage2.rs-2",
+    "kind": "code",
+    "lang": "Rust",
+    "system": true,
+    "chars": 692,
+    "estimate": 173,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 231,
+    "localSystemTokens": 11,
+    "reportedInput": 243,
+    "reportedOutput": 4,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -28.8
+   },
+   {
+    "id": "req-45",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "json-chat-response-min",
+    "kind": "json",
+    "lang": "JSON",
+    "system": false,
+    "chars": 267,
+    "estimate": 67,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 70,
+    "localSystemTokens": 0,
+    "reportedInput": 141,
+    "reportedOutput": 61,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -52.5
+   },
+   {
+    "id": "req-46",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "json-chat-response-min",
+    "kind": "json",
+    "lang": "JSON",
+    "system": false,
+    "chars": 267,
+    "estimate": 67,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 83,
+    "localSystemTokens": 0,
+    "reportedInput": 84,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -20.2
+   },
+   {
+    "id": "req-47",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "markdown-2",
+    "kind": "markdown",
+    "lang": "English",
+    "system": false,
+    "chars": 786,
+    "estimate": 197,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 189,
+    "localSystemTokens": 0,
+    "reportedInput": 260,
+    "reportedOutput": 64,
+    "reportedCached": 0,
+    "overhead": 71,
+    "estimateErrorPct": -24.2
+   },
+   {
+    "id": "req-48",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "markdown-2",
+    "kind": "markdown",
+    "lang": "English",
+    "system": false,
+    "chars": 786,
+    "estimate": 197,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 239,
+    "localSystemTokens": 0,
+    "reportedInput": 240,
+    "reportedOutput": 12,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -17.9
+   },
+   {
+    "id": "req-49",
+    "provider": "groq",
+    "model": "openai/gpt-oss-20b",
+    "sample": "emoji-2",
+    "kind": "emoji",
+    "lang": "English + emoji",
+    "system": true,
+    "chars": 54,
+    "estimate": 14,
+    "tokenizer": "o200k_base",
+    "localPromptTokens": 29,
+    "localSystemTokens": 11,
+    "reportedInput": 114,
+    "reportedOutput": 24,
+    "reportedCached": 0,
+    "overhead": 74,
+    "estimateErrorPct": -87.7
+   },
+   {
+    "id": "req-50",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "sample": "emoji-2",
+    "kind": "emoji",
+    "lang": "English + emoji",
+    "system": true,
+    "chars": 54,
+    "estimate": 14,
+    "tokenizer": "gemma3",
+    "localPromptTokens": 25,
+    "localSystemTokens": 11,
+    "reportedInput": 37,
+    "reportedOutput": 3,
+    "reportedCached": 0,
+    "overhead": 1,
+    "estimateErrorPct": -62.2
+   }
+  ]
+ }
+}

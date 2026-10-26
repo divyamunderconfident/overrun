@@ -2,7 +2,7 @@
 // Writes results/study.json, results/demo-log.json and RESULTS.md. Every model call is cached on disk
 // (study/cache, gitignored) by a hash of its request, so reruns cost nothing and resume after a quota stop.
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { estimate, charCount } from "../site/lib/estimate";
 import { normalizeUsage } from "../site/lib/usage";
 import { loadTokenizer, TOKENIZERS, type TokenizerId } from "../site/lib/tokenizers";
@@ -189,3 +189,7 @@ const md = [
 ].join("\n");
 writeFileSync(new URL("RESULTS.md", root), md);
 console.log(md.split("\n").slice(4, 9).join("\n"));
+
+// The site reads its own copies.
+mkdirSync(new URL("site/public/data/", root), { recursive: true });
+for (const f of ["study.json", "demo-log.json"]) copyFileSync(new URL(`results/${f}`, root), new URL(`site/public/data/${f}`, root));
