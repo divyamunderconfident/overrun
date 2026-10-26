@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root { color-scheme: light dark; }
+body { @apply bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100; }
+input, textarea, select { @apply rounded border border-zinc-300 bg-transparent px-2 py-1 dark:border-zinc-700; }
+button { @apply rounded border border-zinc-400 px-3 py-1 hover:bg-zinc-100 disabled:opacity-50 dark:hover:bg-zinc-800; }
+table { @apply w-full border-collapse text-sm; }
+th, td { @apply border-b border-zinc-200 px-2 py-1 text-left align-top dark:border-zinc-800; }
+h1 { @apply mb-2 text-2xl font-bold; }
+h2 { @apply mt-8 mb-2 text-lg font-semibold; }
+a { @apply underline; }

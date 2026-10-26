@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T16:20:02.692Z",
+ "generated": "2026-10-26T16:24:11.857Z",
  "method": "estimate = ceil(Unicode characters / 4); tokens = local tokenizer count without special tokens; factor = real tokens / estimated tokens; errorPct = (estimate - real) / real * 100",
  "corpus": {
   "built": "2026-10-26",

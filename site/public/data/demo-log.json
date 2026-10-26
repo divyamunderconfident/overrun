@@ -1,6 +1,6 @@
 {
  "note": "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.",
- "limit": 2000000,
+ "limit": 500000,
  "rateCard": "groq-gpt-oss-20b",
  "overhead": {
   "openai/gpt-oss-20b": {

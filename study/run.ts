@@ -147,7 +147,7 @@ const study = {
 };
 mkdirSync(new URL("results/", root), { recursive: true });
 writeFileSync(new URL("results/study.json", root), JSON.stringify(study, null, 1) + "\n");
-writeFileSync(new URL("results/demo-log.json", root), JSON.stringify({ note: "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.", limit: 2000000, rateCard: "groq-gpt-oss-20b", overhead: Object.fromEntries(realSummary.filter((s) => s.requests).map((s) => [s.model, { noSystem: s.overheadNoSystem?.median ?? null, withSystem: s.overheadWithSystem?.median ?? null }])), requests: demo }, null, 1) + "\n");
+writeFileSync(new URL("results/demo-log.json", root), JSON.stringify({ note: "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.", limit: 500000, rateCard: "groq-gpt-oss-20b", overhead: Object.fromEntries(realSummary.filter((s) => s.requests).map((s) => [s.model, { noSystem: s.overheadNoSystem?.median ?? null, withSystem: s.overheadWithSystem?.median ?? null }])), requests: demo }, null, 1) + "\n");
 
 const tk = TOKENIZERS.map((t) => t.id);
 const md = [
