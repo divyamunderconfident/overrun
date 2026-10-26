@@ -1,0 +1,1605 @@
+{
+ "built": "2026-10-26",
+ "samples": [
+  {
+   "id": "prose-eng-US-51",
+   "kind": "prose",
+   "lang": "English",
+   "text": "\"I yelled at everyone to get out of the water: 'There's a shark in the water!'\" Hammel added.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-148",
+   "kind": "prose",
+   "lang": "English",
+   "text": "The city of Palu, which has more than 380,000 people, was strewn with debris from collapsed buildings.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-342",
+   "kind": "prose",
+   "lang": "English",
+   "text": "The driver of the car stopped and paramedics attended, but the man died at the scene.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-439",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Mr. Gendon recounted how, in the hours after the news of the Roa Roa Hotel collapse circulated among the paragliding community, he had desperately sent WhatsApp messages to the Palu competitors, who were taking part in the beach festival.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-536",
+   "kind": "prose",
+   "lang": "English",
+   "text": "But the ever-competitive Scherzer hopes to take the mound on Sunday against the Colorado Rockies, but only if there are still playoff implications for the Rockies, who hold a one-game lead over the Los Angeles Dodgers in the NL West.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-633",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Ri says it's a \"pipe dream\" that continued sanctions and U.S. objection to a declaration ending the Korean War will ever bring the North to its knees.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-827",
+   "kind": "prose",
+   "lang": "English",
+   "text": "A trial vaccine is showing promising results in patients with a range of cancers.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-924",
+   "kind": "prose",
+   "lang": "English",
+   "text": "He's also originally based on the traveler and international man of mystery Atkinson once played in the now forgotten Barclaycard TV ads, leaving chaos in his wake.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1118",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Michael Vann said he was \"feeling very honored to play a part in the parade\" and added \"the valor of a genuine hero is being demonstrated by the support that is going to be given by a lot of people.\"",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1215",
+   "kind": "prose",
+   "lang": "English",
+   "text": "The ill-fated F125 frigate made headlines last year, when the German Navy officially refused to commission the vessel and returned it to Blohm & Voss shipyard in Hamburg.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1312",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Briefings will still happen, Sanders said, but \"if the press has the chance to ask the president of the United States questions directly, that's infinitely better than talking to me.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1409",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Eilidh Doyle has been elected to the board of Scottish Athletics as a non-executive director at the governing body's annual general meeting.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1506",
+   "kind": "prose",
+   "lang": "English",
+   "text": "The maps were redrawn after the Pennsylvania Supreme Court ruled in January that the old districts were unconstitutionally gerrymandered in Republicans' favor.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1603",
+   "kind": "prose",
+   "lang": "English",
+   "text": "2009: A 7.6 magnitude quake struck near the city of Padang, capital of West Sumatra province.",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-eng-US-1700",
+   "kind": "prose",
+   "lang": "English",
+   "text": "Russian Grand Prix: Lewis Hamilton closes in on world title after team orders hand him win over Sebastian Vettel",
+   "source": "NTREX-128 newstest2019-ref.eng-US.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-51",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "“Grité a todos que saliesen del agua porque había un tiburón”, añadió Hammel.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-148",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "La ciudad de Palu, con más de 380 000 habitantes, quedó cubierta de restos de los edificios derrumbados.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-342",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "El conductor del coche se detuvo y el ciclista fue atendido por los paramédicos, pero falleció allí mismo.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-439",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "El señor Gendon recordaba cómo, en las horas que siguieron a la divulgación de la noticia de que el hotel Roa Roa se había derrumbado en la comunidad de parapente, había enviado desesperados mensajes de WhatsApp a los competidores de Palu, que participaban en el festival que se celebraba en la playa.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-536",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Aun así, el siempre competitivo Scherzer espera pisar el montículo el domingo contra los Colorado Rockies, pero solo si estos, triunfaron ante Los Angeles Dodgers en la División Oeste de la Liga Nacional, aún tienen oportunidades en los playoff.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-633",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Ri señala que la continuación de las sanciones continuadas y la oposición de EE. UU. a una declaración que acabe con la Guerra de Corea para someter al norte, es una “quimera”.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-827",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Un ensayo de la vacuna está generando resultados prometedores en pacientes con diferentes cánceres.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-924",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Además, en su origen se basó en el misterioso hombre viajero e internacional representado hace años por Atkinson en los ya olvidados anuncios de televisión de Barclaycard, sembrando el caos tras él.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1118",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Michael Vann dijo que \"era todo un privilegio para él poder formar parte del desfile\" y añadió que \"el valor de un auténtico héroe queda patente cuando se le muestra un respaldo tan numeroso\".",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1215",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "La desafortunada fragata F125 ocupó titulares el año pasado, cuando la Marina alemana rechazó oficialmente poner el navío en funcionamiento y lo devolvió al astillero Blohm & Voss en Hamburgo.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1312",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Las ruedas de prensa seguirán realizándose, dijo Sanders, pero \"si la prensa tiene la opción de preguntar directamente al presidente de Estados Unidos, creo que es muchísimo mejor que hacérmelas a mí.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1409",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Eilidh Doyle ha sido elegida para formar parte de la directiva de la federación de atletismo de Escocia como directora no ejecutiva en la reunión general anual del órgano de administración.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1506",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Los mapas se rediseñaron después de que el Tribunal Supremo de Pensilvania dictaminara en enero que los antiguos distritos se habían manipulado inconstitucionalmente a favor de los republicanos.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1603",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "2009: Un terremoto de magnitud 7,6 golpeó cerca de la ciudad de Padang, capital de la provincia de Sumatra Occidental.",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-spa-1700",
+   "kind": "prose",
+   "lang": "Spanish",
+   "text": "Gran Premio de Rusia: Lewis Hamilton se acerca al título mundial después de que las órdenes del equipo le entregaran la victoria sobre Sebastian Vettel",
+   "source": "NTREX-128 newstest2019-ref.spa.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-51",
+   "kind": "prose",
+   "lang": "French",
+   "text": "« Je hurlais pour que tout le monde sorte de l’eau : Il y a un requin ! », explique Chad.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-148",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Comptant plus de 380 000 habitants, la ville de Palu se trouvait parsemée de débris des bâtiments effondrés.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-342",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Le conducteur du véhicule s’est arrêté, les secours sont arrivés sur place, mais l’homme est décédé sur les lieux de l’accident.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-439",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Dans les heures qui ont suivi l’annonce de l’effondrement de l’hôtel Roa Roa dans la communauté du parapente, M. Gendon a raconté qu’il avait désespérément envoyé des messages WhatsApp aux athlètes à Palu qui participaient au festival sur la plage.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-536",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Mais Scherzer, très compétitif, espère jouer dimanche contre les Rockies du Colorado, mais seulement en cas de match éliminatoire pour les Rockies, de vraies légendes face aux Los Angeles Dodgers de la division Ouest de la Ligue nationale.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-633",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Ri déclare qu’il est « chimérique » de penser que le maintien des sanctions et l’opposition des États-Unis à une déclaration qui mettra fin à la guerre de Corée fera plier le Nord.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-827",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Un vaccin expérimental montre des résultats encourageants chez des patients atteints de différents types de cancer.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-924",
+   "kind": "prose",
+   "lang": "French",
+   "text": "À l’origine, il s’inspire également du voyageur et de l’homme de mystère international qu’Atkinson a joué autrefois dans les publicités télévisées Barclaycard, désormais oubliées, laissant le chaos derrière lui.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1118",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Michael Vann a confié qu’il se sentait « très honoré de faire partie du défilé » et ajouté que « le courage d’un authentique héros se reflète dans le soutien qui lui sera apporté par beaucoup de gens ».",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1215",
+   "kind": "prose",
+   "lang": "French",
+   "text": "L’année dernière, la frégate maudite F125 a fait les gros titres lorsque la Marine allemande a officiellement refusé de mettre le navire en service et l’a renvoyé au chantier naval Blohm & Voss, à Hambourg.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1312",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Des conférences de presse auront toujours lieu, a affirmé Sanders, mais « si la presse a la chance de questionner directement le président des États-Unis, c’est infiniment mieux que de parler avec moi.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1409",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Eilidh Doyle a été élue au Conseil d’administration de Scottish Athletics en tant que directrice non exécutive lors de l’assemblée générale annuelle de l’organe directeur.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1506",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Les cartes ont été redessinées quand la Cour suprême de Pennsylvanie a statué, en janvier, que les anciens arrondissements étaient inconstitutionnellement manipulés en faveur des républicains.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1603",
+   "kind": "prose",
+   "lang": "French",
+   "text": "2009 : Un séisme d’une magnitude de 7,6 a secoué la ville de Padang, capitale de la province de Sumatra Ouest.",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-fra-1700",
+   "kind": "prose",
+   "lang": "French",
+   "text": "Grand Prix russe : Lewis Hamilton se dirige vers le titre mondial après que les directives de l’équipe lui ont permis de remporter la victoire contre Sebastian Vettel",
+   "source": "NTREX-128 newstest2019-ref.fra.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-51",
+   "kind": "prose",
+   "lang": "German",
+   "text": "„Ich schrie, dass alle aus dem Wasser herauskommen sollten: ‚Da ist ein Hai im Wasser!‘“, fügte Hammel hinzu.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-148",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Die Stadt Palu, die über mehr als 380.000 Einwohner verfügt, war übersät mit den Trümmern eingestürzter Gebäude.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-342",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Der Fahrer des Autos hielt an, und Sanitäter kümmerten sich um den Mann, der jedoch am Unfallort starb.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-439",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Gendon erzählte, wie er in den Stunden, nachdem die Nachricht vom Einsturz des Roa-Roa-Hotels unter den Paraglidern die Runde machte, verzweifelt WhatsApp-Nachrichten an die Wettkampfteilnehmer aus Palu gesendet hatte, die an dem Strandfest teilnahmen.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-536",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Der stets leistungswillige Scherzer hofft jedoch, am Sonntag gegen die Colorado Rockies auf dem Hügel zu stehen, aber nur, wenn dies für die Rockies, die in der NL West ein Spiel Vorsprung vor den Los Angeles Dodgers haben, für die Playoffs relevant ist.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-633",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Ri bezeichnete die Vorstellung, dass weitere Sanktionen und der Widerstand der USA gegen eine Erklärung zur Beendigung des Koreakriegs den Norden jemals in die Knie zwingen würden, als „Hirngespinst“.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-827",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Ein Testimpfstoff zeigt bei Patienten mit verschiedenen Krebsarten vielversprechende Ergebnisse.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-924",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Außerdem basierte die Figur ursprünglich auf dem Chaos hinter sich zurücklassenden Reisenden und internationalen Geheimagenten, den Atkinson in den inzwischen vergessenen Barclaycard-Fernsehwerbespots spielte.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1118",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Michael Vann gab an, dass er sich sehr geehrt fühle, an der Parade teilnehmen zu können, und fügte hinzu, dass die Tapferkeit eines echten Helden vor allem durch die Unterstützung vieler Menschen sichtbar werde.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1215",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Die vom Unglück verfolgte Fregatte F125 geriet letztes Jahr in die Schlagzeilen, als sich die deutsche Marine offiziell weigerte, das Schiff abzunehmen und es der Werft Blohm & Voss in Hamburg zurückgab.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1312",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Pressekonferenzen wird es immer noch geben, so Sanders, jedoch sei es, „wenn die Presse die Möglichkeit hat, dem Präsidenten der Vereinigten Staaten direkt Fragen zu stellen, doch weitaus besser als mit mir zu sprechen.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1409",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Eilidh Doyle wurde auf dessen jährlicher Generalversammlung als nicht-exekutives Mitglied in den Rat des schottischen Leichtathletik-Dachverbands Scottish Athletics gewählt.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1506",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Die Karten wurden neu gezeichnet, nachdem der Oberste Gerichtshof des Staates Pennsylvania im Januar entschied, dass die alten Bezirke gegen die Verfassung verstießen und zu Gunsten der Republikaner manipuliert wurden.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1603",
+   "kind": "prose",
+   "lang": "German",
+   "text": "2009: Ein Erdbeben mit der Stärke 7,6 traf auf die Stadt Padang, die Hauptstadt der Provinz West-Sumatra.",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-deu-1700",
+   "kind": "prose",
+   "lang": "German",
+   "text": "Großer Preis von Russland: Lewis Hamilton nähert sich dem Weltmeistertitel nachdem ihm sein Team den Sieg über Sebastian Vettel überlassen hat",
+   "source": "NTREX-128 newstest2019-ref.deu.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-51",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "«Я закричал, чтобы все выбирались из воды: „Здесь акула!“», — рассказывает Хаммел.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-148",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Город Палу с населением свыше 380 тысяч людей был завален обломками обрушившихся домов.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-342",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Водитель машины и прибывшие на место санитары пытались оказать помощь велосипедисту, но мужчина скончался не приходя в сознание.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-439",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Гендон вспоминает, как, узнав об обрушении отела Роа Роа от других парапланеристов, в течение следующих часов он отчаянно пытался связаться по WhatsApp со своими коллегами из Палу, отдыхающими на пляжном фестивале.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-536",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Но неутомимый Шерзер надеется взять верх в борьбе против «Колорадо Рокиз» в воскресенье, но только если у «Рокиз», опережающих на одну игру «Лос-Анджелес Доджерс» в Западном дивизионе, начнутся проблемы в плей-офф.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-633",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Ри утверждает: мечта о том, что длительные санкции и возражение США против декларации об окончании Корейской войны когда-либо поставят Север на колени — это утопия.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-827",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Пробная вакцина показывает многообещающие результаты у пациентов с различными видами рака.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-924",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Первоначально этот персонаж создавался на основе личности путешественника и загадочного «международного» Аткинсона, когда-то сыгравшего в забытой сейчас телевизионной рекламе Barclaycard, в которой герой оставляет после себя полный хаос.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1118",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Майкл Ванн сказал, что «для него большая честь принять участие в параде» и добавил, что «доблесть подлинного героя подтверждается поддержкой, которая будет оказана многими людьми».",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1215",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Злополучный фрегат F125 попал в заголовки новостей в прошлом году, когда германский военно-морской флот официально отказался от ввода в эксплуатацию судна и вернул его на верфи Blohm & Voss в Гамбурге.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1312",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Сандерс уверила, что брифинги по-прежнему будут проходить, но «если у прессы есть возможность напрямую задавать вопросы президенту Соединенных Штатов, это гораздо лучше, чем разговаривать со мной».",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1409",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "На ежегодном общем собрании руководящего органа Эйлид Дойл была избрана в совет директоров шотландской легкой атлетики в качестве наблюдательного члена совета директора.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1506",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Карты были пересмотрены после того, как Верховный суд Пенсильвании в январе постановил, что в результате предвыборных махинаций старые районы были в нарушение конституции приписаны республиканцам.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1603",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "2009: Землетрясение магнитудой 7,6 произошло в городе Паданг, столице провинции Западная Суматра.",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-rus-1700",
+   "kind": "prose",
+   "lang": "Russian",
+   "text": "Гран При России: Льюис Хэмилтон приближается к титулу чемпиона мира после того, как командная тактика подарила ему победу над Себастьяном Феттелем",
+   "source": "NTREX-128 newstest2019-ref.rus.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-51",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "\"لقد قمت بالصياح بأعلى صوتي مطالبًا الجميع بالخروج من المياه: \"يوجد قرش في المياه!\" كما أضاف هاميل.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-148",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "وقد تمت تغطية مدينة بالو والتي يعيش بها أكثر من 380,000 شخص بالحطام الناتج عن انهيار المباني.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-342",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "وتوقف سائق السيارة وحضر المسعفون ولكنه قد لقى مصرعه في موقع الحادث.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-439",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "ووصف السيد جندون كيف أنه بعد ساعات من تداول أخبار انهيار فندق Roa Roa بين مجتمع الطيران المظلي، فإنه أرسل رسائل عبر واتساب إلى منافسي بالو الذين كانوا يشاركون في مهرجان الشاطئ.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-536",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "غير أن سيرزير المنافس الدائم يأمل في الفوز يوم الأحد ضد كولورادو روكيز، ولكن فقط في حالة وجود إشارة لمنافسة خروج المغلوب على روكيز الذي يتقدم في مباراة واحدة على لوس أنجلوس دودجرز في اتحاد الألعاب الرياضية NL West.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-633",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "يقول ري أنه \"حلم صعب المنال\" حيث أن استمرار العقوبات والاعتراض الأمريكي على إعلان ينهي الحرب الكورية لن يجعل كوريا الشمالية تستسلم أبدًا.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-827",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "يُظهر لقاح تجريبي نتائج واعدة في المرضى المصابينبمجموعة من السرطانات.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-924",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "كما أنها تستند في الأصل على المسافر والرجل الدولي الغامض الذي لعب دوره أتكينسون ذات مرة في إعلاناتباركلايكارد التليفزيونية المنسية الآن، تاركًا الفوضى في أعقابه.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1118",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "قال مايكل فان إنه \"يشعر بالفخر الشديد للعب دور في الاستعراض\" وأضاف: \"تتجلى شجاعة البطل الحقيقي في الدعم الذي يقدمه له الكثير من الناس\".",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1215",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "تصدرت فرقاطة موديلF125المشؤومة عناوين الصحف العام الماضي، عندما رفضت البحرية الألمانية رسميًا تكليف السفينة وإعادتها إلى حوض بناء السفن بلوم أند فوس في هامبورغ.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1312",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "قالت ساندرز إن الجلسات الإعلامية ستظل تحدث، لكن \"إذا كان لدى الصحافة فرصة لطرح أسئلة مباشرة على رئيس الولايات المتحدة، فهذا أفضل بلا حدود من التحدث معي.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1409",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "اُنتخبت عيلدة دويل لعضوية مجلس إدارة ألعاب القوى الأسكتلندية بصفتها مديرة غير تنفيذية في الاجتماع العام السنوي لمجلس الإدارة.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1506",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "وقد أُعيد رسم الخرائط بعد أن قضت المحكمة العليا في ولاية بنسلفانيا في يناير بأن المناطق القديمة كانت غير دستورية لصالح الجمهوريين.",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1603",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "2009: وتعرضت مدينة بادنج، عاصمة سومطرة الغربية، إلى زلزال عنيف بقوة 7.6 ريختر",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-arb-1700",
+   "kind": "prose",
+   "lang": "Arabic",
+   "text": "سباق الجائزة الكبرى الروسي \"سباق جراند بريكس الروسي\": لويس هاميلتون يقترب من الفوز بلقب بطولة العالم بعد أن فوز فريقه على سيباستيان فيتيل",
+   "source": "NTREX-128 newstest2019-ref.arb.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-51",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "हम्मेल ने कहा, \"मैंने सभी की आवाज़ लगाई कि वे पानी से बाहर निकल जाएं: पानी में एक शार्क है!''",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-148",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "380,000 से ज़्यादा की आबादी वाले पालू के शहर में कई इमारतों ढह गए थी, जिससे यह शहर मलबे से भर गया था।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-342",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "कार के ड्राइवर ने कार रोक कर उसे प्राथमिक चिकित्सा दिलवाई, लेकिन घटनास्थल पर व्यक्ति की ही मौत हो गई।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-439",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "मि. गेंडन ने कहा कि रोआ रोआ होटल के ढहने की खबर मिलने के बाद ही पैराग्लाइडिंग समुदाय ने अपना काम शुरू कर दिया, उन्होंने बीच फेस्टिवल में भागीदारी कर रहे पालू प्रतियोगियों को WhatsApp के ज़रिए मैसेज भेजे थे।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-536",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "लेकिन, हमेशा प्रतिस्पर्धा करने वाले स्केजर को यह उम्मीद है कि रविवार को वे कोलोराडो रॉकीज के विरुद्द बड़े स्कोर बनाएंगे, लेकिन रॉकीज के लिए प्लेऑफ अभी भी सिर्फ़ संभावना बनी हुई है, उसे एनएल वेस्ट में लॉस एंजिल्स डोजर्स के साथ खेले जाने वाले गेम में जीत मिली है।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-633",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "री ने कहा कि यह एक वह \"पाइप ड्रीम\" है जिससे कोरियाई युद्ध के खत्म करने की घोषणा के लिए प्रतिबंधों और अमेरिकी आपत्ति से नॉर्थ हार मान जाएगा।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-827",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "टीके के लिए एक ट्रायल में अलग-अलग तरह के कैंसर के मरीजों में आशाजनक नतीजे देखे जा रहे हैं।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-924",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "वे मूल रूप से यात्री हैं और रहस्य के इंटरनेशनल मैन एटकिंसन हैं जिसके वेक के चाओस को छोड़कर बार्कलेकार्ड टीवी विज्ञापनों में उनकी निभाई गई भूमिका को भूला दिया गया था।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1118",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "माइकल वॉन ने कहा कि वे \"परेड में भूमिका निभाने के लिए बहुत सम्मानित महसूस कर रहे हैं\" और उन्होंने कहा \"अनेक लोगों द्वारा दिए जा रहे समर्थन से एक वास्तविक नायक की वीरता का प्रदर्शन किया जा रहा है।\"",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1215",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "दुर्दांत F125 युद्धपोत ने पिछले साल तब सुर्खियाँ बटोरी थीं, जब जर्मन नौसेना ने आधिकारिक तौर पर पोत को कमीशन करने से इनकार कर दिया था और हैम्बर्ग में ब्लोह्म और वॉस शिपयार्ड को वापस कर दिया था।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1312",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "ब्रीफ़िंग अभी भी होगी, सैंडर्स ने कहा, लेकिन \"अगर प्रेस के पास संयुक्त राज्य अमेरिका के राष्ट्रपति से सीधे सवाल पूछने का मौक़ा मिलता है, तो यह मुझसे बात करने से बेहतर है।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1409",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "ईलिध डॉयल को गवर्निंग बॉडी की वार्षिक आम बैठक में एक गैर-कार्यकारी निदेशक के रूप में स्कॉटिश एथलेटिक्स  बोर्ड में चुना गया है।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1506",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "पुराने जिलों द्वारा रिपब्लिकन के पक्ष में असंवैधानिक रूप से जालसाज़ी करने के मामले में जनवरी में पेंसिल्वेनिया सर्वोच्च न्यायालय के इस फ़ैसले के बाद, मैप या नक्शों को फिर से बनाया गया।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1603",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "2009: पाडांग के शहर के निकट 7.6 परिमाण के भूकंप ने क्षेत्र को प्रभावित किया जो पश्चिमी सुमात्रा प्रांत की राजधानी है।",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-hin-1700",
+   "kind": "prose",
+   "lang": "Hindi",
+   "text": "रूसी ग्रांड प्रिक्स: लूईस हैमिलटन ने सेबेस्टियन वेटल पर टीम की जीत के बाद विश्व शीर्षक को समाप्त कर दिया",
+   "source": "NTREX-128 newstest2019-ref.hin.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-51",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "அனைவரையும் தண்ணீரிலிருந்து வெளியே வரும்படி கத்தினேன்: 'தண்ணீரில் ஒரு சுறா உள்ளது!'\" என ஹாமல் கூறினார்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-148",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "380,000-க்கும் மேற்பட்ட மக்களைக் கொண்ட பலு நகரம், சிதைந்த கட்டடங்களின் தூசுகளோடு விழுந்து கிடக்கிறது.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-342",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "டிரைவர் காரை நிறுத்தியதும் உதவ பிறர் முன்வந்தனர். ஆனால், அடிபட்டவர் சம்பவ இடத்திலேயே இருந்தார்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-439",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "பாராக்ளைடிங் சமூகத்தில் Roa Roa உணவகம் சிதைந்தது தொடர்பான செய்தி கிடைத்தவுடன், பீச் திருவிழாவில் இருந்த பலு போட்டியாளர்களுக்கு எப்படி WhatsApp செய்திகளை அனுப்பினார் என்பதை நினைவுகூர்ந்தார்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-536",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "வெற்றியாளரான செர்ஸர் கொலராடோ ராக்கீஸுக்கு எதிராக ஞாயிற்றுக்கிழமையன்று வெல்வதாக நம்பிக்கையில் இருந்தார். ஆனால், NL வெஸ்ட்டின் லாஸ் ஏஞ்சலெஸ் டாட்ஜெர்களுக்கு மேல் ஒரு விளையாட்டை வைத்திருக்கும் ராக்கீஸுக்கு ப்ளே-ஆஃப் உள்ளீடுகள் இருந்தால் மட்டுமே.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-633",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "தொடர்ச்சியான அனுமதிகளும், கொரியப் போரை முடிப்பதற்கான அமெரிக்காவின் ஆட்சேபனையும், வடக்கு நாட்டைப் பணியவைக்கும் என்பது ஒரு \"பைப் ட்ரீம்\" என ரீ கூறினார்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-827",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "சோதனை தடுப்பூசியானது பல்வேறு வகையான புற்றுநோய் நோயாளிகளுக்கும் நம்பிக்கை அளிக்கும்படியான முடிவுகளைக் காட்டுகிறது.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-924",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "அவரது எழுச்சியில் குழப்பத்தை ஏற்படுத்திய இப்போது மறைந்துபோன பார்க்லே கார்டு தொலைக்காட்சி விளம்பரங்களில் பயணி மற்றும் சர்வதேச மர்ம மனிதனை அடிப்படையாகக் கொண்ட காதாபாத்திரத்தில் நடித்தவர்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1118",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "தான் \"அணிவகுப்பில் பங்கேற்பது மிகவும் பெருமையாக உணர்வதாக” மைக்கேல் வான் கூறினார், அத்துடன் வீரமான போர்வீரர்கள் இன்னும் நிறைய மக்களின் ஆதரவுடன் வெளிப்படுத்தப்பட போகிறார்கள்\" எனக் கூறினார்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1215",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "ஜெர்மனியின் கடற்படை அதிகாரி போர்க்கப்பலை உபயோகிக்க மறுத்து, அதை ஹம்பர்க்கில் உள்ள லோம் அண்ட் வாஸ் ஷிப்யார்டில் திருப்பி அளித்த போது, F125 அதிர்ஷ்டம் இல்லாத போர்க்கப்பல் என கடந்த ஆண்டு தலைப்புச்செய்திகளில் இடம்பெற்றது.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1312",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "சாண்டர்ஸ் அவர்களோ, இனிமேலும் சுருக்கமான செய்தியாளர் கூட்டங்கள் நடைபெறத்தான் செய்யும் என்று கூறியதோடு, செய்தியாளர்களுக்கு \"அமெரிக்காவின் ஜனாதிபதியிடம் நேரடியாக கேள்விகளைக் கேட்பதற்கான வாய்ப்பு கிடைத்தால், அது என்றைக்குமே என்னிடம் பேசுவதை விட சிறந்ததாகவே இருக்கும், என்றும்,",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1409",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "எய்லித் டோய்லே அவர்களை, நிர்வாகக் குழுவின் வருடாந்திரப் பொதுக்குழுக் கூட்டத்தில், போர்டு ஆஃப் ஸ்காட்டிஷ் ஆத்லெட்டிக்ஸ்-க்கு நிர்வாகம்-அல்லாத இயக்குநராகத் தெரிவு செய்திருக்கிறார்கள்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1506",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "பழைய மாவட்டங்கள், அரசியலமைப்பிற்கு விரோதமாக ரிபப்ளிக்கன்களுக்கு சாதகமாக வரைவு செய்திருப்பதாக, ஜனவரி மாதத்தில் பென்சில்வேனியா உச்ச நீதிமன்றம் தீர்ப்பு கொடுத்த பிறகு வரைபடங்களை மறுவரைவு செய்தார்கள்.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1603",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "2009: மேற்கு சுமத்திரா மாகாணத்தின் தலைநகரான, பாடாங் நகரின் அருகில் ஒரு 7.6 அளவுள்ள பூகம்பம் தாக்கியது.",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-tam-1700",
+   "kind": "prose",
+   "lang": "Tamil",
+   "text": "ரஷ்ய கிராண்ட் பிரிக்ஸ்: செபாஸ்டியன் வெட்டல்லை வென்றுவிட்டதாக அணி உத்தரவிட்டதற்குப் பிறகு, லூயிஸ் ஹாமில்ட்டன் உலகப் பட்டத்தைப் பெற நெருங்கிவிட்டார்",
+   "source": "NTREX-128 newstest2019-ref.tam.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-51",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "\"我冲着每个人叫喊，让他们从水里出来：“水里有鲨鱼！” Hammel 接着说。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-148",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "巴鲁市人口超过 38 万, 震后，到处是坍塌建筑物的废墟。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-342",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "小轿车司机（在发生事故后）停车，救护人员也到场抢救，但是该名男子还是死于事故现场。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-439",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "Gendon 先生讲述了他在听到 滑翔伞界流传 Roa Roa 酒店坍塌的新闻后的几个小时内是如何迫不及待地给正在巴鲁参加海滩节的参赛者发送 WhatsApp 短信息的。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-536",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "而一心求胜的 Scherzer 希望在周日对抗科罗拉多洛基山队的比赛中充当投球手，但条件是季后赛对洛基山队还有影响，该队在 NL West 领先洛杉矶道奇队一场比赛。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-633",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "李英浩表示，“妄想”通过继续制裁朝鲜以及美国反对宣布“朝鲜战争”结束使朝鲜屈服。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-827",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "试验疫苗在癌症患者体内发挥了良好效果，证明其对许多癌症均有疗效。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-924",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "强尼最初也是以旅行者、国际人物、神秘的艾金森为原型，曾经的他在已被遗忘的巴克莱卡电视广告中出演过 - 那个清醒时身后留下一片混乱的人物。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1118",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "迈克·范恩表示，“他很荣幸能参加此次游行”，他还补充道，“一位真正的英雄会有很多人证明他的英勇壮举”。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1215",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "去年当德国海军正式将F125护卫舰退还给汉堡的布洛姆和沃斯造船厂时，这艘命运多舛的F125护卫舰便登上了头条新闻。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1312",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "桑德斯说：“记者会还是要召开的，但是，如果媒体朋友有机会直接向总统先生提问题，那比和我交谈要好得多。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1409",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "埃利德·多伊尔在苏格兰田径理事会的年度大会上，当选为理事会非执行董事。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1506",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "今年1月，宾夕法尼亚州最高法院裁定，旧选区因不符合宪法，于是重新划分到有利于共和党的选区。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1603",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "2009:西苏门答腊省省会巴东附近发生7.6级地震。",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-zho-CN-1700",
+   "kind": "prose",
+   "lang": "Chinese",
+   "text": "俄罗斯大奖赛:在刘易斯·汉密尔顿战胜塞巴斯蒂安·维特尔后，他即将获得世界冠军",
+   "source": "NTREX-128 newstest2019-ref.zho-CN.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-51",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "「全員海から出るように叫んだ。サメがいるって！」ハメルは語る。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 51 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-148",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "38万人の人口があるパルでは、倒壊した建物の破片が散らばっている。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 148 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-342",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "車の運転手は止まり救急隊員が駆けつけたが、その男性は現場で亡くなった。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 342 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-439",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "ゲンドン氏はロアロアホテルの崩壊のニュース後数時間でパラグライディングコミュニティ間に回り、彼はビーチフェスティバルに参加していたパルの競合社にWhatsAppメッセージを必死に送ったことを語った。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 439 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-536",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "しかし闘争心のあるシャーザーはコロラドロッキーズに対し日曜日にマウンドを取ることを望んでいるがしかし、NLウェストでロサンゼルスドジャースを1試合リードしているロッキーズにとってプレイオフの影響がいまだにある場合のみとなる。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 536 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-633",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "リは制裁を継続し、朝鮮戦争を終結させる宣言に対しての米国の異議が北朝鮮をひざまずかせるのは「空想的な夢」だと言う。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 633 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-827",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "試験用ワクチンは、広範囲の癌患者の間で有望な結果を示している。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 827 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-924",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "ジョニー・イングリッシュはもともと、今となっては忘れられたバークレイカードのテレビ広告でアトキンソンが演じた、いたるところでトラブルを起こす謎の世界旅行者に基づいている。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 924 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1118",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "マイケル・ヴァン氏は、「パレードに参加することはとてつもない栄誉に感じました」と述べている。さらに「真のヒーローの勇気が、多くの人々の支援により実証されました」と付け加えた。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1118 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1215",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "このトラブル続きのF125フリゲート艦は、昨年ドイツ海軍が始動を公式に拒否してハンブルグのブローム・ウント・フォスに差し戻した際に、大きなニュースとなった。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1215 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1312",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "ブリーフィングは今後も開催されるが、サンダース氏は、「もしプレスが合衆国大統領に直接質問できるチャンスがあるなら、それは私に質問するより絶対的に良いはずです。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1312 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1409",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "スコットランドアスレチック委員会統括組織の一般会合でエイリー・ドイル選手がノンエグゼクティブディレクターとして選出された。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1409 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1506",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "1 月にペンシルバニア州最高裁判所が、旧選挙区は違法に共和党に有利となっているとの判決を下して、選挙区が再編された。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1506 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1603",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "2009 年:西スマトラ州の州都パダン市近くでマグニチュード 7.6 の地震が発生した。",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1603 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "prose-jpn-1700",
+   "kind": "prose",
+   "lang": "Japanese",
+   "text": "ロシア グランプリ:チーム オーダーでルイス ハミルトンがセバスチャン ベッテルに勝利しタイトル獲得間近",
+   "source": "NTREX-128 newstest2019-ref.jpn.txt line 1700 (github.com/MicrosoftTranslator/NTREX)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "id": "code-stage1.rs-1",
+   "kind": "code",
+   "lang": "Rust",
+   "text": "use super::*;\npub fn estimate(text: &str, chars_per_token: u64) -> Result<u64, Error> {\n    if chars_per_token == 0 {\n        return Err(Error::Invalid(\"ratio must be positive\".into()));\n    }\n    let n = text.chars().count() as u64;\n    Ok(n / chars_per_token + u64::from(n % chars_per_token != 0))\n}\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage1.rs",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-stage2.rs-2",
+   "kind": "code",
+   "lang": "Rust",
+   "text": "use super::*;\npub fn parse_usage(line: &str) -> Result<Usage, Error> {\n    let p: Vec<&str> = line.trim().split(',').collect();\n    if p.len() != 3 {\n        return Err(Error::Invalid(\"input,output,cached required\".into()));\n    }\n    let mut n = Vec::new();\n    for part in p {\n        if part.is_empty() || !part.bytes().all(|b| b.is_ascii_digit()) {\n            return Err(Error::Invalid(\"unsigned counter required\".into()));\n        }\n        n.push(part.parse::<u64>().map_err(|_| Error::Limit)?);\n    }\n    if n[2] > n[0] {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    Ok(Usage {\n        input: n[0],\n        output: n[1],\n        cached: n[2],\n    })\n}\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage2.rs",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-stage3.rs-3",
+   "kind": "code",
+   "lang": "Rust",
+   "text": "use super::*;\npub fn cost(usage: &Usage, rates: &Rates) -> Result<u64, Error> {\n    if usage.cached > usage.input {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    let a = (usage.input - usage.cached)\n        .checked_mul(rates.input)\n        .ok_or(Error::Limit)?;\n    let b = usage.cached.checked_mul(rates.cached).ok_or(Error::Limit)?;\n    let c = usage.output.checked_mul(rates.output).ok_or(Error::Limit)?;\n    a.checked_add(b)\n        .and_then(|x| x.checked_add(c))\n        .ok_or(Error::Limit)\n}\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage3.rs",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-stage4.rs-4",
+   "kind": "code",
+   "lang": "Rust",
+   "text": "use super::*;\npub fn reserve(spent: &mut u64, quote: u64, limit: u64) -> Result<u64, Error> {\n    let next = spent.checked_add(quote).ok_or(Error::Limit)?;\n    if next > limit {\n        return Err(Error::Limit);\n    }\n    *spent = next;\n    Ok(limit - next)\n}\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage4.rs",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-cli.rs-5",
+   "kind": "code",
+   "lang": "Rust",
+   "text": "pub mod types;\npub use types::*;\npub mod stage1;\npub use stage1::*;\npub mod stage2;\npub use stage2::*;\npub mod stage3;\npub use stage3::*;\npub mod stage4;\npub use stage4::*;\nfn json(value: &str) -> String {\n    let mut out = String::from(\"\\\"\");\n    for ch in value.chars() {\n        match ch {\n            '\"' => out.push_str(\"\\\\\\\"\"),\n            '\\\\' => out.push_str(\"\\\\\\\\\"),\n            '\\n' => out.push_str(\"\\\\n\"),\n            '\\r' => out.push_str(\"\\\\r\"),\n            '\\t' => out.push_str(\"\\\\t\"),\n            c if c.is_control() => out.push_str(&format!(\"\\\\u{:04x}\", c as u32)),\n            c => out.push(c),\n        }\n    }\n    out.push('\"');\n    out\n}\nfn read_file(path: &std::path::Path, max: u64) -> Result<String, Error> {\n    use std::io::Read;\n    let info = std::fs::metadata(path).map_err(|e| Error::Io(e.to_string()))?;\n    if !info.is_file() || info.len() > max {\n        return Err(Error::Limit);\n    }\n    let mut text = String::new();\n    std::fs::File::open(path)\n        .map_err(|e| Error::Io(e.to_string()))?\n        .take(max + 1)\n        .read_to_string(&mut text)\n        .map_err(|e| Error::Io(e.to_string()))?;\n    if text.len() as u64 > max {\n        return Err(Error::Limit);\n    }\n    Ok(text)\n}\nfn run() -> Result<(), Error> {\n    let args: Vec<String> = std::env::args().skip(1).collect();\n    if args.len() != 5 {\n        return Err(Error::Invalid(\"usage: cost-meter input,output,cached input-rate output-rate cached-rate budget (all rates in nano-dollars/token)\".into()));\n    }\n    let usage = parse_usage(&args[0])?;\n    let numbers: Result<Vec<u64>, _> = args[1..].iter().map(|s| s.parse::<u64>()).collect();\n    let n =\n        numbers.map_err(|_| Error::Invalid(\"unsigned integer rate and budget required\".into()))?;\n    let actual = cost(\n        &usage,\n        &Rates {\n            input: n[0],\n            output: n[1],\n            cached: n[2],\n        },\n    )?;\n    let mut spent = 0;\n    let admitted = reserve(&mut spent, actual, n[3]).is_ok();\n    println!(\"{{\\\"schema_version\\\":1,\\\"unit\\\":\\\"nano_dollars\\\",\\\"input_tokens\\\":{},\\\"output_tokens\\\":{},\\\"cached_tokens\\\":{},\\\"cost\\\":{},\\\"admitted\\\":{},\\\"remaining\\\":{}}}\",usage.input,usage.output,usage.cached,actual,admitted,n[3]-spent);\n    Ok(())\n}\nfn main() {\n    if let Err(e) = run() {\n        eprintln!(\"{:?}\", e);\n        std::process::exit(1)\n    }\n}\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/cli.rs",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.py-6",
+   "kind": "code",
+   "lang": "Python",
+   "text": "\"\"\"Replay recorded provider usage through Rust integer arithmetic and a reservation ledger.\"\"\"\n\nimport argparse, json, subprocess, tempfile\nfrom pathlib import Path\n\ndef counters(raw):\n    raw = raw.get(\"usage\", raw)\n    result = [\n        raw.get(\"input_tokens\"),\n        raw.get(\"output_tokens\"),\n        raw.get(\"input_tokens_details\", {}).get(\"cached_tokens\", 0),\n    ]\n    if any(isinstance(n, bool) or not isinstance(n, int) or n < 0 for n in result):\n        raise ValueError(\"nonnegative integer usage counters required\")\n    return result",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.py-7",
+   "kind": "code",
+   "lang": "Python",
+   "text": "def replay(data, meter):\n    limit = data[\"limit\"]\n    rates = data[\"rates\"]\n    spent = 0\n    rows = []\n    seen = set()\n    if isinstance(limit, bool) or not isinstance(limit, int) or limit < 0:\n        raise ValueError(\"integer nano-dollar limit required\")\n    for request in data[\"requests\"]:\n        key = request[\"id\"]\n        if not isinstance(key, str) or not key or key in seen:\n            raise ValueError(\"unique request id required\")\n        seen.add(key)\n        estimate = request[\"estimate\"]\n        quote = meter(\n            [\n                estimate[\"input_tokens\"],\n                estimate[\"output_limit\"],\n                estimate.get(\"cached_tokens\", 0),\n            ],\n            rates,\n        )\n        if spent + quote > limit:\n            rows.append(\n                {\n                    \"id\": key,\n                    \"reserved\": 0,\n                    \"actual\": 0,\n                    \"unused\": 0,\n                    \"status\": \"blocked\",\n                    \"reason\": \"reservation exceeds remaining budget\",\n                }\n            )\n            continue\n        actual = meter(counters(request[\"usage\"]), rates)\n        spent += actual\n        rows.append(\n            {\n                \"id\": key,\n                \"reserved\": quote,\n                \"cost\": quote,\n                \"actual\": actual,\n                \"unused\": max(0, quote - actual),\n                \"overrun\": max(0, actual - quote),\n                \"status\": \"settled\" if actual <= quote else \"overrun\",\n            }\n        )\n        if spent > limit:\n            break\n    return {\n        \"schema_version\": 1,\n        \"unit\": \"nano_dollars\",\n        \"mode\": \"recorded_usage_replay\",\n        \"limit\": limit,\n        \"spent\": spent,\n        \"remaining\": max(0, limit - spent),\n        \"over_budget\": spent > limit,\n        \"settlements\": rows,\n    }",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.py-8",
+   "kind": "code",
+   "lang": "Python",
+   "text": "def main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"input\")\n    parser.add_argument(\"--out\")\n    args = parser.parse_args()\n    with tempfile.TemporaryDirectory(prefix=\"cost-meter-private-\") as folder:\n        binary = Path(folder) / \"meter\"\n        subprocess.run(\n            [\n                \"rustc\",\n                \"--edition=2021\",\n                str(Path(__file__).with_name(\"cli.rs\")),\n                \"-o\",\n                str(binary),\n            ],\n            check=True,\n            capture_output=True,\n            text=True,\n        )",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.py-9",
+   "kind": "code",
+   "lang": "Python",
+   "text": "        def meter(usage, rates):\n            if any(\n                isinstance(n, bool) or not isinstance(n, int) or n < 0\n                for n in usage + list(rates.values())\n            ):\n                raise ValueError(\"nonnegative integer counters and rates required\")\n            result = subprocess.run(\n                [\n                    str(binary),\n                    \",\".join(map(str, usage)),\n                    str(rates[\"input\"]),\n                    str(rates[\"output\"]),\n                    str(rates[\"cached\"]),\n                    str(2**64 - 1),\n                ],\n                capture_output=True,\n                text=True,\n            )\n            if result.returncode:\n                raise ValueError(result.stderr.strip())\n            return json.loads(result.stdout)[\"cost\"]",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.py-10",
+   "kind": "code",
+   "lang": "Python",
+   "text": "        result = replay(json.loads(Path(args.input).read_text()), meter)\n    payload = json.dumps(result, indent=2)\n    if args.out:\n        Path(args.out).write_text(payload + \"\\n\")\n    print(payload)\n\nif __name__ == \"__main__\":\n    main()\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py",
+   "licence": "MIT"
+  },
+  {
+   "id": "code-usage.ts-11",
+   "kind": "code",
+   "lang": "TypeScript",
+   "text": "import { checked, invalid } from \"./errors\";\n\nexport type Usage = { input: bigint; output: bigint; cached: bigint };\nexport type Provider = \"openai\" | \"anthropic\" | \"gemini\" | \"groq\";\n\nfunction counter(v: unknown, name: string): bigint {\n  if (v === undefined || v === null) return 0n;\n  if (typeof v === \"bigint\" && v >= 0n) return checked(v);\n  if (typeof v === \"number\" && Number.isSafeInteger(v) && v >= 0) return BigInt(v);\n  throw invalid(`${name}: nonnegative integer required`);\n}",
+   "source": "overrun/site/lib/usage.ts",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "code-usage.ts-12",
+   "kind": "code",
+   "lang": "TypeScript",
+   "text": "function usage(input: bigint, output: bigint, cached: bigint): Usage {\n  if (cached > input) throw invalid(\"cached exceeds input\");\n  return { input: checked(input), output, cached };\n}\n\n/** Port of the original stage 2: \"input,output,cached\". */\nexport function parseUsageLine(line: string): Usage {\n  const p = line.trim().split(\",\");\n  if (p.length !== 3) throw invalid(\"input,output,cached required\");\n  if (p.some((s) => !/^[0-9]+$/.test(s))) throw invalid(\"unsigned counter required\");\n  const [i, o, c] = p.map((s) => checked(BigInt(s)));\n  return usage(i, o, c);\n}",
+   "source": "overrun/site/lib/usage.ts",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "code-usage.ts-13",
+   "kind": "code",
+   "lang": "TypeScript",
+   "text": "/**\n * R3: normalise a provider usage object (or a whole response holding one) into\n * { input, output, cached } where cached is a part of input, never extra.\n */\nexport function normalizeUsage(raw: unknown, provider?: Provider): Usage & { provider: Provider } {\n  if (!raw || typeof raw !== \"object\") throw invalid(\"usage object required\");\n  // eslint-disable-next-line @typescript-eslint/no-explicit-any\n  let u = raw as Record<string, any>;\n  if (u.usageMetadata) u = u.usageMetadata;\n  else if (u.x_groq?.usage) { u = u.x_groq.usage; provider ??= \"groq\"; }\n  else if (u.usage && typeof u.usage === \"object\") u = u.usage;",
+   "source": "overrun/site/lib/usage.ts",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "code-usage.ts-14",
+   "kind": "code",
+   "lang": "TypeScript",
+   "text": "  if (has(u, \"promptTokenCount\", \"candidatesTokenCount\")) {\n    // Gemini: thinking tokens are billed as output.\n    const out = counter(u.candidatesTokenCount, \"candidatesTokenCount\") + counter(u.thoughtsTokenCount, \"thoughtsTokenCount\");\n    return { provider: \"gemini\", ...usage(counter(u.promptTokenCount, \"promptTokenCount\"), out, counter(u.cachedContentTokenCount, \"cachedContentTokenCount\")) };\n  }\n  if (has(u, \"cache_read_input_tokens\", \"cache_creation_input_tokens\") || (provider === \"anthropic\" && \"input_tokens\" in u)) {\n    // Anthropic: input_tokens excludes cache reads and writes, so add them back.\n    // shortcut: cache writes are priced as plain input (Anthropic bills them at 1.25x); add a rate if cache writes matter.\n    const read = counter(u.cache_read_input_tokens, \"cache_read_input_tokens\");\n    const write = counter(u.cache_creation_input_tokens, \"cache_creation_input_tokens\");\n    return { provider: \"anthropic\", ...usage(counter(u.input_tokens, \"input_tokens\") + read + write, counter(u.output_tokens, \"output_tokens\"), read) };\n  }\n  if (has(u, \"prompt_tokens\")) {\n    // OpenAI Chat Completions; Groq uses the same shape.\n    const cached = counter(u.prompt_tokens_details?.cached_tokens, \"cached_tokens\");\n    return { provider: provider === \"groq\" ? \"groq\" : \"openai\", ...usage(counter(u.prompt_tokens, \"prompt_tokens\"), counter(u.completion_tokens, \"completion_tokens\"), cached) };\n  }\n  if (has(u, \"input_tokens\")) {\n    // OpenAI Responses API (the original project's format).\n    const cached = counter(u.input_tokens_details?.cached_tokens, \"cached_tokens\");\n    return { provider: provider ?? \"openai\", ...usage(counter(u.input_tokens, \"input_tokens\"), counter(u.output_tokens, \"output_tokens\"), cached) };\n  }\n  throw invalid(\"unrecognised usage format\");\n}\n",
+   "source": "overrun/site/lib/usage.ts",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "code-ledger.ts-15",
+   "kind": "code",
+   "lang": "TypeScript",
+   "text": "import { checked, invalid, limit } from \"./errors\";\nimport { cost, type Rates } from \"./pricing\";\nimport { normalizeUsage } from \"./usage\";\n\n/** R5 / original stage 4: admit only if spent + quote <= limit. Returns the new state; nothing changes on rejection. */\nexport function reserve(spent: bigint, quote: bigint, budget: bigint): { spent: bigint; remaining: bigint } {\n  const next = checked(spent + quote);\n  if (next > budget) throw limit(\"over budget\");\n  return { spent: next, remaining: budget - next };\n}",
+   "source": "overrun/site/lib/ledger.ts",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "markdown-1",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "# Token Counter and Cost Meter\n\nUsage reconciliation explaining why real billing differs from preflight estimates.\n\nStart with a visible approximation. At four characters per token, 21 Unicode scalar values estimate six tokens. This is a baseline for preflight planning; actual provider counts can differ by language, punctuation and tokenizer.\n\n## Start with a learner workspace\n\n[Tokenizers](../../phases/10-llms-from-scratch/01-tokenizers/docs/en.md), [Verification gates](../../phases/14-agent-engineering/38-verification-gates/docs/en.md). Language foundation: [Rust ownership and Result](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html).",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-2",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "Install Rust (`rustc`) and Python 3.10+. The core uses the Rust standard library; Python adapters compile into private temporary directories.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --init learning-artifacts/token-counter-and-cost-meter\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 1 --path learning-artifacts/token-counter-and-cost-meter\n```\n\n## Build route\n\n1. [Estimate text with a documented bound](stages/01-estimate-text-with-a-documented-bound/docs/en.md)\n2. [Validate recorded usage](stages/02-validate-recorded-usage/docs/en.md)\n3. [Price with checked integers](stages/03-price-with-checked-integers/docs/en.md)\n4. [Admit work against a ledger](stages/04-admit-work-against-a-ledger/docs/en.md)\n\n## Run with your own inputs",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-3",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "After completing the stages, these commands run your workspace code on the original Orchard examples. Replace the sample paths with your own files.\n\n```bash\npython3 learning-artifacts/token-counter-and-cost-meter/usage.py projects/token-counter-and-cost-meter/examples/usage.json --out usage-ledger.json\n```\n\nTo inspect the complete reference first, replace `learning-artifacts/token-counter-and-cost-meter` with `projects/token-counter-and-cost-meter/solution` in the same command. JSON results use `schema_version: 1`; paths and argument examples are explicit so another tool can consume them.\n\n## Integration boundary",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-4",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "Rates are explicit fixture inputs in integer nano-dollars per token, not current provider prices. usage.py normalizes recorded usage JSON and delegates checked arithmetic to Rust. Its ledger is a sequential replay saved with --out; it is not a live billing service or concurrent reservation store.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --all --solution --strict\npython3 scripts/project_test.py token-counter-and-cost-meter --all --path learning-artifacts/token-counter-and-cost-meter --strict\n```\n\nThe first command checks the reference. The second checks your implementation. The published examples and tests are regression evidence, not a production certification or an unseen benchmark.\n\n## Primary references",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-5",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "# Price with checked integers\n\n**Stage 3 of 4.** Rust. Plan about 2 hours.\n\nThe fixture rate card uses nano-dollars per token. Charge uncached input, cached input and output at separate rates. Every multiplication and sum is checked for overflow, and no floating-point rounding can silently change the bill.\n\n```figure\npj-token-counter-and-cost-meter-3\n```\n\n## Implementation boundary\n\n```rust\npub fn cost(usage:&Usage,rates:&Rates)->Result<u64,Error>\n```\n\nPrimary reference: [Official reference](https://doc.rust-lang.org/std/primitive.u64.html#method.checked_mul).\n\n## Worked Orchard case",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/stages/03-price-with-checked-integers/docs/en.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-6",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "Before coding, review [Rust ownership and Result](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html) and [Tokenizers](../../../../../phases/10-llms-from-scratch/01-tokenizers/docs/en.md). Complete [stage 2](../../02-validate-recorded-usage/docs/en.md) first.\n\nUse supplied integer rate cards in nano-dollars per token. With input=2, output=5 and cached=1, the recorded request costs 260 nano-dollars. These fixture rates are not current provider prices.\n\n```text\n60 uncached * 2 = 120\n40 cached * 1 = 40\n20 output * 5 = 100\ntotal=260 nano_dollars\n```\n\n## Build and inspect\n\nMultiply and add with checked u64 operations. Do not round each component through floating-point dollars.",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/stages/03-price-with-checked-integers/docs/en.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-7",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "Implement the stage in your learner workspace. The CLI helpers are provided adapters and import your functions; they do not substitute the reference solution.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 3 --path learning-artifacts/token-counter-and-cost-meter\n```\n\nPredict the intermediate state above, then run the stage. A fresh stub fails; a passing reference run does not establish completion of your learner workspace.\n\n## Investigate next\n\nHow would an overflow affect budget admission if arithmetic wrapped silently?\n",
+   "source": "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/stages/03-price-with-checked-integers/docs/en.md",
+   "licence": "MIT"
+  },
+  {
+   "id": "markdown-8",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "# PRD: Overrun — why your LLM bill does not match your estimate\n\nOverrun is a free, in-browser tool that estimates what an LLM request will cost before you send it, checks the real usage the provider reports afterwards, and explains the gap. It also publishes a small study: how wrong the common \"4 characters per token\" rule is across languages, code and data, measured with real tokenizers. It grows out of the Starter project \"Token Counter and Cost Meter\" from AI Engineering from Scratch (MIT licence), and keeps that project's four ideas: a labelled estimate, validated usage records, integer-only pricing, and a budget ledger.\n\n### Problem",
+   "source": "overrun/docs/PRD.md",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "markdown-9",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "Teams plan LLM features with a rough rule such as \"4 characters is about 1 token\", then the bill comes in higher. The rule breaks for non-English text, code, JSON and emoji, it ignores system prompts and output tokens, and cached tokens get counted twice by mistake. Floating-point cost maths adds small rounding errors that add up over millions of calls.\n\n### Users\n\n- Primary: PMs and engineers sizing the cost of an LLM feature before building it.\n- Secondary: anyone checking an LLM usage log against a budget.\n\n### Goals and non-goals\n\nGoals",
+   "source": "overrun/docs/PRD.md",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "markdown-10",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "- An estimate that is always labelled as an estimate, with its rule shown.\n- Exact accounting from the usage numbers providers actually report.\n- Cost maths with integers only (nano-dollars), so totals never drift.\n- A budget ledger that says which request would have been blocked.\n- A published, reproducible measurement of how far the 4-characters rule is off, by kind of text.\n\nNon-goals\n\n- Not a live billing service and not a source of current prices: every rate card is a dated, editable fixture with its source link.\n- No paid APIs. Real tokenizers run in the browser; real usage comes from free-tier calls.\n\n### How it works",
+   "source": "overrun/docs/PRD.md",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "markdown-11",
+   "kind": "markdown",
+   "lang": "English",
+   "text": "1. **Estimate:** count Unicode characters (not bytes), divide by a configurable ratio with ceiling division, and label the result \"estimate\".\n2. **Count for real:** run open tokenizers in the browser (for example OpenAI's o200k_base and cl100k_base, and an open model's tokenizer such as Llama 3 or Qwen) and show each count next to the estimate.\n3. **Validate usage:** read recorded usage JSON in the OpenAI, Anthropic, Gemini or Groq format, normalise it into one record, and reject impossible records (negative or fractional counts, or cached tokens greater than input tokens, since cached tokens are a part of input, not extra).\n4. **Price:** multiply with integer nano-dollars per token and checked arithmetic (BigInt), charging uncached input, cached input and output separately.\n5. **Admit:** replay a log against a budget: a request is admitted only if spent plus its quote stays within the limit.\n6. **Reconcile:** for every request, show estimate vs actual and the reasons for the gap: language, code or JSON, system-prompt overhead, output tokens, cached tokens.",
+   "source": "overrun/docs/PRD.md",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-chat-response-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\n  \"id\": \"chatcmpl-0001\",\n  \"object\": \"chat.completion\",\n  \"model\": \"example-model\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"The invoice total is 42.50 EUR.\"\n      },\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 120,\n    \"completion_tokens\": 12,\n    \"total_tokens\": 132\n  }\n}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-chat-response-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\"id\":\"chatcmpl-0001\",\"object\":\"chat.completion\",\"model\":\"example-model\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The invoice total is 42.50 EUR.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":12,\"total_tokens\":132}}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-users-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "[\n  {\n    \"id\": 1000,\n    \"name\": \"Asha\",\n    \"email\": \"asha@example.com\",\n    \"active\": true,\n    \"roles\": [\n      \"admin\",\n      \"editor\"\n    ]\n  },\n  {\n    \"id\": 1001,\n    \"name\": \"Bruno\",\n    \"email\": \"bruno@example.com\",\n    \"active\": false,\n    \"roles\": [\n      \"viewer\"\n    ]\n  },\n  {\n    \"id\": 1002,\n    \"name\": \"Chen\",\n    \"email\": \"chen@example.com\",\n    \"active\": true,\n    \"roles\": [\n      \"viewer\"\n    ]\n  },\n  {\n    \"id\": 1003,\n    \"name\": \"Dana\",\n    \"email\": \"dana@example.com\",\n    \"active\": false,\n    \"roles\": [\n      \"admin\",\n      \"editor\"\n    ]\n  },\n  {\n    \"id\": 1004,\n    \"name\": \"Emeka\",\n    \"email\": \"emeka@example.com\",\n    \"active\": true,\n    \"roles\": [\n      \"viewer\"\n    ]\n  },\n  {\n    \"id\": 1005,\n    \"name\": \"Farah\",\n    \"email\": \"farah@example.com\",\n    \"active\": false,\n    \"roles\": [\n      \"viewer\"\n    ]\n  }\n]",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-users-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "[{\"id\":1000,\"name\":\"Asha\",\"email\":\"asha@example.com\",\"active\":true,\"roles\":[\"admin\",\"editor\"]},{\"id\":1001,\"name\":\"Bruno\",\"email\":\"bruno@example.com\",\"active\":false,\"roles\":[\"viewer\"]},{\"id\":1002,\"name\":\"Chen\",\"email\":\"chen@example.com\",\"active\":true,\"roles\":[\"viewer\"]},{\"id\":1003,\"name\":\"Dana\",\"email\":\"dana@example.com\",\"active\":false,\"roles\":[\"admin\",\"editor\"]},{\"id\":1004,\"name\":\"Emeka\",\"email\":\"emeka@example.com\",\"active\":true,\"roles\":[\"viewer\"]},{\"id\":1005,\"name\":\"Farah\",\"email\":\"farah@example.com\",\"active\":false,\"roles\":[\"viewer\"]}]",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-orders-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "[\n  {\n    \"order_id\": \"ORD-7700\",\n    \"customer\": \"Asha\",\n    \"items\": [\n      {\n        \"sku\": \"SKU-0A\",\n        \"qty\": 1,\n        \"unit_price_cents\": 1999\n      },\n      {\n        \"sku\": \"SKU-0B\",\n        \"qty\": 1,\n        \"unit_price_cents\": 450\n      }\n    ],\n    \"shipped\": true\n  },\n  {\n    \"order_id\": \"ORD-7701\",\n    \"customer\": \"Bruno\",\n    \"items\": [\n      {\n        \"sku\": \"SKU-1A\",\n        \"qty\": 2,\n        \"unit_price_cents\": 1999\n      },\n      {\n        \"sku\": \"SKU-1B\",\n        \"qty\": 1,\n        \"unit_price_cents\": 450\n      }\n    ],\n    \"shipped\": true\n  },\n  {\n    \"order_id\": \"ORD-7702\",\n    \"customer\": \"Chen\",\n    \"items\": [\n      {\n        \"sku\": \"SKU-2A\",\n        \"qty\": 3,\n        \"unit_price_cents\": 1999\n      },\n      {\n        \"sku\": \"SKU-2B\",\n        \"qty\": 1,\n        \"unit_price_cents\": 450\n      }\n    ],\n    \"shipped\": false\n  },\n  {\n    \"order_id\": \"ORD-7703\",\n    \"customer\": \"Dana\",\n    \"items\": [\n      {\n        \"sku\": \"SKU-3A\",\n        \"qty\": 4,\n        \"unit_price_cents\": 1999\n      },\n      {\n        \"sku\": \"SKU-3B\",\n        \"qty\": 1,\n        \"unit_price_cents\": 450\n      }\n    ],\n    \"shipped\": false\n  }\n]",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-orders-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "[{\"order_id\":\"ORD-7700\",\"customer\":\"Asha\",\"items\":[{\"sku\":\"SKU-0A\",\"qty\":1,\"unit_price_cents\":1999},{\"sku\":\"SKU-0B\",\"qty\":1,\"unit_price_cents\":450}],\"shipped\":true},{\"order_id\":\"ORD-7701\",\"customer\":\"Bruno\",\"items\":[{\"sku\":\"SKU-1A\",\"qty\":2,\"unit_price_cents\":1999},{\"sku\":\"SKU-1B\",\"qty\":1,\"unit_price_cents\":450}],\"shipped\":true},{\"order_id\":\"ORD-7702\",\"customer\":\"Chen\",\"items\":[{\"sku\":\"SKU-2A\",\"qty\":3,\"unit_price_cents\":1999},{\"sku\":\"SKU-2B\",\"qty\":1,\"unit_price_cents\":450}],\"shipped\":false},{\"order_id\":\"ORD-7703\",\"customer\":\"Dana\",\"items\":[{\"sku\":\"SKU-3A\",\"qty\":4,\"unit_price_cents\":1999},{\"sku\":\"SKU-3B\",\"qty\":1,\"unit_price_cents\":450}],\"shipped\":false}]",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-config-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\n  \"service\": \"overrun\",\n  \"version\": \"1.4.2\",\n  \"retries\": {\n    \"max\": 3,\n    \"backoff_ms\": [\n      100,\n      400,\n      1600\n    ]\n  },\n  \"features\": {\n    \"cache\": true,\n    \"streaming\": false\n  },\n  \"regions\": [\n    \"eu-west-1\",\n    \"us-east-1\"\n  ]\n}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-config-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\"service\":\"overrun\",\"version\":\"1.4.2\",\"retries\":{\"max\":3,\"backoff_ms\":[100,400,1600]},\"features\":{\"cache\":true,\"streaming\":false},\"regions\":[\"eu-west-1\",\"us-east-1\"]}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-geo-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\n  \"type\": \"FeatureCollection\",\n  \"features\": [\n    {\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          77.8956,\n          29.8649\n        ]\n      },\n      \"properties\": {\n        \"name\": \"Roorkee\"\n      }\n    },\n    {\n      \"type\": \"Feature\",\n      \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          -0.1276,\n          51.5072\n        ]\n      },\n      \"properties\": {\n        \"name\": \"London\"\n      }\n    }\n  ]\n}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-geo-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[77.8956,29.8649]},\"properties\":{\"name\":\"Roorkee\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[-0.1276,51.5072]},\"properties\":{\"name\":\"London\"}}]}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-tool-call-pretty",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\n  \"role\": \"assistant\",\n  \"tool_calls\": [\n    {\n      \"id\": \"call_01\",\n      \"type\": \"function\",\n      \"function\": {\n        \"name\": \"get_weather\",\n        \"arguments\": \"{\\\"city\\\":\\\"Paris\\\",\\\"unit\\\":\\\"celsius\\\"}\"\n      }\n    }\n  ]\n}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "json-tool-call-min",
+   "kind": "json",
+   "lang": "JSON",
+   "text": "{\"role\":\"assistant\",\"tool_calls\":[{\"id\":\"call_01\",\"type\":\"function\",\"function\":{\"name\":\"get_weather\",\"arguments\":\"{\\\"city\\\":\\\"Paris\\\",\\\"unit\\\":\\\"celsius\\\"}\"}}]}",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-1",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "just shipped the new feature 🚀🚀🚀 thank you team!!! 🙌🙌 #launchday #buildinpublic",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-2",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "monday mood ☕️☕️☕️ + 47 unread emails 😵‍💫📧 send help 🆘",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-3",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "the sunset tonight 🌅🧡💛💜 no filter needed ✨ #nofilter #goldenhour",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-4",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "who else is watching the match?? ⚽️🔥 GOOOAL 🥳🥳🥳🇧🇷🇦🇷",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-5",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "new recipe alert 🍝🧄🍅 took 20 min, tasted like 2 hours 😋👩‍🍳",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-6",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "gym streak day 30 💪🏽💪🏽🏋️‍♀️ never skipping leg day again 🦵😤",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-7",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "my cat knocked my coffee off the desk AGAIN 🐈‍⬛☕️💥 why is she like this 😂",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-8",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "family trip 👨‍👩‍👧‍👦✈️🏝️ first time seeing the sea for the little one 🌊🐚",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-9",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "rain all week ☔️🌧️⛈️ perfect excuse for books and tea 📚🍵",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-10",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "exam results are out 📄😬... PASSED 🎉🎓🥹 thank you mom ❤️",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-11",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "concert last night 🎸🎤🤘 my ears are still ringing 🔊😅 10/10 would go again",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  },
+  {
+   "id": "emoji-12",
+   "kind": "emoji",
+   "lang": "English + emoji",
+   "text": "plant update 🌱➡️🌿➡️🪴 she is thriving and so am i 💚✨",
+   "source": "synthetic, written for this study",
+   "licence": "MIT (this repo)"
+  }
+ ]
+}

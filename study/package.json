@@ -1,0 +1,12 @@
+{
+  "name": "overrun-study",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "corpus": "tsx corpus.ts",
+    "study": "tsx --env-file-if-exists=../.env run.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
+  }
+}
