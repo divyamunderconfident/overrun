@@ -1,0 +1,13 @@
+# Project rules
+- Read docs/PRD.md before any task.
+- Ship fast: work autonomously, make reasonable choices without asking, and list the choices you made at the end. Ask only if you are truly blocked (a missing key, file or login).
+- Stack: TypeScript everywhere. Next.js + Tailwind site in /site; the core logic lives in site/lib and runs in the browser. Study scripts are Node/TypeScript scripts in /study that write results/study.json.
+- Money is integer nano-dollars as BigInt. No floating point in any cost calculation. Every estimate is labelled "estimate".
+- Rate cards are dated fixtures with source links, never presented as current prices.
+- Free services only: in-browser tokenizers, Groq or Gemini free tiers for the small real-usage check. No paid APIs, databases or hosting.
+- Cache every real model call on disk by a hash of its input; stop cleanly at the daily quota and resume.
+- Tests never call a real model or the network.
+- Never read, print or commit .env. Never hard-code keys. The repo is public.
+- Commit and push after every working milestone.
+- Never invent numbers in README, RESULTS.md or the site. Quote them from results files.
+- Credit the original project: "Token Counter and Cost Meter" from AI Engineering from Scratch by Rohit Ghumare (MIT).
