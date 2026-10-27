@@ -2,10 +2,21 @@ import type { Metadata } from "next";
 import { TOKENIZERS } from "@/lib/tokenizers";
 import { DotChart } from "../DotChart";
 import { fmt, group, groupLabel, groups, longDate, study } from "../data";
+import { Term, Tip } from "../Tip";
 
 export const metadata: Metadata = { title: "Findings · Overrun" };
 
-type Range = { median: number; min: number; max: number; n: number } | null | undefined;
+const MIT_TEXT = `MIT License
+
+Copyright (c) [COPYRIGHT HOLDER]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
+
+type Range ={ median: number; min: number; max: number; n: number } | null | undefined;
 const range = (o: Range) => (o ? `+${o.median} (${o.min}–${o.max}, n=${o.n})` : "n/a");
 
 export default function Findings() {
@@ -20,13 +31,13 @@ export default function Findings() {
         <div className="lab">Findings · measured {longDate(study.generated.slice(0, 10))}</div>
         <h1 id="f-h" className="serif h1" style={{ maxWidth: 900 }}>How wrong is &ldquo;four characters per token&rdquo;? <em>It depends what you write.</em></h1>
         <p style={{ fontSize: 18, maxWidth: 760, marginTop: 24 }}>
-          The 4-characters rule underestimates <b>{w.group}</b> by <span className="mono acc">{w.factor}×</span> on {w.tokenizer} ({w.charsPerToken} characters per token).
+          The <Term id="four-char-rule">4-characters rule</Term> underestimates <b>{w.group}</b> by <span className="mono acc">{w.factor}×</span><Tip id="factor" /> on {w.tokenizer} ({w.charsPerToken} characters per <Term id="token">token</Term>).
           For English news prose on {en.tokenizer} it overestimates: <span className="mono">{en.factor}×</span> ({en.charsPerToken} characters per token).
         </p>
       </section>
 
       <section className="wrap sec" aria-labelledby="ta-h">
-        <div className="lab">01 · One language, two tokenizers</div>
+        <div className="lab">01 · One language, two <Term id="tokenizer">tokenizers</Term></div>
         <h2 id="ta-h" className="serif h2">Tamil on cl100k_base <em>vs</em> o200k_base.</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24, marginTop: 32 }}>
           {(["cl100k_base", "o200k_base"] as const).map((t) => (
@@ -56,7 +67,7 @@ export default function Findings() {
                   <td className="num">{fmt(g.estimate)}</td>
                   {TOKENIZERS.map((t) => {
                     const x = g.byTokenizer[t.id];
-                    return <td key={t.id} className="num" style={{ color: x.factor > 1 ? "var(--acc)" : undefined }}>{x.factor.toFixed(2)}× <span className="mut" style={{ fontSize: 12 }}>{fmt(x.tokens)}</span></td>;
+                    return <td key={t.id} className="num" style={{ color: x.factor > 1 ? "var(--acc-ink)" : undefined }}>{x.factor.toFixed(2)}× <span className="mut" style={{ fontSize: 12 }}>{fmt(x.tokens)}</span></td>;
                   })}
                 </tr>
               ))}
@@ -69,11 +80,11 @@ export default function Findings() {
         <div className="lab">03 · Real usage, {study.real.requests} requests</div>
         <h2 id="real-h" className="serif h2">The tokens you <em>never typed.</em></h2>
         <p className="mut" style={{ maxWidth: 720 }}>
-          Short requests to free-tier models. Overhead is the reported input tokens minus the local tokenizer&apos;s count of the prompt and system text: what the provider adds for its chat format.
+          Short requests to free-tier models. <Term id="overhead">Overhead</Term> is the reported input tokens minus the local tokenizer&apos;s count of the prompt and <Term id="system-prompt">system</Term> text: tokens the provider adds that nobody typed.
         </p>
         <div className="scroll">
           <table className="tbl">
-            <thead><tr><th>Model</th><th>Local tokenizer</th><th>Requests</th><th>Overhead, no system</th><th>Overhead, with system</th><th>Median estimate error</th></tr></thead>
+            <thead><tr><th>Model</th><th>Local tokenizer</th><th>Requests</th><th>Overhead, no system</th><th>Overhead, with system</th><th><Term id="median">Median</Term> <Term id="estimate">estimate</Term> error</th></tr></thead>
             <tbody>
               {study.real.summary.map((s) => (
                 <tr key={s.model}>
@@ -100,12 +111,22 @@ export default function Findings() {
         <p className="mut" style={{ fontSize: 14 }}>
           {study.corpus.samples} samples, corpus built {longDate(study.corpus.built)}. Every number on this page is read from <a href="/data/study.json">results/study.json</a>; the corpus with each sample&apos;s source and licence is <code>study/corpus.json</code> in the repo.
         </p>
+        <h3 id="sources" className="serif" style={{ fontSize: 28, margin: "40px 0 8px" }}>Sources &amp; licences</h3>
         <ul className="mut" style={{ fontSize: 14, paddingLeft: 18 }}>
           {study.corpus.sources.map((s) => <li key={s}>{s}</li>)}
         </ul>
         <p className="mut" style={{ fontSize: 14 }}>
-          Parallel prose: <a href="https://github.com/MicrosoftTranslator/NTREX">NTREX-128</a>, CC BY-SA 4.0. Code and docs: MIT (the original course project and this repo). Synthetic JSON and emoji posts: written for this study, MIT.
+          Parallel prose: <a href="https://github.com/MicrosoftTranslator/NTREX">NTREX-128</a>, CC BY-SA 4.0. Rust and Python sample code and technical documentation: MIT. Synthetic JSON and emoji posts: written for this study, MIT.
         </p>
+        <p style={{ fontSize: 14 }}>
+          Code and documentation samples from [PROJECT NAME], © [COPYRIGHT HOLDER], used under the{" "}
+          <a href="https://github.com/rohitg00/ai-engineering-from-scratch/blob/main/LICENSE">MIT License</a>.
+        </p>
+        <details style={{ fontSize: 13 }}>
+          <summary className="lab">MIT License text</summary>
+          <pre className="mono mut" style={{ whiteSpace: "pre-wrap", fontSize: 12 }}>{MIT_TEXT}</pre>
+        </details>
+        <p className="mut" style={{ fontSize: 14 }}>Overrun itself is MIT licensed; see the LICENSE file in <a href="https://github.com/divyamunderconfident/overrun">its repository</a>.</p>
       </section>
     </>
   );

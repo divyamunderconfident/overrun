@@ -1,11 +1,12 @@
-import { groupLabel, groups } from "./data";
+import { groupLabel, groups as allGroups } from "./data";
 import { TOKENIZERS, type TokenizerId } from "@/lib/tokenizers";
 
 const MAX = 5; // chars/token axis: 0..5, the 4.0 rule at 80%
 
 /** Characters per token, one row per kind of text, one dot per tokenizer. */
-export function DotChart({ tokenizers }: { tokenizers: TokenizerId[] }) {
+export function DotChart({ tokenizers, only }: { tokenizers: TokenizerId[]; only?: string[] }) {
   const labels = tokenizers.map((t) => TOKENIZERS.find((x) => x.id === t)!.label);
+  const groups = only ? allGroups.filter((g) => only.includes(g.group)) : allGroups;
   const desc = groups.map((g) => `${groupLabel(g.group)}: ${tokenizers.map((t, i) => `${labels[i]} ${g.byTokenizer[t].charsPerToken}`).join(", ")}`).join("; ");
   return (
     <figure style={{ margin: 0 }}>

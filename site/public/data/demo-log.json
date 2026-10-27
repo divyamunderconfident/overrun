@@ -47,7 +47,7 @@
    "kind": "prose",
    "lang": "English",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "\"I yelled at everyone to get out of the water: 'There's a shark in the water!'\" Hammel added.",
+   "prompt_chars": 93,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -74,7 +74,7 @@
    "kind": "prose",
    "lang": "English",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "\"I yelled at everyone to get out of the water: 'There's a shark in the water!'\" Hammel added.",
+   "prompt_chars": 93,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -103,7 +103,7 @@
    "kind": "prose",
    "lang": "English",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "The city of Palu, which has more than 380,000 people, was strewn with debris from collapsed buildings.",
+   "prompt_chars": 102,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -130,7 +130,7 @@
    "kind": "prose",
    "lang": "English",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "The city of Palu, which has more than 380,000 people, was strewn with debris from collapsed buildings.",
+   "prompt_chars": 102,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -159,7 +159,7 @@
    "kind": "prose",
    "lang": "Spanish",
    "system": "",
-   "prompt": "“Grité a todos que saliesen del agua porque había un tiburón”, añadió Hammel.",
+   "prompt_chars": 77,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -186,7 +186,7 @@
    "kind": "prose",
    "lang": "Spanish",
    "system": "",
-   "prompt": "“Grité a todos que saliesen del agua porque había un tiburón”, añadió Hammel.",
+   "prompt_chars": 77,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -215,7 +215,7 @@
    "kind": "prose",
    "lang": "Spanish",
    "system": "",
-   "prompt": "La ciudad de Palu, con más de 380 000 habitantes, quedó cubierta de restos de los edificios derrumbados.",
+   "prompt_chars": 104,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -242,7 +242,7 @@
    "kind": "prose",
    "lang": "Spanish",
    "system": "",
-   "prompt": "La ciudad de Palu, con más de 380 000 habitantes, quedó cubierta de restos de los edificios derrumbados.",
+   "prompt_chars": 104,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -271,7 +271,7 @@
    "kind": "prose",
    "lang": "French",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "« Je hurlais pour que tout le monde sorte de l’eau : Il y a un requin ! », explique Chad.",
+   "prompt_chars": 89,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -298,7 +298,7 @@
    "kind": "prose",
    "lang": "French",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "« Je hurlais pour que tout le monde sorte de l’eau : Il y a un requin ! », explique Chad.",
+   "prompt_chars": 89,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -327,7 +327,7 @@
    "kind": "prose",
    "lang": "French",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "Comptant plus de 380 000 habitants, la ville de Palu se trouvait parsemée de débris des bâtiments effondrés.",
+   "prompt_chars": 108,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -354,7 +354,7 @@
    "kind": "prose",
    "lang": "French",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "Comptant plus de 380 000 habitants, la ville de Palu se trouvait parsemée de débris des bâtiments effondrés.",
+   "prompt_chars": 108,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -383,7 +383,7 @@
    "kind": "prose",
    "lang": "German",
    "system": "",
-   "prompt": "„Ich schrie, dass alle aus dem Wasser herauskommen sollten: ‚Da ist ein Hai im Wasser!‘“, fügte Hammel hinzu.",
+   "prompt_chars": 109,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -410,7 +410,7 @@
    "kind": "prose",
    "lang": "German",
    "system": "",
-   "prompt": "„Ich schrie, dass alle aus dem Wasser herauskommen sollten: ‚Da ist ein Hai im Wasser!‘“, fügte Hammel hinzu.",
+   "prompt_chars": 109,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -439,7 +439,7 @@
    "kind": "prose",
    "lang": "German",
    "system": "",
-   "prompt": "Die Stadt Palu, die über mehr als 380.000 Einwohner verfügt, war übersät mit den Trümmern eingestürzter Gebäude.",
+   "prompt_chars": 112,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -466,7 +466,7 @@
    "kind": "prose",
    "lang": "German",
    "system": "",
-   "prompt": "Die Stadt Palu, die über mehr als 380.000 Einwohner verfügt, war übersät mit den Trümmern eingestürzter Gebäude.",
+   "prompt_chars": 112,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -495,7 +495,7 @@
    "kind": "prose",
    "lang": "Russian",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "«Я закричал, чтобы все выбирались из воды: „Здесь акула!“», — рассказывает Хаммел.",
+   "prompt_chars": 82,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -522,7 +522,7 @@
    "kind": "prose",
    "lang": "Russian",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "«Я закричал, чтобы все выбирались из воды: „Здесь акула!“», — рассказывает Хаммел.",
+   "prompt_chars": 82,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -551,7 +551,7 @@
    "kind": "prose",
    "lang": "Russian",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "Город Палу с населением свыше 380 тысяч людей был завален обломками обрушившихся домов.",
+   "prompt_chars": 87,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -578,7 +578,7 @@
    "kind": "prose",
    "lang": "Russian",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "Город Палу с населением свыше 380 тысяч людей был завален обломками обрушившихся домов.",
+   "prompt_chars": 87,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -607,7 +607,7 @@
    "kind": "prose",
    "lang": "Arabic",
    "system": "",
-   "prompt": "\"لقد قمت بالصياح بأعلى صوتي مطالبًا الجميع بالخروج من المياه: \"يوجد قرش في المياه!\" كما أضاف هاميل.",
+   "prompt_chars": 99,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -634,7 +634,7 @@
    "kind": "prose",
    "lang": "Arabic",
    "system": "",
-   "prompt": "\"لقد قمت بالصياح بأعلى صوتي مطالبًا الجميع بالخروج من المياه: \"يوجد قرش في المياه!\" كما أضاف هاميل.",
+   "prompt_chars": 99,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -663,7 +663,7 @@
    "kind": "prose",
    "lang": "Arabic",
    "system": "",
-   "prompt": "وقد تمت تغطية مدينة بالو والتي يعيش بها أكثر من 380,000 شخص بالحطام الناتج عن انهيار المباني.",
+   "prompt_chars": 93,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -690,7 +690,7 @@
    "kind": "prose",
    "lang": "Arabic",
    "system": "",
-   "prompt": "وقد تمت تغطية مدينة بالو والتي يعيش بها أكثر من 380,000 شخص بالحطام الناتج عن انهيار المباني.",
+   "prompt_chars": 93,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -719,7 +719,7 @@
    "kind": "prose",
    "lang": "Hindi",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "हम्मेल ने कहा, \"मैंने सभी की आवाज़ लगाई कि वे पानी से बाहर निकल जाएं: पानी में एक शार्क है!''",
+   "prompt_chars": 92,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -746,7 +746,7 @@
    "kind": "prose",
    "lang": "Hindi",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "हम्मेल ने कहा, \"मैंने सभी की आवाज़ लगाई कि वे पानी से बाहर निकल जाएं: पानी में एक शार्क है!''",
+   "prompt_chars": 92,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -775,7 +775,7 @@
    "kind": "prose",
    "lang": "Hindi",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "380,000 से ज़्यादा की आबादी वाले पालू के शहर में कई इमारतों ढह गए थी, जिससे यह शहर मलबे से भर गया था।",
+   "prompt_chars": 100,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -802,7 +802,7 @@
    "kind": "prose",
    "lang": "Hindi",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "380,000 से ज़्यादा की आबादी वाले पालू के शहर में कई इमारतों ढह गए थी, जिससे यह शहर मलबे से भर गया था।",
+   "prompt_chars": 100,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -831,7 +831,7 @@
    "kind": "prose",
    "lang": "Tamil",
    "system": "",
-   "prompt": "அனைவரையும் தண்ணீரிலிருந்து வெளியே வரும்படி கத்தினேன்: 'தண்ணீரில் ஒரு சுறா உள்ளது!'\" என ஹாமல் கூறினார்.",
+   "prompt_chars": 102,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -858,7 +858,7 @@
    "kind": "prose",
    "lang": "Tamil",
    "system": "",
-   "prompt": "அனைவரையும் தண்ணீரிலிருந்து வெளியே வரும்படி கத்தினேன்: 'தண்ணீரில் ஒரு சுறா உள்ளது!'\" என ஹாமல் கூறினார்.",
+   "prompt_chars": 102,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -887,7 +887,7 @@
    "kind": "prose",
    "lang": "Tamil",
    "system": "",
-   "prompt": "380,000-க்கும் மேற்பட்ட மக்களைக் கொண்ட பலு நகரம், சிதைந்த கட்டடங்களின் தூசுகளோடு விழுந்து கிடக்கிறது.",
+   "prompt_chars": 101,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -914,7 +914,7 @@
    "kind": "prose",
    "lang": "Tamil",
    "system": "",
-   "prompt": "380,000-க்கும் மேற்பட்ட மக்களைக் கொண்ட பலு நகரம், சிதைந்த கட்டடங்களின் தூசுகளோடு விழுந்து கிடக்கிறது.",
+   "prompt_chars": 101,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -943,7 +943,7 @@
    "kind": "prose",
    "lang": "Chinese",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "\"我冲着每个人叫喊，让他们从水里出来：“水里有鲨鱼！” Hammel 接着说。",
+   "prompt_chars": 39,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -970,7 +970,7 @@
    "kind": "prose",
    "lang": "Chinese",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "\"我冲着每个人叫喊，让他们从水里出来：“水里有鲨鱼！” Hammel 接着说。",
+   "prompt_chars": 39,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -999,7 +999,7 @@
    "kind": "prose",
    "lang": "Chinese",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "巴鲁市人口超过 38 万, 震后，到处是坍塌建筑物的废墟。",
+   "prompt_chars": 29,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1026,7 +1026,7 @@
    "kind": "prose",
    "lang": "Chinese",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "巴鲁市人口超过 38 万, 震后，到处是坍塌建筑物的废墟。",
+   "prompt_chars": 29,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1055,7 +1055,7 @@
    "kind": "prose",
    "lang": "Japanese",
    "system": "",
-   "prompt": "「全員海から出るように叫んだ。サメがいるって！」ハメルは語る。",
+   "prompt_chars": 31,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1082,7 +1082,7 @@
    "kind": "prose",
    "lang": "Japanese",
    "system": "",
-   "prompt": "「全員海から出るように叫んだ。サメがいるって！」ハメルは語る。",
+   "prompt_chars": 31,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1111,7 +1111,7 @@
    "kind": "prose",
    "lang": "Japanese",
    "system": "",
-   "prompt": "38万人の人口があるパルでは、倒壊した建物の破片が散らばっている。",
+   "prompt_chars": 33,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1138,7 +1138,7 @@
    "kind": "prose",
    "lang": "Japanese",
    "system": "",
-   "prompt": "38万人の人口があるパルでは、倒壊した建物の破片が散らばっている。",
+   "prompt_chars": 33,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1167,7 +1167,7 @@
    "kind": "code",
    "lang": "Rust",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "use super::*;\npub fn estimate(text: &str, chars_per_token: u64) -> Result<u64, Error> {\n    if chars_per_token == 0 {\n        return Err(Error::Invalid(\"ratio must be positive\".into()));\n    }\n    let n = text.chars().count() as u64;\n    Ok(n / chars_per_token + u64::from(n % chars_per_token != 0))\n}\n",
+   "prompt_chars": 302,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1194,7 +1194,7 @@
    "kind": "code",
    "lang": "Rust",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "use super::*;\npub fn estimate(text: &str, chars_per_token: u64) -> Result<u64, Error> {\n    if chars_per_token == 0 {\n        return Err(Error::Invalid(\"ratio must be positive\".into()));\n    }\n    let n = text.chars().count() as u64;\n    Ok(n / chars_per_token + u64::from(n % chars_per_token != 0))\n}\n",
+   "prompt_chars": 302,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1223,7 +1223,7 @@
    "kind": "code",
    "lang": "Rust",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "use super::*;\npub fn parse_usage(line: &str) -> Result<Usage, Error> {\n    let p: Vec<&str> = line.trim().split(',').collect();\n    if p.len() != 3 {\n        return Err(Error::Invalid(\"input,output,cached required\".into()));\n    }\n    let mut n = Vec::new();\n    for part in p {\n        if part.is_empty() || !part.bytes().all(|b| b.is_ascii_digit()) {\n            return Err(Error::Invalid(\"unsigned counter required\".into()));\n        }\n        n.push(part.parse::<u64>().map_err(|_| Error::Limit)?);\n    }\n    if n[2] > n[0] {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    Ok(Usage {\n        input: n[0],\n        output: n[1],\n        cached: n[2],\n    })\n}\n",
+   "prompt_chars": 692,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1250,7 +1250,7 @@
    "kind": "code",
    "lang": "Rust",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "use super::*;\npub fn parse_usage(line: &str) -> Result<Usage, Error> {\n    let p: Vec<&str> = line.trim().split(',').collect();\n    if p.len() != 3 {\n        return Err(Error::Invalid(\"input,output,cached required\".into()));\n    }\n    let mut n = Vec::new();\n    for part in p {\n        if part.is_empty() || !part.bytes().all(|b| b.is_ascii_digit()) {\n            return Err(Error::Invalid(\"unsigned counter required\".into()));\n        }\n        n.push(part.parse::<u64>().map_err(|_| Error::Limit)?);\n    }\n    if n[2] > n[0] {\n        return Err(Error::Invalid(\"cached exceeds input\".into()));\n    }\n    Ok(Usage {\n        input: n[0],\n        output: n[1],\n        cached: n[2],\n    })\n}\n",
+   "prompt_chars": 692,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1279,7 +1279,7 @@
    "kind": "json",
    "lang": "JSON",
    "system": "",
-   "prompt": "{\"id\":\"chatcmpl-0001\",\"object\":\"chat.completion\",\"model\":\"example-model\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The invoice total is 42.50 EUR.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":12,\"total_tokens\":132}}",
+   "prompt_chars": 267,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1306,7 +1306,7 @@
    "kind": "json",
    "lang": "JSON",
    "system": "",
-   "prompt": "{\"id\":\"chatcmpl-0001\",\"object\":\"chat.completion\",\"model\":\"example-model\",\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"The invoice total is 42.50 EUR.\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":120,\"completion_tokens\":12,\"total_tokens\":132}}",
+   "prompt_chars": 267,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1335,7 +1335,7 @@
    "kind": "markdown",
    "lang": "English",
    "system": "",
-   "prompt": "Install Rust (`rustc`) and Python 3.10+. The core uses the Rust standard library; Python adapters compile into private temporary directories.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --init learning-artifacts/token-counter-and-cost-meter\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 1 --path learning-artifacts/token-counter-and-cost-meter\n```\n\n## Build route\n\n1. [Estimate text with a documented bound](stages/01-estimate-text-with-a-documented-bound/docs/en.md)\n2. [Validate recorded usage](stages/02-validate-recorded-usage/docs/en.md)\n3. [Price with checked integers](stages/03-price-with-checked-integers/docs/en.md)\n4. [Admit work against a ledger](stages/04-admit-work-against-a-ledger/docs/en.md)\n\n## Run with your own inputs",
+   "prompt_chars": 786,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1362,7 +1362,7 @@
    "kind": "markdown",
    "lang": "English",
    "system": "",
-   "prompt": "Install Rust (`rustc`) and Python 3.10+. The core uses the Rust standard library; Python adapters compile into private temporary directories.\n\n```bash\npython3 scripts/project_test.py token-counter-and-cost-meter --init learning-artifacts/token-counter-and-cost-meter\npython3 scripts/project_test.py token-counter-and-cost-meter --stage 1 --path learning-artifacts/token-counter-and-cost-meter\n```\n\n## Build route\n\n1. [Estimate text with a documented bound](stages/01-estimate-text-with-a-documented-bound/docs/en.md)\n2. [Validate recorded usage](stages/02-validate-recorded-usage/docs/en.md)\n3. [Price with checked integers](stages/03-price-with-checked-integers/docs/en.md)\n4. [Admit work against a ledger](stages/04-admit-work-against-a-ledger/docs/en.md)\n\n## Run with your own inputs",
+   "prompt_chars": 786,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",
@@ -1391,7 +1391,7 @@
    "kind": "emoji",
    "lang": "English + emoji",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "monday mood ☕️☕️☕️ + 47 unread emails 😵‍💫📧 send help 🆘",
+   "prompt_chars": 54,
    "output_limit": 64,
    "local": {
     "tokenizer": "o200k_base",
@@ -1418,7 +1418,7 @@
    "kind": "emoji",
    "lang": "English + emoji",
    "system": "You are a terse assistant. Reply with one word.",
-   "prompt": "monday mood ☕️☕️☕️ + 47 unread emails 😵‍💫📧 send help 🆘",
+   "prompt_chars": 54,
    "output_limit": 16,
    "local": {
     "tokenizer": "gemma3",

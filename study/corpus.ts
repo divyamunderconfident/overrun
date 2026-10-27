@@ -1,7 +1,8 @@
 // Builds study/corpus.json once: ~200 samples, each with its source and licence. Rerun only to rebuild the corpus.
 import { readFileSync, writeFileSync } from "node:fs";
 
-type Sample = { id: string; kind: "prose" | "code" | "json" | "markdown" | "emoji"; lang: string; text: string; source: string; licence: string };
+// `source` is the exact provenance (kept in this repo file); `credit` is the generic label the study and site show.
+type Sample = { id: string; kind: "prose" | "code" | "json" | "markdown" | "emoji"; lang: string; text: string; source: string; licence: string; credit?: string };
 const samples: Sample[] = [];
 
 const NTREX = "https://raw.githubusercontent.com/MicrosoftTranslator/NTREX/main/NTREX-128/newstest2019-ref.";
@@ -43,14 +44,14 @@ let n = 0;
 for (const f of codeFiles) {
   for (const c of chunks(await get(ORIG + f))) {
     if (n++ >= 15) break;
-    samples.push({ id: `code-${f.split("/")[1]}-${n}`, kind: "code", lang: f.endsWith(".py") ? "Python" : "Rust", text: c, source: `ai-engineering-from-scratch/projects/token-counter-and-cost-meter/${f}`, licence: "MIT" });
+    samples.push({ id: `code-${f.endsWith(".py") ? "python" : "rust"}-${n}`, kind: "code", lang: f.endsWith(".py") ? "Python" : "Rust", text: c, source: `ai-engineering-from-scratch/projects/token-counter-and-cost-meter/${f}`, licence: "MIT" });
   }
 }
 // ...topped up to 15 with this repo's TypeScript core.
 for (const f of ["usage.ts", "ledger.ts", "pricing.ts", "estimate.ts", "tokenizers.ts"]) {
   for (const c of chunks(readFileSync(new URL(`../site/lib/${f}`, import.meta.url), "utf8"))) {
     if (n++ >= 15) break;
-    samples.push({ id: `code-${f}-${n}`, kind: "code", lang: "TypeScript", text: c, source: `overrun/site/lib/${f}`, licence: "MIT (this repo)" });
+    samples.push({ id: `code-typescript-${n}`, kind: "code", lang: "TypeScript", text: c, source: `overrun/site/lib/${f}`, licence: "MIT (this repo)" });
   }
 }
 
@@ -95,6 +96,15 @@ const posts = [
   "plant update 🌱➡️🌿➡️🪴 she is thriving and so am i 💚✨",
 ];
 posts.forEach((text, i) => samples.push({ id: `emoji-${i + 1}`, kind: "emoji", lang: "English + emoji", text, source: "synthetic, written for this study", licence: "MIT (this repo)" }));
+
+// Public labels: the site and results name material generically; the MIT attribution lives on the Findings page.
+for (const s of samples) {
+  s.credit = s.kind === "prose" ? s.source.split(" line")[0]
+    : s.source.startsWith(ORIG.split("/")[4]) ? (s.kind === "code" ? "Rust and Python sample code" : "technical documentation")
+    : s.source.startsWith("overrun/site") ? "Overrun TypeScript source"
+    : s.source.startsWith("overrun/docs") ? "Overrun product spec"
+    : s.source;
+}
 
 writeFileSync(new URL("./corpus.json", import.meta.url), JSON.stringify({ built: new Date().toISOString().slice(0, 10), samples }, null, 1) + "\n");
 const byKind = samples.reduce<Record<string, number>>((a, s) => ((a[s.kind] = (a[s.kind] ?? 0) + 1), a), {});

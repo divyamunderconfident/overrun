@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export function Nav() {
   const path = usePathname();
-  const links = [["/", "Estimate"], ["/findings/", "Findings"], ["/reconcile/", "Reconcile"]] as const;
+  const links = [["/start/", "Start here"], ["/", "Estimate"], ["/findings/", "Findings"], ["/reconcile/", "Reconcile"]] as const;
   const here = (href: string) => (href === "/" ? path === "/" : path.startsWith(href.slice(0, -1)));
   return (
     <nav aria-label="Primary" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>

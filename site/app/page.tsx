@@ -4,13 +4,15 @@ import { TOKENIZERS } from "@/lib/tokenizers";
 import { Calculator } from "./Calculator";
 import { DotChart } from "./DotChart";
 import { fmt, group, host, longDate, MODELS, study } from "./data";
+import type { TermId } from "./glossary";
+import { Term } from "./Tip";
 
-const STEPS = [
-  ["Estimate", "Characters ÷ 4, instantly, and always shown as an estimate."],
-  ["Count", "Real tokenizers run locally: o200k, cl100k, Llama 3.1, Gemma 3."],
-  ["Validate", "After the call, read the provider’s reported usage and explain the gap."],
-  ["Price", "Integer nano-dollars and a rate card with its date and source on show."],
-  ["Admit", "Replay against a budget ledger. Requests that would overrun it are blocked."],
+const STEPS: [string, TermId, string][] = [
+  ["Estimate", "estimate", "Characters ÷ 4, instantly, and always shown as an estimate."],
+  ["Count", "tokenizer", "Real tokenizers run locally: o200k, cl100k, Llama 3.1, Gemma 3."],
+  ["Validate", "usage-log", "After the call, read the provider’s reported usage and explain the gap."],
+  ["Price", "rate-card", "Integer nano-dollars and a rate card with its date and source on show."],
+  ["Admit", "budget", "Replay against a budget ledger. Requests that would overrun it are blocked."],
 ];
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
       <section className="wrap fade" aria-labelledby="hero-h">
         <div className="hero">
           <div className="call c1" style={{ gridColumn: 1, gridRow: 1 }}>
-            <b>({w.charsPerToken})</b><span>characters per token: {w.group} on {w.tokenizer}</span><div className="pin" aria-hidden="true" />
+            <b>({w.charsPerToken})</b><span><Term id="characters">characters</Term> per <Term id="token">token</Term>: {w.group} on {w.tokenizer}</span><div className="pin" aria-hidden="true" />
           </div>
           <div className="lab toplab" style={{ gridColumn: 2, gridRow: 1, textAlign: "center" }}>
             A study of {study.corpus.samples} samples · {study.tokenizers.length} tokenizers · {study.real.requests} real requests
@@ -41,16 +43,19 @@ export default function Home() {
             </p>
           </div>
           <div className="call c4" style={{ gridColumn: 1, gridRow: 3, justifyContent: "flex-end" }}>
-            <div className="pin" aria-hidden="true" /><b>(+{groq.overhead.noSystem.median})</b><span>hidden input tokens per request: {groq.model.replace("openai/", "")} on Groq, measured</span>
+            <div className="pin" aria-hidden="true" /><b>(+{groq.overhead.noSystem.median})</b><span><Term id="overhead">hidden input tokens</Term> per request: {groq.model.replace("openai/", "")} on Groq, measured</span>
           </div>
           <div className="cta" style={{ gridColumn: 2, gridRow: 3, display: "flex", justifyContent: "center", alignItems: "flex-end", gap: 10, flexWrap: "wrap" }}>
             <a className="btn" href="#calc">Estimate a request</a>
             <Link className="pill" href="/findings/" style={{ minHeight: 48, padding: "0 20px" }}>Read the findings →</Link>
           </div>
           <div className="call c5" style={{ gridColumn: 3, gridRow: 3, alignItems: "flex-end", textAlign: "right", justifyContent: "flex-end" }}>
-            <div className="pin" aria-hidden="true" /><b>({h.explainedPct}%)</b><span>of the estimate gap explained on {h.heldOut.length} held-out requests</span>
+            <div className="pin" aria-hidden="true" /><b>({h.explainedPct}%)</b><span>of the <Term id="estimate">estimate</Term> gap explained on {h.heldOut.length} held-out requests</span>
           </div>
         </div>
+        <p className="mut" style={{ textAlign: "center", fontSize: 14, margin: "14px 0 0" }}>
+          New to AI? <Link href="/start/">Start here →</Link>
+        </p>
       </section>
 
       <section id="calc" className="wrap sec" aria-labelledby="calc-h">
@@ -60,7 +65,7 @@ export default function Home() {
             <h2 id="calc-h" className="serif h1">Estimate it. Then <em>print the truth.</em></h2>
           </div>
           <p className="mut" style={{ margin: 0, maxWidth: 380 }}>
-            The estimate is labelled as one. The receipt counts with real tokenizers, adds the hidden per-request overhead we measured, and prices it with a dated rate card.
+            The <Term id="estimate">estimate</Term> is labelled as one. The receipt counts with real <Term id="tokenizer">tokenizers</Term>, adds the <Term id="overhead">hidden per-request overhead</Term> we measured, and prices it with a dated <Term id="rate-card">rate card</Term>.
           </p>
         </div>
         <Calculator />
@@ -83,10 +88,10 @@ export default function Home() {
         <div className="lab">03 · How it works</div>
         <h2 id="how-h" className="serif h2" style={{ marginBottom: 32 }}>Five steps, <em>before and after</em> you send.</h2>
         <ol className="how">
-          {STEPS.map(([t, d], i) => (
+          {STEPS.map(([t, term, d], i) => (
             <li key={t}>
               <div className="mono acc" style={{ fontSize: 13 }}>0{i + 1}</div>
-              <div className="serif" style={{ fontSize: 32, margin: "6px 0" }}>{t}</div>
+              <div className="serif" style={{ fontSize: 32, margin: "6px 0" }}><Term id={term}>{t}</Term></div>
               <p className="mut" style={{ margin: 0, fontSize: 14 }}>{d}</p>
             </li>
           ))}
@@ -103,7 +108,7 @@ export default function Home() {
         </div>
         <DotChart tokenizers={["o200k_base", "cl100k_base"]} />
         <p className="mono mut" style={{ fontSize: 11, margin: "18px 0 0" }}>
-          Corpus built {longDate(study.corpus.built)} · {study.corpus.samples} samples · NTREX-128 (CC BY-SA 4.0), MIT-licensed code and docs, synthetic samples (MIT). Counts exclude special tokens.
+          Corpus built {longDate(study.corpus.built)} · {study.corpus.samples} samples · NTREX-128 (CC BY-SA 4.0), Rust and Python sample code and technical documentation (MIT), synthetic samples (MIT). Counts exclude special tokens. <Link href="/findings/#m-h">Sources &amp; licences</Link>.
         </p>
       </section>
     </>

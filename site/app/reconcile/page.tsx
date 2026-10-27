@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import { estimate } from "@/lib/estimate";
 import { replay } from "@/lib/ledger";
 import { formatUsd, type Rates } from "@/lib/pricing";
 import { RATE_CARDS } from "@/lib/ratecards";
-import { formatBp, reconcile, toCsv, toMarkdown, type UsageLog } from "@/lib/reconcile";
+import { formatBp, promptEstimate, reconcile, toCsv, toMarkdown, type UsageLog } from "@/lib/reconcile";
 import { loadTokenizer } from "@/lib/tokenizers";
 import { RateCardPicker } from "../RateCardPicker";
+import { RequestCard } from "../RequestCard";
+import { Term, Tip } from "../Tip";
 
 function download(name: string, text: string, type: string) {
   const a = document.createElement("a");
@@ -59,7 +60,7 @@ export default function Reconcile() {
       const ledger = replay({
         limit: /^\d+$/.test(budget) ? BigInt(budget) : 0n,
         rates,
-        requests: log.requests.map((r) => ({ id: r.id, estimate: { input_tokens: Number(estimate(r.prompt, 4n)), output_limit: r.output_limit }, usage: r.usage })),
+        requests: log.requests.map((r) => ({ id: r.id, estimate: { input_tokens: Number(promptEstimate(r)), output_limit: r.output_limit }, usage: r.usage })),
       });
       const held = log.heldOut ? reconcile({ ...log, requests: log.requests.filter((r) => log.heldOut!.includes(r.id)) }, rates).totals : null;
       return { report, ledger, held };
@@ -85,7 +86,7 @@ export default function Reconcile() {
       <section className="wrap" style={{ paddingTop: 40 }}>
         <div className="panel" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))", gap: 28 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            <span className="lab">Usage log</span>
+            <span className="lab"><Term id="usage-log">Usage log</Term></span>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
               <button type="button" className={`chip${source === "demo" ? " on" : ""}`} aria-pressed={source === "demo"} onClick={loadDemo}>Demo log</button>
               <label className="chip" style={{ display: "inline-flex", alignItems: "center", position: "relative" }}>
@@ -93,30 +94,30 @@ export default function Reconcile() {
                 <input type="file" accept="application/json,.json" className="sr-only" onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
               </label>
             </div>
-            {error && <p role="alert" style={{ color: "var(--acc)", margin: 0, fontSize: 14 }}>{error}</p>}
-            <label className="lab" style={{ display: "block" }}>
-              Budget · nano-dollars
-              <input className="field num" style={{ display: "block", marginTop: 6, maxWidth: 220 }} inputMode="numeric" value={budget} onChange={(e) => setBudget(e.target.value)} />
-            </label>
+            {error && <p role="alert" style={{ color: "var(--acc-ink)", margin: 0, fontSize: 14 }}>{error}</p>}
+            <div>
+              <span style={{ display: "flex", alignItems: "center" }}><label htmlFor="budget" className="lab">Budget · nano-dollars</label><Tip id="budget" /></span>
+              <input id="budget" className="field num" style={{ display: "block", marginTop: 6, maxWidth: 220 }} inputMode="numeric" value={budget} onChange={(e) => setBudget(e.target.value)} />
+            </div>
             <span className="mono mut" style={{ fontSize: 13 }}>= {/^\d+$/.test(budget) ? formatUsd(BigInt(budget)) : "invalid"}</span>
           </div>
           <RateCardPicker cardId={cardId} rates={rates} onChange={(id, x) => { setCardId(id); setRates(x); }} />
         </div>
       </section>
 
-      {result && "error" in result && <section className="wrap" style={{ paddingTop: 24 }}><p role="alert" style={{ color: "var(--acc)" }}>Invalid log: {result.error}</p></section>}
+      {result && "error" in result && <section className="wrap" style={{ paddingTop: 24 }}><p role="alert" style={{ color: "var(--acc-ink)" }}>Invalid log: {result.error}</p></section>}
       {result && "report" in result && result.report && (() => {
         const { report, ledger, held } = result;
         const t = report.totals;
         const blocked = ledger.settlements.filter((s) => s.status === "blocked");
         const status = new Map(ledger.settlements.map((s) => [s.id, s.status]));
-        const stats: [string, string, string][] = [
-          ["Estimated cost · estimate", formatUsd(t.estimateCost), "ceil(characters ÷ 4) on each user prompt"],
+        const stats: [React.ReactNode, string, string][] = [
+          [<Term key="e" id="estimate">Estimated cost · estimate</Term>, formatUsd(t.estimateCost), "ceil(characters ÷ 4) on each user prompt"],
           ["Actual cost · reported usage", formatUsd(t.actualCost), `${report.rows.length} requests`],
           held
-            ? ["Gap explained · held-out", formatBp(held.explainedBp), `${held.unexplainedTokens} of ${held.gapTokens} tokens unexplained; all rows ${formatBp(t.explainedBp)}`]
-            : ["Gap explained", formatBp(t.explainedBp), `${t.unexplainedTokens} of ${t.gapTokens} tokens unexplained`],
-          ["Ledger · blocked", String(blocked.length), `spent ${formatUsd(ledger.spent)} of ${formatUsd(ledger.limit)}`],
+            ? [<Term key="g" id="reconcile">Gap explained · held-out</Term>, formatBp(held.explainedBp), `${held.unexplainedTokens} of ${held.gapTokens} tokens unexplained; all rows ${formatBp(t.explainedBp)}`]
+            : [<Term key="g" id="reconcile">Gap explained</Term>, formatBp(t.explainedBp), `${t.unexplainedTokens} of ${t.gapTokens} tokens unexplained`],
+          [<Term key="b" id="budget">Ledger · blocked</Term>, String(blocked.length), `spent ${formatUsd(ledger.spent)} of ${formatUsd(ledger.limit)}`],
         ];
         return (
           <>
@@ -124,8 +125,8 @@ export default function Reconcile() {
               <div className="lab">01 · Summary</div>
               <h2 id="s-h" className="serif h2" style={{ marginBottom: 28 }}>The gap, <em>itemised.</em></h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24 }}>
-                {stats.map(([l, v, sub]) => (
-                  <div className="rate" key={l}>
+                {stats.map(([l, v, sub], i) => (
+                  <div className="rate" key={i}>
                     <span className="lab">{l}</span>
                     <span className="mono stat">{v}</span>
                     <span className="mut" style={{ fontSize: 13 }}>{sub}</span>
@@ -135,8 +136,8 @@ export default function Reconcile() {
               {held && <p className="mut" style={{ fontSize: 13, maxWidth: 760 }}>The chat-format overhead was measured on a fixed random half of these requests; the held-out figure covers only the other {log!.heldOut!.length}.</p>}
               {blocked.length > 0 && <p style={{ fontSize: 14 }}>Blocked by the ledger (the quote would push spending past the budget): <span className="mono">{blocked.map((b) => b.id).join(", ")}</span></p>}
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 20 }}>
-                <button type="button" className="btn" onClick={() => download("overrun-report.csv", toCsv(report), "text/csv")}>Export CSV</button>
-                <button type="button" className="pill" style={{ minHeight: 48, padding: "0 20px" }} onClick={() => download("overrun-report.md", toMarkdown(report, rateLabel), "text/markdown")}>Export Markdown</button>
+                <span style={{ display: "inline-flex", alignItems: "center" }}><button type="button" className="btn" onClick={() => download("overrun-report.csv", toCsv(report), "text/csv")}>Export CSV</button><Tip id="csv" /></span>
+                <span style={{ display: "inline-flex", alignItems: "center" }}><button type="button" className="pill" style={{ minHeight: 48, padding: "0 20px" }} onClick={() => download("overrun-report.md", toMarkdown(report, rateLabel), "text/markdown")}>Export Markdown</button><Tip id="markdown" /></span>
               </div>
             </section>
 
@@ -144,29 +145,7 @@ export default function Reconcile() {
               <div className="lab">02 · Per request</div>
               <h2 id="p-h" className="serif h2" style={{ marginBottom: 28 }}>Estimate in, <em>receipt out.</em></h2>
               <div className="cards">
-                {report.rows.map((r) => {
-                  const st = status.get(r.id) ?? "not reached";
-                  return (
-                    <article className="card" key={r.id} aria-label={`${r.id}, ${st}`}>
-                      <div className="rl" style={{ fontWeight: 700 }}><span>{r.id}</span><span className="d" /><span className="rmut" style={{ fontWeight: 400 }}>{r.model.replace("openai/", "")}</span></div>
-                      <div className="hr" />
-                      <div className="rl"><span>estimate (chars ÷ 4)</span><span className="d" /><span>{r.estimateTokens.toString()}</span></div>
-                      {r.reasons.filter((x) => x.input && x.tokens !== 0n).map((x) => (
-                        <div className="rl" key={x.reason}><span className="rmut">{x.reason}</span><span className="d" /><span>{x.tokens > 0n ? "+" : ""}{x.tokens.toString()}</span></div>
-                      ))}
-                      <div className="rl" style={{ fontWeight: 700 }}><span>actual input</span><span className="d" /><span>{r.actual.input.toString()}</span></div>
-                      <div className="hr" />
-                      {r.reasons.filter((x) => !x.input && x.tokens !== 0n).map((x) => (
-                        <div className="rl" key={x.reason}><span className="rmut">{x.reason}</span><span className="d" /><span>{x.tokens > 0n ? "+" : ""}{x.tokens.toString()} · {formatUsd(x.cost)}</span></div>
-                      ))}
-                      <div className="rl"><span>cost · estimate</span><span className="d" /><span>{formatUsd(r.estimateCost)}</span></div>
-                      <div className="rl" style={{ fontWeight: 700 }}><span>cost · actual</span><span className="d" /><span>{formatUsd(r.actualCost)}</span></div>
-                      <div style={{ textAlign: "right", marginTop: 10 }}>
-                        <span className={`stamp sm${st === "settled" ? " ok" : ""}`}>{st.toUpperCase()}</span>
-                      </div>
-                    </article>
-                  );
-                })}
+                {report.rows.map((r) => <RequestCard key={r.id} r={r} status={status.get(r.id) ?? "not reached"} />)}
               </div>
             </section>
           </>

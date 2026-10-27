@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import Link from "next/link";
 import { Nav, ThemeToggle } from "./chrome";
 import "./globals.css";
 
@@ -33,10 +34,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <footer className="wrap" style={{ borderTop: "1px solid var(--line)", paddingTop: 28, paddingBottom: 40, display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "baseline" }}>
           <span className="serif" style={{ fontSize: 28 }}>Overrun<em>.</em></span>
-          <span className="mut" style={{ fontSize: 13, maxWidth: 640 }}>
-            Built on &ldquo;Token Counter and Cost Meter&rdquo; from{" "}
-            <a href="https://github.com/rohitg00/ai-engineering-from-scratch">AI Engineering from Scratch</a> by Rohit Ghumare (MIT).
-            Estimates are estimates; rate cards are dated fixtures, not current prices. <a href="https://github.com/divyamunderconfident/overrun">Source</a> · MIT licensed.
+          <span className="mut" style={{ fontSize: 13, maxWidth: 640, display: "flex", flexWrap: "wrap", gap: "4px 16px", alignItems: "center" }}>
+            <span>Estimates are estimates; every price shows the date it was checked.</span>
+            <Link href="/start/">Start here</Link>
+            <Link href="/build/">How it was built</Link>
+            <Link href="/findings/#m-h">Sources &amp; licences</Link>
+            <a href="https://github.com/divyamunderconfident/overrun">Source code</a>
+            <span>MIT licensed</span>
           </span>
         </footer>
       </body>

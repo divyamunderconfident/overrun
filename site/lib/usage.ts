@@ -1,3 +1,5 @@
+// parseUsageLine is adapted from "Token Counter and Cost Meter" (AI Engineering from Scratch), stage 2.
+// Copyright (c) 2026 Rohit Ghumare. Used under the MIT License; see LICENSE.
 import { checked, invalid } from "./errors";
 
 export type Usage = { input: bigint; output: bigint; cached: bigint };

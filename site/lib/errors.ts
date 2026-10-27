@@ -1,3 +1,5 @@
+// Adapted from "Token Counter and Cost Meter" (AI Engineering from Scratch), types.rs.
+// Copyright (c) 2026 Rohit Ghumare. Used under the MIT License; see LICENSE.
 // Mirrors the original project's Error enum: Invalid(reason) or Limit (overflow / over budget).
 export class OverrunError extends Error {
   constructor(public kind: "invalid" | "limit", message: string = kind) {

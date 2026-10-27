@@ -29,5 +29,8 @@ describe("reconcile", () => {
     expect(held.totals.explainedBp).toBeGreaterThanOrEqual(9000n);
     expect(toCsv(report).split("\n")[0]).toContain("reason_cost_nano");
     expect(toMarkdown(report, card.model)).toContain("estimate");
+    const banned = /ai-engineering-from-scratch|token-counter|stage\d\.rs|cli\.rs|usage\.py/i;
+    expect(toCsv(report)).not.toMatch(banned);
+    expect(toMarkdown(report, `${card.model}; rate card dated ${card.asOf}, source ${card.source}`)).not.toMatch(banned);
   });
 });

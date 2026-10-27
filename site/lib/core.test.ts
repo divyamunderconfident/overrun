@@ -1,4 +1,5 @@
-// Stages 1-4 are ported 1:1 from "Token Counter and Cost Meter" (AI Engineering from Scratch, Rohit Ghumare, MIT).
+// Stages 1-4 are ported 1:1 from "Token Counter and Cost Meter" (AI Engineering from Scratch).
+// Copyright (c) 2026 Rohit Ghumare. Used under the MIT License; see LICENSE.
 import { describe, expect, it } from "vitest";
 import { U64_MAX } from "./errors";
 import { estimate, labelledEstimate } from "./estimate";

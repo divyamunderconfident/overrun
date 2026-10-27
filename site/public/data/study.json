@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T08:17:10.104Z",
+ "generated": "2026-10-27T09:12:41.358Z",
  "method": "estimate = ceil(Unicode characters / 4); tokens = local tokenizer count without special tokens; factor = real tokens / estimated tokens; errorPct = (estimate - real) / real * 100",
  "corpus": {
   "built": "2026-10-26",
@@ -15,17 +15,10 @@
    "NTREX-128 newstest2019-ref.tam.txt (CC BY-SA 4.0)",
    "NTREX-128 newstest2019-ref.zho-CN.txt (CC BY-SA 4.0)",
    "NTREX-128 newstest2019-ref.jpn.txt (CC BY-SA 4.0)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage1.rs (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage2.rs (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage3.rs (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/stage4.rs (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/cli.rs (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/solution/usage.py (MIT)",
-   "overrun/site/lib/usage.ts (MIT (this repo))",
-   "overrun/site/lib/ledger.ts (MIT (this repo))",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/README.md (MIT)",
-   "ai-engineering-from-scratch/projects/token-counter-and-cost-meter/stages/03-price-with-checked-integers/docs/en.md (MIT)",
-   "overrun/docs/PRD.md (MIT (this repo))",
+   "Rust and Python sample code (MIT)",
+   "Overrun TypeScript source (MIT (this repo))",
+   "technical documentation (MIT)",
+   "Overrun product spec (MIT (this repo))",
    "synthetic, written for this study (MIT (this repo))"
   ]
  },
@@ -43,7 +36,7 @@
   {
    "id": "llama3",
    "label": "Llama 3.1",
-   "usedBy": "Llama 3.x (Groq llama-3.1-8b-instant)",
+   "usedBy": "Llama 3.x",
    "hf": "Xenova/Meta-Llama-3.1-Tokenizer"
   },
   {
@@ -2500,7 +2493,7 @@
    }
   },
   {
-   "id": "code-stage1.rs-1",
+   "id": "code-rust-1",
    "kind": "code",
    "lang": "Rust",
    "chars": 302,
@@ -2513,7 +2506,7 @@
    }
   },
   {
-   "id": "code-stage2.rs-2",
+   "id": "code-rust-2",
    "kind": "code",
    "lang": "Rust",
    "chars": 692,
@@ -2526,7 +2519,7 @@
    }
   },
   {
-   "id": "code-stage3.rs-3",
+   "id": "code-rust-3",
    "kind": "code",
    "lang": "Rust",
    "chars": 533,
@@ -2539,7 +2532,7 @@
    }
   },
   {
-   "id": "code-stage4.rs-4",
+   "id": "code-rust-4",
    "kind": "code",
    "lang": "Rust",
    "chars": 260,
@@ -2552,7 +2545,7 @@
    }
   },
   {
-   "id": "code-cli.rs-5",
+   "id": "code-rust-5",
    "kind": "code",
    "lang": "Rust",
    "chars": 2352,
@@ -2565,7 +2558,7 @@
    }
   },
   {
-   "id": "code-usage.py-6",
+   "id": "code-python-6",
    "kind": "code",
    "lang": "Python",
    "chars": 547,
@@ -2578,7 +2571,7 @@
    }
   },
   {
-   "id": "code-usage.py-7",
+   "id": "code-python-7",
    "kind": "code",
    "lang": "Python",
    "chars": 1859,
@@ -2591,7 +2584,7 @@
    }
   },
   {
-   "id": "code-usage.py-8",
+   "id": "code-python-8",
    "kind": "code",
    "lang": "Python",
    "chars": 594,
@@ -2604,7 +2597,7 @@
    }
   },
   {
-   "id": "code-usage.py-9",
+   "id": "code-python-9",
    "kind": "code",
    "lang": "Python",
    "chars": 812,
@@ -2617,7 +2610,7 @@
    }
   },
   {
-   "id": "code-usage.py-10",
+   "id": "code-python-10",
    "kind": "code",
    "lang": "Python",
    "chars": 241,
@@ -2630,7 +2623,7 @@
    }
   },
   {
-   "id": "code-usage.ts-11",
+   "id": "code-typescript-11",
    "kind": "code",
    "lang": "TypeScript",
    "chars": 488,
@@ -2643,7 +2636,7 @@
    }
   },
   {
-   "id": "code-usage.ts-12",
+   "id": "code-typescript-12",
    "kind": "code",
    "lang": "TypeScript",
    "chars": 572,
@@ -2656,7 +2649,7 @@
    }
   },
   {
-   "id": "code-usage.ts-13",
+   "id": "code-typescript-13",
    "kind": "code",
    "lang": "TypeScript",
    "chars": 625,
@@ -2669,7 +2662,7 @@
    }
   },
   {
-   "id": "code-usage.ts-14",
+   "id": "code-typescript-14",
    "kind": "code",
    "lang": "TypeScript",
    "chars": 1801,
@@ -2682,7 +2675,7 @@
    }
   },
   {
-   "id": "code-ledger.ts-15",
+   "id": "code-typescript-15",
    "kind": "code",
    "lang": "TypeScript",
    "chars": 513,
@@ -4034,7 +4027,7 @@
     "id": "req-41",
     "provider": "groq",
     "model": "openai/gpt-oss-20b",
-    "sample": "code-stage1.rs-1",
+    "sample": "code-rust-1",
     "kind": "code",
     "lang": "Rust",
     "system": true,
@@ -4053,7 +4046,7 @@
     "id": "req-42",
     "provider": "gemini",
     "model": "gemini-3.1-flash-lite",
-    "sample": "code-stage1.rs-1",
+    "sample": "code-rust-1",
     "kind": "code",
     "lang": "Rust",
     "system": true,
@@ -4072,7 +4065,7 @@
     "id": "req-43",
     "provider": "groq",
     "model": "openai/gpt-oss-20b",
-    "sample": "code-stage2.rs-2",
+    "sample": "code-rust-2",
     "kind": "code",
     "lang": "Rust",
     "system": true,
@@ -4091,7 +4084,7 @@
     "id": "req-44",
     "provider": "gemini",
     "model": "gemini-3.1-flash-lite",
-    "sample": "code-stage2.rs-2",
+    "sample": "code-rust-2",
     "kind": "code",
     "lang": "Rust",
     "system": true,

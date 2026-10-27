@@ -1,5 +1,6 @@
 // R6: estimate vs actual per request, with the gap split into named reasons.
-import { estimate } from "./estimate";
+import { invalid } from "./errors";
+import { estimate, estimateChars } from "./estimate";
 import { cost, formatUsd, type Rates } from "./pricing";
 import { normalizeUsage, type Provider } from "./usage";
 
@@ -10,7 +11,9 @@ export type LogEntry = {
   kind: string;
   lang: string;
   system: string;
-  prompt: string;
+  /** The prompt text, or only its length in Unicode characters (the demo log ships lengths, not texts). */
+  prompt?: string;
+  prompt_chars?: number;
   output_limit: number;
   local: { tokenizer: string; prompt: number; system: number };
   usage: unknown;
@@ -27,9 +30,16 @@ export type UsageLog = {
 /** input: the reason changes input tokens (these add up to actual input - estimate); otherwise it only changes cost. */
 export type Reason = { reason: string; tokens: bigint; cost: bigint; input: boolean };
 
+/** The 4-characters estimate for one log entry's user prompt. */
+export function promptEstimate(e: Pick<LogEntry, "prompt" | "prompt_chars">): bigint {
+  if (typeof e.prompt === "string") return estimate(e.prompt, 4n);
+  if (Number.isSafeInteger(e.prompt_chars) && e.prompt_chars! >= 0) return estimateChars(BigInt(e.prompt_chars!), 4n);
+  throw invalid("prompt or prompt_chars required");
+}
+
 export function reconcileOne(e: LogEntry, rates: Rates, overhead: UsageLog["overhead"] = {}) {
   const u = normalizeUsage(e.usage, e.provider);
-  const est = estimate(e.prompt, 4n);
+  const est = promptEstimate(e);
   const text = BigInt(e.local.prompt) - est;
   const system = BigInt(e.local.system);
   const o = overhead[e.model];

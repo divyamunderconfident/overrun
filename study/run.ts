@@ -9,7 +9,7 @@ import { loadTokenizer, TOKENIZERS, type TokenizerId } from "../site/lib/tokeniz
 import { reconcile, type LogEntry } from "../site/lib/reconcile";
 import { RATE_CARDS } from "../site/lib/ratecards";
 
-type Sample = { id: string; kind: string; lang: string; text: string; source: string; licence: string };
+type Sample = { id: string; kind: string; lang: string; text: string; source: string; licence: string; credit: string };
 const corpus: { built: string; samples: Sample[] } = JSON.parse(readFileSync(new URL("./corpus.json", import.meta.url), "utf8"));
 const root = new URL("../", import.meta.url);
 const r2 = (x: number) => Math.round(x * 100) / 100;
@@ -117,7 +117,7 @@ for (const [i, p] of plan.entries()) {
     estimateErrorPct: r1(((est - input) / input) * 100),
   });
   const raw = response as { usage?: unknown; usageMetadata?: unknown };
-  demo.push({ id: `req-${String(i + 1).padStart(2, "0")}`, provider: m.provider, model: m.model, kind: p.s.kind, lang: p.s.lang, system: p.system ?? "", prompt: p.s.text, output_limit: m.maxTokens, local: { tokenizer: m.tokenizer, prompt: promptTokens, system: systemTokens }, usage: raw.usage ?? { usageMetadata: raw.usageMetadata } });
+  demo.push({ id: `req-${String(i + 1).padStart(2, "0")}`, provider: m.provider, model: m.model, kind: p.s.kind, lang: p.s.lang, system: p.system ?? "", prompt_chars: Number(charCount(p.s.text)), output_limit: m.maxTokens, local: { tokenizer: m.tokenizer, prompt: promptTokens, system: systemTokens }, usage: raw.usage ?? { usageMetadata: raw.usageMetadata } });
 }
 console.log(`real requests with usage: ${real.length}/${plan.length}`);
 
@@ -172,7 +172,7 @@ const tamil = groups.find((g) => g.group === "Tamil")!.byTokenizer;
 const study = {
   generated: new Date().toISOString(),
   method: "estimate = ceil(Unicode characters / 4); tokens = local tokenizer count without special tokens; factor = real tokens / estimated tokens; errorPct = (estimate - real) / real * 100",
-  corpus: { built: corpus.built, samples: corpus.samples.length, sources: [...new Set(corpus.samples.map((s) => `${s.source.split(" line")[0]} (${s.licence})`))] },
+  corpus: { built: corpus.built, samples: corpus.samples.length, sources: [...new Set(corpus.samples.map((s) => `${s.credit} (${s.licence})`))] },
   tokenizers: TOKENIZERS,
   headline: { worst: worst[0], english: { tokenizer: "o200k_base", ...english.byTokenizer.o200k_base }, tamil: { cl100k_base: tamil.cl100k_base, o200k_base: tamil.o200k_base } },
   groups,

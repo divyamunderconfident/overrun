@@ -1,3 +1,5 @@
+// Adapted from "Token Counter and Cost Meter" (AI Engineering from Scratch), stage 4 and its replay script.
+// Copyright (c) 2026 Rohit Ghumare. Used under the MIT License; see LICENSE.
 import { checked, invalid, limit } from "./errors";
 import { cost, type Rates } from "./pricing";
 import { normalizeUsage } from "./usage";
@@ -24,7 +26,7 @@ export type Settlement = {
   reason?: string;
 };
 
-/** Port of the original usage.py replay: reserve the quote, settle on actual usage, block what does not fit. */
+/** Port of the original project's replay script: reserve the quote, settle on actual usage, block what does not fit. */
 export function replay(log: { limit: number | bigint; rates: Rates; requests: LogRequest[] }) {
   const budget = checked(BigInt(log.limit));
   let spent = 0n;
