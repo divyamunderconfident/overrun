@@ -5,7 +5,7 @@ export type TokenizerId = "o200k_base" | "cl100k_base" | "llama3" | "gemma3";
 export const TOKENIZERS: { id: TokenizerId; label: string; usedBy: string; hf?: string }[] = [
   { id: "o200k_base", label: "o200k_base", usedBy: "GPT-4o, GPT-5, gpt-oss (Groq)" },
   { id: "cl100k_base", label: "cl100k_base", usedBy: "GPT-4, GPT-3.5" },
-  { id: "llama3", label: "Llama 3.1", usedBy: "Llama 3.x (Groq llama-3.1-8b-instant)", hf: "Xenova/Meta-Llama-3.1-Tokenizer" },
+  { id: "llama3", label: "Llama 3.1", usedBy: "Llama 3.x", hf: "Xenova/Meta-Llama-3.1-Tokenizer" },
   { id: "gemma3", label: "Gemma 3", usedBy: "Gemma 3; closest open relative of Gemini's tokenizer", hf: "onnx-community/gemma-3-270m-it-ONNX" },
 ];
 

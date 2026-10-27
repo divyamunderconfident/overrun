@@ -2,6 +2,8 @@
 
 Why your LLM bill does not match your estimate. Overrun estimates what a request will cost before you send it, counts it with real tokenizers in your browser, prices it with integer nano-dollars, and reconciles the estimate against the usage the provider reports. Spec: [docs/PRD.md](docs/PRD.md).
 
+**Live: https://overrun-ashy.vercel.app** (no key, no upload needed: demo mode loads a real usage log).
+
 ## Findings
 
 From [results/study.json](results/study.json) (full tables in [RESULTS.md](RESULTS.md)):
