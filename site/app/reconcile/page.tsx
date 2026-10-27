@@ -61,7 +61,8 @@ export default function Reconcile() {
         rates,
         requests: log.requests.map((r) => ({ id: r.id, estimate: { input_tokens: Number(estimate(r.prompt, 4n)), output_limit: r.output_limit }, usage: r.usage })),
       });
-      return { report, ledger };
+      const held = log.heldOut ? reconcile({ ...log, requests: log.requests.filter((r) => log.heldOut!.includes(r.id)) }, rates).totals : null;
+      return { report, ledger, held };
     } catch (e) {
       return { error: (e as Error).message };
     }
@@ -86,7 +87,7 @@ export default function Reconcile() {
 
       {result && "error" in result && <p className="text-sm text-red-600">Invalid log: {result.error}</p>}
       {result && "report" in result && result.report && (() => {
-        const { report, ledger } = result;
+        const { report, ledger, held } = result;
         const t = report.totals;
         const blocked = ledger.settlements.filter((s) => s.status === "blocked");
         return (
@@ -95,8 +96,14 @@ export default function Reconcile() {
             <ul className="list-disc pl-5 text-sm">
               <li>Estimated input cost (<b>estimate</b>, ceil(characters / 4) on the user prompt): {formatUsd(t.estimateCost)}</li>
               <li>Actual cost from reported usage: {formatUsd(t.actualCost)}</li>
-              <li>Input-token gap explained by named reasons: <b>{formatBp(t.explainedBp)}</b> ({t.unexplainedTokens.toString()} of {t.gapTokens.toString()} tokens unexplained)
-                {source === "demo" && <div className="text-xs text-zinc-500">The chat-format overhead was measured on these same requests; it was identical on every request of a model, so it explains rather than fits the gap. Your own logs may leave more unexplained.</div>}</li>
+              {held ? (
+                <li>
+                  Input-token gap explained by named reasons, <b>held-out half</b>: <b>{formatBp(held.explainedBp)}</b> ({held.unexplainedTokens.toString()} of {held.gapTokens.toString()} tokens unexplained)
+                  <div className="text-xs text-zinc-500">The chat-format overhead was measured on a fixed random half of the requests; this figure covers only the other {log!.heldOut!.length}. All rows: {formatBp(t.explainedBp)}.</div>
+                </li>
+              ) : (
+                <li>Input-token gap explained by named reasons: <b>{formatBp(t.explainedBp)}</b> ({t.unexplainedTokens.toString()} of {t.gapTokens.toString()} tokens unexplained)</li>
+              )}
               <li>Ledger: spent {formatUsd(ledger.spent)} of {formatUsd(ledger.limit)}; {blocked.length} request(s) would have been blocked{blocked.length ? `: ${blocked.map((b) => b.id).join(", ")}` : ""}.</li>
             </ul>
             <div className="flex gap-3">

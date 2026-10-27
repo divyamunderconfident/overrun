@@ -6,6 +6,8 @@ const range = (o: Range) => (o ? `${o.median} (${o.min}–${o.max})` : "n/a");
 export default function Findings() {
   const w = study.headline.worst;
   const en = study.headline.english;
+  const ta = study.headline.tamil;
+  const h = study.real.heldOut;
   const tk = study.tokenizers;
   const maxFactor = Math.max(...study.groups.flatMap((g) => tk.map((t) => (g.byTokenizer as Record<string, { factor: number }>)[t.id].factor)));
   return (
@@ -14,6 +16,9 @@ export default function Findings() {
       <p className="text-lg">
         The 4-characters rule underestimates <b>{w.group}</b> by <b>{w.factor}×</b> on <b>{w.tokenizer}</b> ({w.charsPerToken} characters per token).
         For English news prose on {en.tokenizer} it is {en.factor}× ({en.charsPerToken} characters per token).
+      </p>
+      <p>
+        Tamil on cl100k_base is {ta.cl100k_base.factor}× ({ta.cl100k_base.charsPerToken} characters per token) against {ta.o200k_base.factor}× ({ta.o200k_base.charsPerToken}) on o200k_base.
       </p>
       <p className="text-sm text-zinc-500">
         {study.corpus.samples} samples, measured {study.generated.slice(0, 10)}. Method: {study.method}. All numbers on this page come from{" "}
@@ -62,6 +67,10 @@ export default function Findings() {
           </tbody>
         </table>
       </div>
+      <p className="text-sm">
+        <b>Held-out reconciliation:</b> with overhead measured on a fixed random half ({h.calibration.length} requests, seed {h.seed}), the named reasons
+        explain <b>{h.explainedPct}%</b> of the input-token gap on the other {h.heldOut.length} requests ({h.unexplainedTokens} of {h.gapTokens} tokens unexplained).
+      </p>
       <p className="text-xs text-zinc-500">Overhead shown as median (min–max). Gemini&apos;s tokenizer is not public; Gemma 3&apos;s stands in for it.</p>
 
       <h2>Corpus and licences</h2>

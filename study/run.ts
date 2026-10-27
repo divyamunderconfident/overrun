@@ -6,6 +6,8 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { estimate, charCount } from "../site/lib/estimate";
 import { normalizeUsage } from "../site/lib/usage";
 import { loadTokenizer, TOKENIZERS, type TokenizerId } from "../site/lib/tokenizers";
+import { reconcile, type LogEntry } from "../site/lib/reconcile";
+import { RATE_CARDS } from "../site/lib/ratecards";
 
 type Sample = { id: string; kind: string; lang: string; text: string; source: string; licence: string };
 const corpus: { built: string; samples: Sample[] } = JSON.parse(readFileSync(new URL("./corpus.json", import.meta.url), "utf8"));
@@ -134,20 +136,52 @@ const realSummary = (Object.keys(MODELS) as ModelKey[]).map((k) => {
   };
 });
 
+// ---------- Held-out check: overhead measured on a fixed random half, explained share on the other half only ----------
+const SEED = 20261027;
+let state = SEED;
+const rand = () => (state = (state * 1103515245 + 12345) % 2147483648) / 2147483648; // seeded LCG, so the split never changes
+const shuffled = demo.map((d) => d.id);
+for (let i = shuffled.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; }
+const calibration = new Set(shuffled.slice(0, shuffled.length >> 1));
+const heldOutIds = shuffled.filter((id) => !calibration.has(id)).sort();
+const calibrationOverhead = Object.fromEntries([...new Set(real.map((r) => r.model))].map((model) => {
+  const med = (sys: boolean) => {
+    const xs = real.filter((r) => r.model === model && r.system === sys && calibration.has(r.id)).map((r) => r.overhead);
+    if (!xs.length) throw new Error(`no calibration requests for ${model} system=${sys}; change SEED`);
+    return Math.round(median(xs)); // overhead is a whole number of tokens
+  };
+  return [model, { noSystem: med(false), withSystem: med(true) }];
+}));
+const held = reconcile(
+  { limit: 0, overhead: calibrationOverhead, requests: demo.filter((d) => heldOutIds.includes(d.id)) as LogEntry[] },
+  RATE_CARDS.find((c) => c.id === "groq-gpt-oss-20b")!.rates,
+).totals;
+const heldOut = {
+  method: "seeded random split of the 50 requests: overhead per model (median, with and without system prompt) measured on the calibration half, gap explained measured on the held-out half only",
+  seed: SEED,
+  calibration: [...calibration].sort(),
+  heldOut: heldOutIds,
+  overhead: calibrationOverhead,
+  gapTokens: Number(held.gapTokens),
+  unexplainedTokens: Number(held.unexplainedTokens),
+  explainedPct: Number(held.explainedBp) / 100,
+};
+const tamil = groups.find((g) => g.group === "Tamil")!.byTokenizer;
+
 // ---------- Write results ----------
 const study = {
   generated: new Date().toISOString(),
   method: "estimate = ceil(Unicode characters / 4); tokens = local tokenizer count without special tokens; factor = real tokens / estimated tokens; errorPct = (estimate - real) / real * 100",
   corpus: { built: corpus.built, samples: corpus.samples.length, sources: [...new Set(corpus.samples.map((s) => `${s.source.split(" line")[0]} (${s.licence})`))] },
   tokenizers: TOKENIZERS,
-  headline: { worst: worst[0], english: { tokenizer: "o200k_base", ...english.byTokenizer.o200k_base } },
+  headline: { worst: worst[0], english: { tokenizer: "o200k_base", ...english.byTokenizer.o200k_base }, tamil: { cl100k_base: tamil.cl100k_base, o200k_base: tamil.o200k_base } },
   groups,
   rows,
-  real: { requests: real.length, planned: plan.length, stoppedEarly: [...stopped], summary: realSummary, rows: real },
+  real: { requests: real.length, planned: plan.length, stoppedEarly: [...stopped], summary: realSummary, heldOut, rows: real },
 };
 mkdirSync(new URL("results/", root), { recursive: true });
 writeFileSync(new URL("results/study.json", root), JSON.stringify(study, null, 1) + "\n");
-writeFileSync(new URL("results/demo-log.json", root), JSON.stringify({ note: "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.", limit: 500000, rateCard: "groq-gpt-oss-20b", overhead: Object.fromEntries(realSummary.filter((s) => s.requests).map((s) => [s.model, { noSystem: s.overheadNoSystem?.median ?? null, withSystem: s.overheadWithSystem?.median ?? null }])), requests: demo }, null, 1) + "\n");
+writeFileSync(new URL("results/demo-log.json", root), JSON.stringify({ note: "Real usage recorded by study/run.ts from free-tier Groq and Gemini calls.", limit: 500000, rateCard: "groq-gpt-oss-20b", overhead: calibrationOverhead, heldOut: heldOutIds, requests: demo }, null, 1) + "\n");
 
 const tk = TOKENIZERS.map((t) => t.id);
 const md = [
@@ -160,6 +194,8 @@ const md = [
   `The 4-characters rule underestimates **${worst[0].group}** by **${worst[0].factor}×** on **${worst[0].tokenizer}** (${worst[0].charsPerToken} characters per token).`,
   "",
   `For English news prose on o200k_base it is ${english.byTokenizer.o200k_base.factor}× (${english.byTokenizer.o200k_base.charsPerToken} characters per token).`,
+  "",
+  `Tamil on cl100k_base is ${tamil.cl100k_base.factor}× (${tamil.cl100k_base.charsPerToken} characters per token) against ${tamil.o200k_base.factor}× (${tamil.o200k_base.charsPerToken} characters per token) on o200k_base.`,
   "",
   "## Real tokens per estimated token (factor), by kind of text",
   "",
@@ -179,6 +215,8 @@ const md = [
     const f = (o: { median: number; min: number; max: number } | null | undefined) => (o ? `${o.median} (${o.min}–${o.max})` : "n/a");
     return `| ${s.model} | ${s.tokenizer} | ${s.requests} | ${f(s.overheadNoSystem)} | ${f(s.overheadWithSystem)} | ${s.medianEstimateErrorPct}% |`;
   }),
+  "",
+  `**Held-out reconciliation:** with overhead measured on a fixed random half (${calibration.size} requests, seed ${SEED}), the named reasons explain **${heldOut.explainedPct}%** of the input-token gap on the other ${heldOutIds.length} requests (${heldOut.unexplainedTokens} of ${heldOut.gapTokens} tokens unexplained).`,
   "",
   "Gemini's tokenizer is not public; Gemma 3's is used as the closest open relative, so part of the Gemini overhead spread is tokenizer mismatch, not overhead.",
   "",

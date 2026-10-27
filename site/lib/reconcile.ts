@@ -19,6 +19,8 @@ export type UsageLog = {
   limit: number;
   rateCard?: string;
   overhead?: Record<string, { noSystem: number | null; withSystem: number | null }>;
+  /** Ids not used to measure `overhead`, so the explained share on them is a fair test. */
+  heldOut?: string[];
   requests: LogEntry[];
 };
 

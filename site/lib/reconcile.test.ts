@@ -23,6 +23,9 @@ describe("reconcile", () => {
     expect(report.rows.length).toBe(demo.requests.length);
     for (const r of report.rows) expect(r.reasons.reduce((a, x) => a + x.cost, 0n)).toBe(r.gapCost);
     expect(report.totals.explainedBp).toBeGreaterThanOrEqual(9000n);
+    const held = reconcile({ ...(demo as UsageLog), requests: demo.requests.filter((r) => demo.heldOut.includes(r.id)) } as UsageLog, card.rates);
+    expect(held.rows.length).toBe(25);
+    expect(held.totals.explainedBp).toBeGreaterThanOrEqual(9000n);
     expect(toCsv(report).split("\n")[0]).toContain("reason_cost_nano");
     expect(toMarkdown(report, card.model)).toContain("estimate");
   });

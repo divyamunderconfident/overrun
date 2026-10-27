@@ -7,8 +7,10 @@ Why your LLM bill does not match your estimate. Overrun estimates what a request
 From [results/study.json](results/study.json) (full tables in [RESULTS.md](RESULTS.md)):
 
 - The 4-characters rule underestimates **Tamil by 5.35× on cl100k_base** (0.74 characters per token).
+- Tamil on cl100k_base is 5.35× (0.74 characters per token) against 1.41× (2.8 characters per token) on o200k_base.
 - For English news prose on o200k_base it *over*estimates: 0.84× (4.68 characters per token).
 - In 50 real free-tier requests, `openai/gpt-oss-20b` on Groq reported 71 more input tokens than the o200k_base count of the text (74 with a system prompt), on every request. `gemini-3.1-flash-lite` reported 1 more than the Gemma 3 count, on every request.
+- Held-out reconciliation: with that overhead measured on a fixed random half of the 50 requests (seed 20261027), the named reasons explain 100% of the input-token gap on the other 25 (0 of 1067 tokens unexplained).
 
 ## What is inside
 
