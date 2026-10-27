@@ -38,7 +38,7 @@ export default function Reconcile() {
     const card = RATE_CARDS.find((c) => c.id === l.rateCard);
     if (card) { setCardId(card.id); setRates(card.rates); }
   }
-  const loadDemo = () => fetch("/data/demo-log.json").then((r) => r.json()).then((l) => use(l, "demo")).catch((e) => setError(String(e)));
+  const loadDemo = () => fetch("/data/demo-log.json").then((r) => r.json()).then((l) => { setError(""); use(l, "demo"); }).catch((e) => setError(String(e)));
   useEffect(() => { loadDemo(); }, []);
 
   async function upload(file: File) {
@@ -68,69 +68,110 @@ export default function Reconcile() {
     }
   }, [log, rates, budget]);
 
-  const rateLabel = `${RATE_CARDS.find((c) => c.id === cardId)?.model ?? "custom"} (input ${rates.input}, cached ${rates.cached}, output ${rates.output} nano-$/token)`;
+  const card = RATE_CARDS.find((c) => c.id === cardId);
+  const rateLabel = `${card?.model ?? "custom"} (input ${rates.input}, cached ${rates.cached}, output ${rates.output} nano-$/token${card ? `; rate card dated ${card.asOf}, source ${card.source}` : ""})`;
 
   return (
-    <div className="space-y-4">
-      <h1>Reconcile estimate vs actual</h1>
-      <p className="text-sm text-zinc-500">
-        Showing: <b>{source === "demo" ? "demo log (50 real free-tier requests recorded by the study)" : source}</b>.{" "}
-        Upload your own log in the same JSON shape as <a href="/data/demo-log.json">the demo log</a>. It stays in your browser.
-      </p>
-      <div className="flex flex-wrap items-center gap-3 text-sm">
-        <button onClick={loadDemo}>Load demo log</button>
-        <input type="file" accept="application/json,.json" onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
-      </div>
-      {error && <p className="text-sm text-red-600">{error}</p>}
-      <RateCardPicker cardId={cardId} rates={rates} onChange={(id, x) => { setCardId(id); setRates(x); }} />
-      <label className="block text-sm">Budget <input className="w-32" inputMode="numeric" value={budget} onChange={(e) => setBudget(e.target.value)} /> nano-dollars ({/^\d+$/.test(budget) ? formatUsd(BigInt(budget)) : "invalid"})</label>
+    <>
+      <section className="wrap fade" aria-labelledby="r-h">
+        <div className="lab">Reconcile · estimate vs actual</div>
+        <h1 id="r-h" className="serif h1" style={{ maxWidth: 900 }}>Why the bill <em>wasn&apos;t the estimate,</em> request by request.</h1>
+        <p className="mut" style={{ maxWidth: 720, marginTop: 20 }}>
+          Showing <b style={{ color: "var(--ink)" }}>{source === "demo" ? "the demo log: 50 real free-tier requests recorded by the study" : source}</b>.
+          Upload your own log in the same JSON shape as <a href="/data/demo-log.json">the demo log</a>; it never leaves your browser.
+        </p>
+      </section>
 
-      {result && "error" in result && <p className="text-sm text-red-600">Invalid log: {result.error}</p>}
+      <section className="wrap" style={{ paddingTop: 40 }}>
+        <div className="panel" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(280px, 100%), 1fr))", gap: 28 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            <span className="lab">Usage log</span>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
+              <button type="button" className={`chip${source === "demo" ? " on" : ""}`} aria-pressed={source === "demo"} onClick={loadDemo}>Demo log</button>
+              <label className="chip" style={{ display: "inline-flex", alignItems: "center", position: "relative" }}>
+                Upload JSON
+                <input type="file" accept="application/json,.json" className="sr-only" onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
+              </label>
+            </div>
+            {error && <p role="alert" style={{ color: "var(--acc)", margin: 0, fontSize: 14 }}>{error}</p>}
+            <label className="lab" style={{ display: "block" }}>
+              Budget · nano-dollars
+              <input className="field num" style={{ display: "block", marginTop: 6, maxWidth: 220 }} inputMode="numeric" value={budget} onChange={(e) => setBudget(e.target.value)} />
+            </label>
+            <span className="mono mut" style={{ fontSize: 13 }}>= {/^\d+$/.test(budget) ? formatUsd(BigInt(budget)) : "invalid"}</span>
+          </div>
+          <RateCardPicker cardId={cardId} rates={rates} onChange={(id, x) => { setCardId(id); setRates(x); }} />
+        </div>
+      </section>
+
+      {result && "error" in result && <section className="wrap" style={{ paddingTop: 24 }}><p role="alert" style={{ color: "var(--acc)" }}>Invalid log: {result.error}</p></section>}
       {result && "report" in result && result.report && (() => {
         const { report, ledger, held } = result;
         const t = report.totals;
         const blocked = ledger.settlements.filter((s) => s.status === "blocked");
+        const status = new Map(ledger.settlements.map((s) => [s.id, s.status]));
+        const stats: [string, string, string][] = [
+          ["Estimated cost · estimate", formatUsd(t.estimateCost), "ceil(characters ÷ 4) on each user prompt"],
+          ["Actual cost · reported usage", formatUsd(t.actualCost), `${report.rows.length} requests`],
+          held
+            ? ["Gap explained · held-out", formatBp(held.explainedBp), `${held.unexplainedTokens} of ${held.gapTokens} tokens unexplained; all rows ${formatBp(t.explainedBp)}`]
+            : ["Gap explained", formatBp(t.explainedBp), `${t.unexplainedTokens} of ${t.gapTokens} tokens unexplained`],
+          ["Ledger · blocked", String(blocked.length), `spent ${formatUsd(ledger.spent)} of ${formatUsd(ledger.limit)}`],
+        ];
         return (
           <>
-            <h2>Summary</h2>
-            <ul className="list-disc pl-5 text-sm">
-              <li>Estimated input cost (<b>estimate</b>, ceil(characters / 4) on the user prompt): {formatUsd(t.estimateCost)}</li>
-              <li>Actual cost from reported usage: {formatUsd(t.actualCost)}</li>
-              {held ? (
-                <li>
-                  Input-token gap explained by named reasons, <b>held-out half</b>: <b>{formatBp(held.explainedBp)}</b> ({held.unexplainedTokens.toString()} of {held.gapTokens.toString()} tokens unexplained)
-                  <div className="text-xs text-zinc-500">The chat-format overhead was measured on a fixed random half of the requests; this figure covers only the other {log!.heldOut!.length}. All rows: {formatBp(t.explainedBp)}.</div>
-                </li>
-              ) : (
-                <li>Input-token gap explained by named reasons: <b>{formatBp(t.explainedBp)}</b> ({t.unexplainedTokens.toString()} of {t.gapTokens.toString()} tokens unexplained)</li>
-              )}
-              <li>Ledger: spent {formatUsd(ledger.spent)} of {formatUsd(ledger.limit)}; {blocked.length} request(s) would have been blocked{blocked.length ? `: ${blocked.map((b) => b.id).join(", ")}` : ""}.</li>
-            </ul>
-            <div className="flex gap-3">
-              <button onClick={() => download("overrun-report.csv", toCsv(report), "text/csv")}>Export CSV</button>
-              <button onClick={() => download("overrun-report.md", toMarkdown(report, rateLabel), "text/markdown")}>Export Markdown</button>
-            </div>
+            <section className="wrap sec" aria-labelledby="s-h">
+              <div className="lab">01 · Summary</div>
+              <h2 id="s-h" className="serif h2" style={{ marginBottom: 28 }}>The gap, <em>itemised.</em></h2>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24 }}>
+                {stats.map(([l, v, sub]) => (
+                  <div className="rate" key={l}>
+                    <span className="lab">{l}</span>
+                    <span className="mono stat">{v}</span>
+                    <span className="mut" style={{ fontSize: 13 }}>{sub}</span>
+                  </div>
+                ))}
+              </div>
+              {held && <p className="mut" style={{ fontSize: 13, maxWidth: 760 }}>The chat-format overhead was measured on a fixed random half of these requests; the held-out figure covers only the other {log!.heldOut!.length}.</p>}
+              {blocked.length > 0 && <p style={{ fontSize: 14 }}>Blocked by the ledger (the quote would push spending past the budget): <span className="mono">{blocked.map((b) => b.id).join(", ")}</span></p>}
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 20 }}>
+                <button type="button" className="btn" onClick={() => download("overrun-report.csv", toCsv(report), "text/csv")}>Export CSV</button>
+                <button type="button" className="pill" style={{ minHeight: 48, padding: "0 20px" }} onClick={() => download("overrun-report.md", toMarkdown(report, rateLabel), "text/markdown")}>Export Markdown</button>
+              </div>
+            </section>
 
-            <h2>Per request</h2>
-            <div className="overflow-x-auto">
-              <table>
-                <thead><tr><th>Request</th><th>Estimate → actual input</th><th>Cost (estimate → actual)</th><th>Why the gap (tokens)</th><th>Ledger</th></tr></thead>
-                <tbody>
-                  {report.rows.map((r, i) => (
-                    <tr key={r.id}>
-                      <td>{r.id}<div className="text-xs text-zinc-500">{r.model}</div></td>
-                      <td>{r.estimateTokens.toString()} → {r.actual.input.toString()}<div className="text-xs text-zinc-500">out {r.actual.output.toString()}, cached {r.actual.cached.toString()}</div></td>
-                      <td>{formatUsd(r.estimateCost)} → {formatUsd(r.actualCost)}</td>
-                      <td className="text-xs">{r.reasons.filter((x) => x.tokens !== 0n).map((x) => <div key={x.reason}>{x.tokens > 0n ? "+" : ""}{x.tokens.toString()} {x.reason}</div>)}</td>
-                      <td className="text-xs">{ledger.settlements[i]?.status ?? "not reached"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <section className="wrap sec end" aria-labelledby="p-h">
+              <div className="lab">02 · Per request</div>
+              <h2 id="p-h" className="serif h2" style={{ marginBottom: 28 }}>Estimate in, <em>receipt out.</em></h2>
+              <div className="cards">
+                {report.rows.map((r) => {
+                  const st = status.get(r.id) ?? "not reached";
+                  return (
+                    <article className="card" key={r.id} aria-label={`${r.id}, ${st}`}>
+                      <div className="rl" style={{ fontWeight: 700 }}><span>{r.id}</span><span className="d" /><span className="rmut" style={{ fontWeight: 400 }}>{r.model.replace("openai/", "")}</span></div>
+                      <div className="hr" />
+                      <div className="rl"><span>estimate (chars ÷ 4)</span><span className="d" /><span>{r.estimateTokens.toString()}</span></div>
+                      {r.reasons.filter((x) => x.input && x.tokens !== 0n).map((x) => (
+                        <div className="rl" key={x.reason}><span className="rmut">{x.reason}</span><span className="d" /><span>{x.tokens > 0n ? "+" : ""}{x.tokens.toString()}</span></div>
+                      ))}
+                      <div className="rl" style={{ fontWeight: 700 }}><span>actual input</span><span className="d" /><span>{r.actual.input.toString()}</span></div>
+                      <div className="hr" />
+                      {r.reasons.filter((x) => !x.input && x.tokens !== 0n).map((x) => (
+                        <div className="rl" key={x.reason}><span className="rmut">{x.reason}</span><span className="d" /><span>{x.tokens > 0n ? "+" : ""}{x.tokens.toString()} · {formatUsd(x.cost)}</span></div>
+                      ))}
+                      <div className="rl"><span>cost · estimate</span><span className="d" /><span>{formatUsd(r.estimateCost)}</span></div>
+                      <div className="rl" style={{ fontWeight: 700 }}><span>cost · actual</span><span className="d" /><span>{formatUsd(r.actualCost)}</span></div>
+                      <div style={{ textAlign: "right", marginTop: 10 }}>
+                        <span className={`stamp sm${st === "settled" ? " ok" : ""}`}>{st.toUpperCase()}</span>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
           </>
         );
       })()}
-    </div>
+    </>
   );
 }

@@ -27,7 +27,9 @@ From [results/study.json](results/study.json) (full tables in [RESULTS.md](RESUL
 | R7 study: corpus, measurement, real usage check | `study/`, `results/`, `/findings` |
 | R8 demo mode: the 50 real requests from the study as a bundled log | `site/public/data/demo-log.json` |
 
-Rate cards are dated fixtures copied from each provider's pricing page on 2026-10-26. They are not current prices; edit them on the site.
+Rate cards are dated fixtures copied from each provider's pricing page on 2026-10-26 or 2026-10-27 (each card carries its own date and source). They are not current prices; edit them on the site.
+
+The site follows the "Fog & Signal" design handoff (Direction A): Instrument Serif for headlines, JetBrains Mono with tabular figures for numbers, light and dark themes, and a thermal receipt that prints each estimate (the animation is skipped under `prefers-reduced-motion`).
 
 ## Run it
 

@@ -24,7 +24,8 @@ export type UsageLog = {
   requests: LogEntry[];
 };
 
-export type Reason = { reason: string; tokens: bigint; cost: bigint };
+/** input: the reason changes input tokens (these add up to actual input - estimate); otherwise it only changes cost. */
+export type Reason = { reason: string; tokens: bigint; cost: bigint; input: boolean };
 
 export function reconcileOne(e: LogEntry, rates: Rates, overhead: UsageLog["overhead"] = {}) {
   const u = normalizeUsage(e.usage, e.provider);
@@ -36,12 +37,12 @@ export function reconcileOne(e: LogEntry, rates: Rates, overhead: UsageLog["over
   const unexplained = u.input - est - text - system - fmt;
   const label = e.kind === "prose" ? `${e.lang} text` : `${e.kind} text`;
   const reasons: Reason[] = [
-    { reason: `${label} vs 4-characters rule (${e.local.tokenizer})`, tokens: text, cost: text * rates.input },
-    { reason: "system prompt left out of estimate", tokens: system, cost: system * rates.input },
-    { reason: "chat-format overhead (measured in study)", tokens: fmt, cost: fmt * rates.input },
-    { reason: "output tokens left out of estimate", tokens: u.output, cost: u.output * rates.output },
-    { reason: "cached-input discount", tokens: -u.cached, cost: -u.cached * (rates.input - rates.cached) },
-    { reason: "unexplained", tokens: unexplained, cost: unexplained * rates.input },
+    { reason: `${label} vs 4-characters rule (${e.local.tokenizer})`, tokens: text, cost: text * rates.input, input: true },
+    { reason: "system prompt left out of estimate", tokens: system, cost: system * rates.input, input: true },
+    { reason: "chat-format overhead (measured in study)", tokens: fmt, cost: fmt * rates.input, input: true },
+    { reason: "output tokens left out of estimate", tokens: u.output, cost: u.output * rates.output, input: false },
+    { reason: "cached-input discount", tokens: -u.cached, cost: -u.cached * (rates.input - rates.cached), input: false },
+    { reason: "unexplained", tokens: unexplained, cost: unexplained * rates.input, input: true },
   ];
   const estimateCost = cost({ input: est, output: 0n, cached: 0n }, rates);
   const actualCost = cost(u, rates);

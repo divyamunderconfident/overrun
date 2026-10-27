@@ -15,6 +15,7 @@ describe("reconcile", () => {
     expect(r.estimateTokens).toBe(10n);
     expect(r.reasons.map((x) => x.tokens)).toEqual([20n, 3n, 5n, 6n, -8n, 2n]);
     expect(r.reasons.reduce((a, x) => a + x.cost, 0n)).toBe(r.gapCost);
+    expect(r.reasons.filter((x) => x.input).reduce((a, x) => a + x.tokens, 0n)).toBe(r.actual.input - r.estimateTokens);
   });
 
   it("explains at least 90% of the gap on the bundled demo log, and every row adds up", () => {

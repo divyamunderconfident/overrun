@@ -1,82 +1,112 @@
-import study from "@/public/data/study.json";
+import type { Metadata } from "next";
+import { TOKENIZERS } from "@/lib/tokenizers";
+import { DotChart } from "../DotChart";
+import { fmt, group, groupLabel, groups, longDate, study } from "../data";
+
+export const metadata: Metadata = { title: "Findings · Overrun" };
 
 type Range = { median: number; min: number; max: number; n: number } | null | undefined;
-const range = (o: Range) => (o ? `${o.median} (${o.min}–${o.max})` : "n/a");
+const range = (o: Range) => (o ? `+${o.median} (${o.min}–${o.max}, n=${o.n})` : "n/a");
 
 export default function Findings() {
   const w = study.headline.worst;
   const en = study.headline.english;
   const ta = study.headline.tamil;
+  const tg = group("Tamil");
   const h = study.real.heldOut;
-  const tk = study.tokenizers;
-  const maxFactor = Math.max(...study.groups.flatMap((g) => tk.map((t) => (g.byTokenizer as Record<string, { factor: number }>)[t.id].factor)));
   return (
-    <div className="space-y-4">
-      <h1>How wrong is &ldquo;4 characters per token&rdquo;?</h1>
-      <p className="text-lg">
-        The 4-characters rule underestimates <b>{w.group}</b> by <b>{w.factor}×</b> on <b>{w.tokenizer}</b> ({w.charsPerToken} characters per token).
-        For English news prose on {en.tokenizer} it is {en.factor}× ({en.charsPerToken} characters per token).
-      </p>
-      <p>
-        Tamil on cl100k_base is {ta.cl100k_base.factor}× ({ta.cl100k_base.charsPerToken} characters per token) against {ta.o200k_base.factor}× ({ta.o200k_base.charsPerToken}) on o200k_base.
-      </p>
-      <p className="text-sm text-zinc-500">
-        {study.corpus.samples} samples, measured {study.generated.slice(0, 10)}. Method: {study.method}. All numbers on this page come from{" "}
-        <a href="/data/study.json">results/study.json</a>.
-      </p>
+    <>
+      <section className="wrap fade" aria-labelledby="f-h">
+        <div className="lab">Findings · measured {longDate(study.generated.slice(0, 10))}</div>
+        <h1 id="f-h" className="serif h1" style={{ maxWidth: 900 }}>How wrong is &ldquo;four characters per token&rdquo;? <em>It depends what you write.</em></h1>
+        <p style={{ fontSize: 18, maxWidth: 760, marginTop: 24 }}>
+          The 4-characters rule underestimates <b>{w.group}</b> by <span className="mono acc">{w.factor}×</span> on {w.tokenizer} ({w.charsPerToken} characters per token).
+          For English news prose on {en.tokenizer} it overestimates: <span className="mono">{en.factor}×</span> ({en.charsPerToken} characters per token).
+        </p>
+      </section>
 
-      <h2>Real tokens per estimated token</h2>
-      <p className="text-sm text-zinc-500">Above 1× the estimate is too low; the bar shows the factor.</p>
-      <div className="overflow-x-auto">
-        <table>
-          <thead><tr><th>Text</th>{tk.map((t) => <th key={t.id}>{t.label}</th>)}</tr></thead>
-          <tbody>
-            {study.groups.map((g) => (
-              <tr key={g.group}>
-                <td>{g.group} <span className="text-xs text-zinc-500">({g.samples})</span></td>
-                {tk.map((t) => {
-                  const x = (g.byTokenizer as Record<string, { factor: number; charsPerToken: number }>)[t.id];
-                  return (
-                    <td key={t.id} className="min-w-24">
-                      {x.factor}× <span className="text-xs text-zinc-500">{x.charsPerToken} c/t</span>
-                      <div className={`h-1.5 rounded ${x.factor > 1 ? "bg-red-500" : "bg-emerald-500"}`} style={{ width: `${(x.factor / maxFactor) * 100}%` }} />
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <section className="wrap sec" aria-labelledby="ta-h">
+        <div className="lab">01 · One language, two tokenizers</div>
+        <h2 id="ta-h" className="serif h2">Tamil on cl100k_base <em>vs</em> o200k_base.</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24, marginTop: 32 }}>
+          {(["cl100k_base", "o200k_base"] as const).map((t) => (
+            <div className="panel" key={t}>
+              <div className="lab">{t} · {TOKENIZERS.find((x) => x.id === t)!.usedBy}</div>
+              <div className="mono" style={{ fontSize: "clamp(48px, 8vw, 88px)", lineHeight: 1, margin: "12px 0" }}>{ta[t].factor}<span className="acc" style={{ fontSize: ".4em" }}>×</span></div>
+              <div className="mono mut" style={{ fontSize: 13 }}>{ta[t].charsPerToken} chars/token · {fmt(ta[t].tokens)} real tokens vs estimate {fmt(tg.estimate)}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mut" style={{ maxWidth: 680 }}>Same {tg.samples} sentences, {fmt(tg.chars)} characters. The newer vocabulary needs {(ta.cl100k_base.tokens / ta.o200k_base.tokens).toFixed(2)}× fewer tokens for them.</p>
+      </section>
 
-      <h2>Real usage check</h2>
-      <p className="text-sm">
-        {study.real.requests} of {study.real.planned} short requests to free-tier models returned usage. Overhead is the reported input tokens minus
-        the local tokenizer&apos;s count of the prompt and system text: the tokens a provider adds for its chat format.
-      </p>
-      <div className="overflow-x-auto">
-        <table>
-          <thead><tr><th>Model</th><th>Local tokenizer</th><th>Requests</th><th>Overhead, no system</th><th>Overhead, with system</th><th>Median estimate error</th></tr></thead>
-          <tbody>
-            {study.real.summary.map((s) => (
-              <tr key={s.model}>
-                <td>{s.model}</td><td>{s.tokenizer}</td><td>{s.requests}</td>
-                <td>{range(s.overheadNoSystem)}</td><td>{range(s.overheadWithSystem)}</td><td>{s.medianEstimateErrorPct}%</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <p className="text-sm">
-        <b>Held-out reconciliation:</b> with overhead measured on a fixed random half ({h.calibration.length} requests, seed {h.seed}), the named reasons
-        explain <b>{h.explainedPct}%</b> of the input-token gap on the other {h.heldOut.length} requests ({h.unexplainedTokens} of {h.gapTokens} tokens unexplained).
-      </p>
-      <p className="text-xs text-zinc-500">Overhead shown as median (min–max). Gemini&apos;s tokenizer is not public; Gemma 3&apos;s stands in for it.</p>
+      <section className="wrap sec" aria-labelledby="cpt-h">
+        <div className="lab">02 · All text, all tokenizers</div>
+        <h2 id="cpt-h" className="serif h2" style={{ marginBottom: 28 }}>Characters per token, <em>by what you write.</em></h2>
+        <DotChart tokenizers={TOKENIZERS.map((t) => t.id)} />
+        <h3 className="lab" style={{ margin: "48px 0 12px" }}>Real tokens per estimated token (above 1× the estimate is too low)</h3>
+        <div className="scroll">
+          <table className="tbl">
+            <thead><tr><th>Text</th><th>Samples</th><th>Estimate</th>{TOKENIZERS.map((t) => <th key={t.id}>{t.label}</th>)}</tr></thead>
+            <tbody>
+              {groups.map((g) => (
+                <tr key={g.group}>
+                  <td>{groupLabel(g.group)}</td>
+                  <td className="num">{g.samples}</td>
+                  <td className="num">{fmt(g.estimate)}</td>
+                  {TOKENIZERS.map((t) => {
+                    const x = g.byTokenizer[t.id];
+                    return <td key={t.id} className="num" style={{ color: x.factor > 1 ? "var(--acc)" : undefined }}>{x.factor.toFixed(2)}× <span className="mut" style={{ fontSize: 12 }}>{fmt(x.tokens)}</span></td>;
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-      <h2>Corpus and licences</h2>
-      <ul className="list-disc pl-5 text-sm">
-        {study.corpus.sources.map((s) => <li key={s}>{s}</li>)}
-      </ul>
-    </div>
+      <section className="wrap sec" aria-labelledby="real-h">
+        <div className="lab">03 · Real usage, {study.real.requests} requests</div>
+        <h2 id="real-h" className="serif h2">The tokens you <em>never typed.</em></h2>
+        <p className="mut" style={{ maxWidth: 720 }}>
+          Short requests to free-tier models. Overhead is the reported input tokens minus the local tokenizer&apos;s count of the prompt and system text: what the provider adds for its chat format.
+        </p>
+        <div className="scroll">
+          <table className="tbl">
+            <thead><tr><th>Model</th><th>Local tokenizer</th><th>Requests</th><th>Overhead, no system</th><th>Overhead, with system</th><th>Median estimate error</th></tr></thead>
+            <tbody>
+              {study.real.summary.map((s) => (
+                <tr key={s.model}>
+                  <td className="mono">{s.model}</td><td className="mono">{s.tokenizer}</td><td className="num">{s.requests}</td>
+                  <td className="num">{range(s.overheadNoSystem)}</td><td className="num">{range(s.overheadWithSystem)}</td><td className="num">{s.medianEstimateErrorPct}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="panel" style={{ marginTop: 32, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24, alignItems: "center" }}>
+          <div className="mono" style={{ fontSize: "clamp(48px, 8vw, 88px)", lineHeight: 1 }}>{h.explainedPct}<span className="acc" style={{ fontSize: ".4em" }}>%</span></div>
+          <p style={{ margin: 0 }}>
+            <b>Held-out reconciliation.</b> Overhead was measured on a fixed random half ({h.calibration.length} requests, seed <span className="num">{h.seed}</span>). On the other {h.heldOut.length}, the named reasons explain {h.explainedPct}% of the input-token gap: <span className="num">{fmt(h.unexplainedTokens)}</span> of <span className="num">{fmt(h.gapTokens)}</span> tokens unexplained.
+          </p>
+        </div>
+        <p className="mut" style={{ fontSize: 13 }}>Gemini&apos;s tokenizer isn&apos;t public; Gemma 3, its closest open relative, stands in for the count.</p>
+      </section>
+
+      <section className="wrap sec end" aria-labelledby="m-h">
+        <div className="lab">04 · Method, sources, licences</div>
+        <h2 id="m-h" className="serif h2" style={{ marginBottom: 20 }}>How it was measured.</h2>
+        <p className="mono" style={{ fontSize: 13, maxWidth: 820 }}>{study.method}</p>
+        <p className="mut" style={{ fontSize: 14 }}>
+          {study.corpus.samples} samples, corpus built {longDate(study.corpus.built)}. Every number on this page is read from <a href="/data/study.json">results/study.json</a>; the corpus with each sample&apos;s source and licence is <code>study/corpus.json</code> in the repo.
+        </p>
+        <ul className="mut" style={{ fontSize: 14, paddingLeft: 18 }}>
+          {study.corpus.sources.map((s) => <li key={s}>{s}</li>)}
+        </ul>
+        <p className="mut" style={{ fontSize: 14 }}>
+          Parallel prose: <a href="https://github.com/MicrosoftTranslator/NTREX">NTREX-128</a>, CC BY-SA 4.0. Code and docs: MIT (the original course project and this repo). Synthetic JSON and emoji posts: written for this study, MIT.
+        </p>
+      </section>
+    </>
   );
 }
